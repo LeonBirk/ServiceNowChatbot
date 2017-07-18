@@ -38,13 +38,12 @@ bot.dialog('createIncident', [
     session.dialogData.keyword= results.response;
     session.send(session.dialogData.keyword + " huh? I always struggle with that, too.");
     var categoryArray = [];
-    session.send(categories.Skype);
-    /*
-    for (var i=0; i < categories.list.length; i++){
-        if(categories.list[i] === session.dialogData.keyword){
-            categoryArray.push(categories.list[i]);
+
+    for (var i=0; i < categories.length; i++){
+        if(categories[i] === session.dialogData.keyword){
+            categoryArray.push(categories[i]);
         }
-    }*/
+    }
     session.send('I have understood that your problem concerns \"'+ session.dialogData.keyword +'\".');
     builder.Prompts.text(session, 'Please specify one of the following categories:' + categoryArray[0] + ', ' + categoryArray[1]);
     }
