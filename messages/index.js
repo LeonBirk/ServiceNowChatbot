@@ -37,12 +37,40 @@ bot.dialog('createIncident', [
     session.dialogData.keyword= results.response;
     session.send(session.dialogData.keyword + " huh? I always struggle with that, too.");
     var choices = categories[session.dialogData.keyword];
-    //session.send('I have understood that your problem concerns \"'+ session.dialogData.keyword +'\".');
     builder.Prompts.choice(session, 'Please specify one of the following categories:', choices);
     },
     function (session, results){
-        session.send('Your choice was: ' + results.response.entity)
+        session.dialogData.category= results.response.entity;
+        builder.Prompts.text(session,'Your choice was: ' + session.dialogData.category + '. So let\'s move on with a short description. What\'s wrong exactly? In just a few words.');
+    },
+    function (session, results) {
+        session.dialogData.short_description = results.response;
+        builder.Prompts.text(session, 'Now that doesn\'t sound too bad. I am sure we\'ll resolve this quickly. Is there anything you would want to add in a more elaborate description?')
+    },
+    function (session, results) {
+        session.dialogData.description = results.response;
+        builder.Prompts.text(session, 'Ok, now I\'m positive that this will be done in an instant! Just let me know under which phone number you would want to be contacted.')
+    },
+    function (session, results) {
+        session.dialogData.phone_nr = results.response;
+        var choices = ['yes', 'no'];
+        builder.Prompts.choice(session, 'Looks good! So you want to submit a Ticket about ' + session.dialogData.keyword + ', the underlying category is ' + session.dialogData.category +
+            ' with a short description of \'' + session.dialogData.short_description + '\'. And for further information, we can reach you under ' +
+            session.dialogData.phone_nr + '. Am I correct?')
+    },
+    function (session, results) {
+        if(results.response.entitiy === 'no'){
+            session.send('OK NOW I AM UPSET! Ask someone else. >:(')
+        }
+        else if(results.response.entitiy === 'yes'){
+            session.send('Nice! I will get to work. Don\'t worry, I will get back to you when there are any news.')
+        }else
+        {
+            session.send('I am confuuuuused. :(')
+        }
+        session.endDialog();
     }
+
 ]);
 
 bot.dialog('/', function (session) {
