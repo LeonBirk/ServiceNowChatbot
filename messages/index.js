@@ -67,7 +67,7 @@ function callback(error, response, body) {
 
 request(options, callback);
     } else if (session.message.text.includes("my incidents")){
-        session.send("Getting your personal incidents...");
+        session.send("Getting your personal incidents... from Github!");
         var urlString = 'https://dev27563.service-now.com/api/now/table/incident?sysparm_query=caller_id=681ccaf9c0a8016400b98a06818d57c7'; 
         var options = {
             url: urlString,
