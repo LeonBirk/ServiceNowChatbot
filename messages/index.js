@@ -23,6 +23,7 @@ var categories = require('./categories.json');
 bot.dialog('createIncident', [
     // Step 1
     function (session) {
+        session.send(categories.Skype);
         builder.Prompts.text(session, 'I have understood that you want to create a new Incident, is that correct?');
     },
     // Step 2
@@ -35,13 +36,15 @@ bot.dialog('createIncident', [
     },
     function(session, results) {
     session.dialogData.keyword= results.response;
-    session.send(session.dialogData.keyword + "huh? I always struggle with that, too.");
+    session.send(session.dialogData.keyword + " huh? I always struggle with that, too.");
     var categoryArray = [];
+    session.send(categories.Skype);
+    /*
     for (var i=0; i < categories.list.length; i++){
         if(categories.list[i] === session.dialogData.keyword){
             categoryArray.push(categories.list[i]);
         }
-    }
+    }*/
     session.send('I have understood that your problem concerns \"'+ session.dialogData.keyword +'\".');
     builder.Prompts.text(session, 'Please specify one of the following categories:' + categoryArray[0] + ', ' + categoryArray[1]);
     }
