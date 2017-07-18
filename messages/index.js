@@ -23,7 +23,7 @@ var categories = require('./categories.json');
 bot.dialog('createIncident', [
     // Step 1
     function (session) {
-        session.send(categories.toString());
+        session.send(categories.Skype[0]);
         builder.Prompts.text(session, 'I have understood that you want to create a new Incident, is that correct?');
     },
     // Step 2
