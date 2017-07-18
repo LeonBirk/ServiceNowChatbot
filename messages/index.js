@@ -26,7 +26,7 @@ bot.dialog('createIncident', [
     },
     // Step 2
     function (session, results) {
-        if(results.response = 'no'){
+        if(results.response === 'no'){
             session.endDialog('Ok! So how can I help you?');
         }else {
             builder.Prompts.text(session, 'Okay! So let\'s start with a keyword. What is the application, product or service that is causing a problem for you?');
