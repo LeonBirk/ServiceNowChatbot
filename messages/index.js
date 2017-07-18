@@ -45,18 +45,18 @@ bot.dialog('createIncident', [
     },
     function (session, results) {
         session.dialogData.short_description = results.response;
-        builder.Prompts.text(session, 'Now that doesn\'t sound too bad. I am sure we\'ll resolve this quickly. Is there anything you would want to add in a more elaborate description?')
+        builder.Prompts.text(session, 'Now that doesn\'t sound too bad. I am sure we\'ll resolve this quickly. Is there anything you would want to add in a more elaborate description?');
     },
     function (session, results) {
         session.dialogData.description = results.response;
-        builder.Prompts.text(session, 'Ok, now I\'m positive that this will be done in an instant! Just let me know under which phone number you would want to be contacted.')
+        builder.Prompts.text(session, 'Ok, now I\'m positive that this will be done in an instant! Just let me know under which phone number you would want to be contacted.');
     },
     function (session, results) {
         session.dialogData.phone_nr = results.response;
         var choices = ['yes', 'no'];
         builder.Prompts.choice(session, 'Looks good! So you want to submit a Ticket about ' + session.dialogData.keyword + ', the underlying category is ' + session.dialogData.category +
             ' with a short description of \'' + session.dialogData.short_description + '\'. And for further information, we can reach you under ' +
-            session.dialogData.phone_nr + '. Am I correct?')
+            session.dialogData.phone_nr + '. Am I correct?', choices)
     },
     function (session, results) {
         if(results.response.entitiy === 'no'){
