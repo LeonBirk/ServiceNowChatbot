@@ -18,6 +18,7 @@ var connector = useEmulator ? new builder.ChatConnector() : new botbuilder_azure
 
 var bot = new builder.UniversalBot(connector);
 bot.localePath(path.join(__dirname, './locale'));
+var categories = require('./categories.json');
 
 bot.dialog('createIncident', [
     // Step 1
@@ -34,7 +35,14 @@ bot.dialog('createIncident', [
     },
     function(session, results) {
     session.dialogData.keyword= results.response;
-    builder.Prompts.text(session, 'I have understood that your problem concerns \"'+ results.response +'\". Does your problem fit into one of the following categories:')
+    var categoryArray = [];
+    for (var i=0; i < categories.list.length; i++){
+        if(categories.list[i] === session.dialogData.keyword){
+            categoryArray.push(categories.list[i]);
+        }
+    }
+    session.send('I have understood that your problem concerns \"'+ session.dialogData.keyword +'\".');
+    builder.Prompts.text(session, 'Please specify one of the following categories:' + categoryArray[0] + ', ' + categoryArray[1]);
     }
 ]);
 
