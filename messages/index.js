@@ -19,6 +19,17 @@ var connector = useEmulator ? new builder.ChatConnector() : new botbuilder_azure
 var bot = new builder.UniversalBot(connector);
 bot.localePath(path.join(__dirname, './locale'));
 
+bot.dialog('greetings', [
+    // Step 1
+    function (session) {
+        builder.Prompts.text(session, 'Hi! What is your name?');
+    },
+    // Step 2
+    function (session, results) {
+        session.endDialog('Hello %s!', results.response);
+    }
+]);
+
 bot.dialog('/', function (session) {
     if(session.message.text.includes("INC")){
     session.send("Getting Incident data...");
