@@ -18,12 +18,12 @@ var connector = useEmulator ? new builder.ChatConnector() : new botbuilder_azure
 
 var bot = new builder.UniversalBot(connector);
 bot.localePath(path.join(__dirname, './locale'));
-var categories = require('./categories.json');
+var categories = JSON.parse(require('./categories.json'));
 
 bot.dialog('createIncident', [
     // Step 1
     function (session) {
-        session.send(categories);
+        session.send(categories.toString());
         builder.Prompts.text(session, 'I have understood that you want to create a new Incident, is that correct?');
     },
     // Step 2
