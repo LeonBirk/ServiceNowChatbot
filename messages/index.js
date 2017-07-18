@@ -19,20 +19,28 @@ var connector = useEmulator ? new builder.ChatConnector() : new botbuilder_azure
 var bot = new builder.UniversalBot(connector);
 bot.localePath(path.join(__dirname, './locale'));
 
-bot.dialog('greetings', [
+bot.dialog('createIncident', [
     // Step 1
     function (session) {
-        builder.Prompts.text(session, 'Hi! What is your name?');
+        builder.Prompts.text(session, 'I have understood that you want to create a new Incident, is that correct?');
     },
     // Step 2
     function (session, results) {
-        session.endDialog('Hello %s!', results.response);
+        if(results.response = 'no'){
+            session.endDialog('Ok! So how can I help you?');
+        }else {
+            builder.Prompts.text(session, 'Okay! So let\'s start with a keyword. What is the application, product or service that is causing a problem for you?');
+        }
+    },
+    function(session, results) {
+    session.dialogData.keyword= results.response;
+    builder.Prompts.text(session, 'I have understood that your problem concerns \"'+ results.response +'\". Does your problem fit into one of the following categories:')
     }
 ]);
 
 bot.dialog('/', function (session) {
-    if(session.message.text.includes("hi")){
-        session.beginDialog('greetings');
+    if(session.message.text.includes("open"&&"incident")){
+        session.beginDialog('createIncident');
     } else
     if(session.message.text.includes("INC")){
     session.send("Getting Incident data...");
