@@ -1,0 +1,17 @@
+{
+  "Microsoft Office": [
+    "Microsoft Powerpoint",
+    "Microsoft Word",
+    "Microsoft Excel"
+  ],
+  "Skype": [
+    "Connection problems",
+    "Contact list issue",
+    "Login not possible"
+  ],
+  "Finance Portal" : [
+    "Information Request",
+    "Order",
+    "Issue"
+  ]
+}
