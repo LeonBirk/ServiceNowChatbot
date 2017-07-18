@@ -31,6 +31,9 @@ bot.dialog('greetings', [
 ]);
 
 bot.dialog('/', function (session) {
+    if(session.message.text.includes("hi")){
+        bot.dialog('/greetings');
+    } else
     if(session.message.text.includes("INC")){
     session.send("Getting Incident data...");
     var incidentID = session.message.text;
