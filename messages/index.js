@@ -35,6 +35,7 @@ bot.dialog('createIncident', [
     },
     function(session, results) {
     session.dialogData.keyword= results.response;
+    session.send(session.dialogData.keyword + "huh? I always struggle with that, too.");
     var categoryArray = [];
     for (var i=0; i < categories.list.length; i++){
         if(categories.list[i] === session.dialogData.keyword){
