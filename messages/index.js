@@ -39,12 +39,12 @@ bot.dialog('createIncident', [
     session.send(session.dialogData.keyword + " huh? I always struggle with that, too.");
     var categoryArray = [];
 
-    for (var i=0; i < categories.length; i++){
-        if(categories[i] === session.dialogData.keyword){
-            categoryArray.push(categories[i]);
+    for (x in categories){
+        if(x === session.dialogData.keyword){
+            categoryArray.push(x);
         }
     }
-    session.send('I have understood that your problem concerns \"'+ session.dialogData.keyword +'\".');
+    //session.send('I have understood that your problem concerns \"'+ session.dialogData.keyword +'\".');
     builder.Prompts.text(session, 'Please specify one of the following categories:' + categoryArray[0] + ', ' + categoryArray[1]);
     }
 ]);
