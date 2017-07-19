@@ -138,7 +138,7 @@ bot.dialog('createIncident', [
     function (session) {
         builder.Prompts.text(session, 'I have understood that you want to create a new Incident, is that correct?');
     },
-    // if the response is negative, returns to default dialog; if positive: ask for
+    // if the response is negative, returns to default dialog; if positive: ask for a keyword (possible keywords listed in categories.json
     function (session, results) {
         if (results.response === 'no') {
             session.endDialog('Ok! So how can I help you?');
@@ -146,24 +146,29 @@ bot.dialog('createIncident', [
             builder.Prompts.text(session, 'Okay! So let\'s start with a keyword. What is the application, product or service that is causing a problem for you?');
         }
     },
+    // Returns a list of choices for the selected category
     function (session, results) {
         session.dialogData.keyword = results.response;
         session.send(session.dialogData.keyword + " huh? I always struggle with that, too.");
         var choices = categories[session.dialogData.keyword];
         builder.Prompts.choice(session, 'Please specify one of the following categories:', choices);
     },
+    // Asks for a short description
     function (session, results) {
         session.dialogData.category = results.response.entity;
         builder.Prompts.text(session, 'Your choice was: ' + session.dialogData.category + '. So let\'s move on with a short description. What\'s wrong exactly? In just a few words.');
     },
+    // Asks for a description
     function (session, results) {
         session.dialogData.short_description = results.response;
         builder.Prompts.text(session, 'Now that doesn\'t sound too bad. I am sure we\'ll resolve this quickly. Is there anything you would want to add in a more elaborate description?');
     },
+    // Asks for a phone number
     function (session, results) {
         session.dialogData.description = results.response;
         builder.Prompts.text(session, 'Ok, now I\'m positive that this will be done in an instant! Just let me know under which phone number you would want to be contacted.');
     },
+    // Asks for verification of data, sends HTTP-request if positive
     function (session, results) {
         session.dialogData.phone_nr = results.response;
         var choices = ['yes', 'no'];
@@ -193,7 +198,7 @@ bot.dialog('createIncident', [
             };
 
             function callback(error, response, body) {
-                var respJSON = JSON.parse(body);
+                //var respJSON = JSON.parse(body);
                 session.send("Error response: " + body.toString());
                 if (!error && response.statusCode == 200) {
 
