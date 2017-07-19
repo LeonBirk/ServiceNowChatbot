@@ -21,9 +21,10 @@ bot.localePath(path.join(__dirname, './locale'));
 var categories = require('./categories.json');
 
 bot.dialog('/', function (session) {
-    if (session.message.text.includes("open" & "incident")) {
+    if (session.message.text.includes("open") && session.message.text.includes("incident")) {
         session.beginDialog('createIncident');
-    } else if (session.message.text.includes("INC")) {
+    } else if (session.message.text.includes("INC"))
+    {
         session.send("Getting Incident data...");
         var incidentID = session.message.text;
         //session.send('You requested information on the Incident with the ID ' + session.message.text);
@@ -70,7 +71,8 @@ bot.dialog('/', function (session) {
         }
 
         request(options, callback);
-    } else if (session.message.text.includes("my incidents")) {
+    } else if (session.message.text.includes("my incidents"))
+    {
         session.send("Getting your personal incidents... from Github!");
         var urlString = 'https://dev27563.service-now.com/api/now/table/incident?sysparm_query=caller_id=681ccaf9c0a8016400b98a06818d57c7';
         var options = {
@@ -97,7 +99,8 @@ bot.dialog('/', function (session) {
 
         request(options, callback);
     }
-    else if (session.message.text.includes("order sales laptop")) {
+    else if (session.message.text.includes("order sales laptop"))
+    {
         session.send("Adding to cart: Sales Laptop...");
         var body = {'sysparm_quantity': '1'};
         var urlString = 'https://dev27563.service-now.com/api/sn_sc/servicecatalog/items/e212a942c0a80165008313c59764eea1/add_to_cart';
