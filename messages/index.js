@@ -20,60 +20,6 @@ var bot = new builder.UniversalBot(connector);
 bot.localePath(path.join(__dirname, './locale'));
 var categories = require('./categories.json');
 
-bot.dialog('createIncident', [
-    // Step 1
-    function (session) {
-        builder.Prompts.text(session, 'I have understood that you want to create a new Incident, is that correct?');
-    },
-    // Step 2
-    function (session, results) {
-        if(results.response === 'no'){
-            session.endDialog('Ok! So how can I help you?');
-        }else {
-            builder.Prompts.text(session, 'Okay! So let\'s start with a keyword. What is the application, product or service that is causing a problem for you?');
-        }
-    },
-    function(session, results) {
-    session.dialogData.keyword= results.response;
-    session.send(session.dialogData.keyword + " huh? I always struggle with that, too.");
-    var choices = categories[session.dialogData.keyword];
-    builder.Prompts.choice(session, 'Please specify one of the following categories:', choices);
-    },
-    function (session, results){
-        session.dialogData.category= results.response.entity;
-        builder.Prompts.text(session,'Your choice was: ' + session.dialogData.category + '. So let\'s move on with a short description. What\'s wrong exactly? In just a few words.');
-    },
-    function (session, results) {
-        session.dialogData.short_description = results.response;
-        builder.Prompts.text(session, 'Now that doesn\'t sound too bad. I am sure we\'ll resolve this quickly. Is there anything you would want to add in a more elaborate description?');
-    },
-    function (session, results) {
-        session.dialogData.description = results.response;
-        builder.Prompts.text(session, 'Ok, now I\'m positive that this will be done in an instant! Just let me know under which phone number you would want to be contacted.');
-    },
-    function (session, results) {
-        session.dialogData.phone_nr = results.response;
-        var choices = ['yes', 'no'];
-        builder.Prompts.choice(session, 'Looks good! So you want to submit a Ticket about ' + session.dialogData.keyword + ', the underlying category is ' + session.dialogData.category +
-            ' with a short description of \'' + session.dialogData.short_description + '\'. And for further information, we can reach you under ' +
-            session.dialogData.phone_nr + '. Am I correct?', choices);
-    },
-    function (session, results) {
-        var confirmation = results.response.entity.toString();
-        if(confirmation == 'no'){
-            session.send('OK NOW I AM UPSET! Ask someone else. >:(')
-        }
-        else if(confirmation == 'yes'){
-            session.send('Nice! I will get to work. Don\'t worry, I will get back to you when there are any news.')
-        }else
-        {
-            session.send('I am confuuuuused. :(')
-        }
-        session.endDialog();
-    }
-
-]);
-
 bot.dialog('/', function (session) {
     if(session.message.text.includes("open"&&"incident")){
         session.beginDialog('createIncident');
@@ -180,6 +126,83 @@ request(options, callback);
     }
 
 });
+
+bot.dialog('createIncident', [
+    // Step 1
+    function (session) {
+        builder.Prompts.text(session, 'I have understood that you want to create a new Incident, is that correct?');
+    },
+    // Step 2
+    function (session, results) {
+        if(results.response === 'no'){
+            session.endDialog('Ok! So how can I help you?');
+        }else {
+            builder.Prompts.text(session, 'Okay! So let\'s start with a keyword. What is the application, product or service that is causing a problem for you?');
+        }
+    },
+    function(session, results) {
+        session.dialogData.keyword= results.response;
+        session.send(session.dialogData.keyword + " huh? I always struggle with that, too.");
+        var choices = categories[session.dialogData.keyword];
+        builder.Prompts.choice(session, 'Please specify one of the following categories:', choices);
+    },
+    function (session, results){
+        session.dialogData.category= results.response.entity;
+        builder.Prompts.text(session,'Your choice was: ' + session.dialogData.category + '. So let\'s move on with a short description. What\'s wrong exactly? In just a few words.');
+    },
+    function (session, results) {
+        session.dialogData.short_description = results.response;
+        builder.Prompts.text(session, 'Now that doesn\'t sound too bad. I am sure we\'ll resolve this quickly. Is there anything you would want to add in a more elaborate description?');
+    },
+    function (session, results) {
+        session.dialogData.description = results.response;
+        builder.Prompts.text(session, 'Ok, now I\'m positive that this will be done in an instant! Just let me know under which phone number you would want to be contacted.');
+    },
+    function (session, results) {
+        session.dialogData.phone_nr = results.response;
+        var choices = ['yes', 'no'];
+        builder.Prompts.choice(session, 'Looks good! So you want to submit a Ticket about ' + session.dialogData.keyword + ', the underlying category is ' + session.dialogData.category +
+            ' with a short description of \'' + session.dialogData.short_description + '\'. And for further information, we can reach you under ' +
+            session.dialogData.phone_nr + '. Am I correct?', choices);
+    },
+    function (session, results) {
+        var confirmation = results.response.entity.toString();
+        if(confirmation == 'no'){
+            session.send('OK NOW I AM UPSET! Ask someone else. >:(')
+        }
+        else if(confirmation == 'yes'){
+            session.send('Nice! I will get to work. Don\'t worry, I will get back to you when there are any news.');
+            var body = {"short_description":session.dialogData.short_description.toString()};
+            var urlString = 'https://dev27563.service-now.com/api/now/table/incident';
+            var options = {
+                url: urlString,
+                method: 'POST',
+                json: true,
+                data: body,
+                headers: headers,
+                auth: {
+                    'user': 'admin',
+                    'pass': 'EF3tGqL5T!'
+                }
+            };
+
+            function callback(error, response, body) {
+                session.send(body);
+                if (!error && response.statusCode == 200) {
+                    var respJSON = JSON.parse(body);
+                    session.send(body);
+                }
+            }
+            request(options, callback);
+        }else
+        {
+            session.send('I am confuuuuused. :(')
+        }
+        session.endDialog();
+
+    }
+
+]);
 
 if (useEmulator) {
     var restify = require('restify');
