@@ -118,7 +118,7 @@ bot.dialog('/', function (session) {
 
         function callback(error, response, body) {
             session.send(body);
-            if (!error && response.statusCode == 200) {
+            if (!error && response.statusCode == 201) {
                 var respJSON = JSON.parse(body);
                 session.send(body);
             }
@@ -198,13 +198,7 @@ bot.dialog('createIncident', [
             };
 
             function callback(error, response, body) {
-                //var respJSON = JSON.parse(body);
-                session.send(response);
-                for(var property in body.result) {
-                    session.send(property + "=" + body.result[property]);
-                }
-                session.send(body.result);
-                if (!error && response.statusCode == 200) {
+                if (!error && response.statusCode == 201) {
 
                     session.send("Positive response: " + body);
                 }
