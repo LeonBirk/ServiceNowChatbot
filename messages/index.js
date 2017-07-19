@@ -56,13 +56,13 @@ bot.dialog('createIncident', [
         var choices = ['yes', 'no'];
         builder.Prompts.choice(session, 'Looks good! So you want to submit a Ticket about ' + session.dialogData.keyword + ', the underlying category is ' + session.dialogData.category +
             ' with a short description of \'' + session.dialogData.short_description + '\'. And for further information, we can reach you under ' +
-            session.dialogData.phone_nr + '. Am I correct?', choices)
+            session.dialogData.phone_nr + '. Am I correct?', choices);
     },
     function (session, results) {
-        if(results.response.entitiy === 'no'){
+        if(results.response.entitiy == 'no'){
             session.send('OK NOW I AM UPSET! Ask someone else. >:(')
         }
-        else if(results.response.entitiy === 'yes'){
+        else if(results.response.entitiy == 'yes'){
             session.send('Nice! I will get to work. Don\'t worry, I will get back to you when there are any news.')
         }else
         {
