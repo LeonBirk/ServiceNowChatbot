@@ -59,10 +59,11 @@ bot.dialog('createIncident', [
             session.dialogData.phone_nr + '. Am I correct?', choices);
     },
     function (session, results) {
-        if(results.response.entitiy == 'no'){
+        var confirmation = results.response.entity.toString();
+        if(confirmation == 'no'){
             session.send('OK NOW I AM UPSET! Ask someone else. >:(')
         }
-        else if(results.response.entitiy == 'yes'){
+        else if(confirmation == 'yes'){
             session.send('Nice! I will get to work. Don\'t worry, I will get back to you when there are any news.')
         }else
         {
