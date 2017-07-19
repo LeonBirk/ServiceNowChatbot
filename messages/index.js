@@ -199,8 +199,9 @@ bot.dialog('createIncident', [
 
             function callback(error, response, body) {
                 //var respJSON = JSON.parse(body);
-                for(var property in body) {
-                    session.send(property + "=" + body[property]);
+                session.send(response);
+                for(var property in body.result) {
+                    session.send(property + "=" + body.result[property]);
                 }
                 session.send(body.result);
                 if (!error && response.statusCode == 200) {
