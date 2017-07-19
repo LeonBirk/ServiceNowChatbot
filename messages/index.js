@@ -134,11 +134,11 @@ bot.dialog('/', function (session) {
 
 // Waterfall dialogue that gets the information needed to create a ticket in ServiceNow and uploads it
 bot.dialog('createIncident', [
-    // Step 1
+    // Verifies entry into Conversation
     function (session) {
         builder.Prompts.text(session, 'I have understood that you want to create a new Incident, is that correct?');
     },
-    // Step 2
+    // if the response is negative, returns to default dialog; if positive: ask for
     function (session, results) {
         if (results.response === 'no') {
             session.endDialog('Ok! So how can I help you?');
@@ -193,9 +193,10 @@ bot.dialog('createIncident', [
             };
 
             function callback(error, response, body) {
-                session.send("Error response: " + body);
+                var respJSON = JSON.parse(body);
+                session.send("Error response: " + body.toString());
                 if (!error && response.statusCode == 200) {
-                    var respJSON = JSON.parse(body);
+
                     session.send("Positive response: " + body);
                 }
             }
