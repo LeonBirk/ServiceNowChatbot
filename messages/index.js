@@ -132,6 +132,7 @@ bot.dialog('/', function (session) {
 
 });
 
+// Waterfall dialogue that gets the information needed to create a ticket in ServiceNow and uploads it
 bot.dialog('createIncident', [
     // Step 1
     function (session) {
@@ -192,10 +193,10 @@ bot.dialog('createIncident', [
             };
 
             function callback(error, response, body) {
-                session.send(body);
+                session.send("Error response: " + body);
                 if (!error && response.statusCode == 200) {
                     var respJSON = JSON.parse(body);
-                    session.send(body);
+                    session.send("Positive response: " + body);
                 }
             }
 
