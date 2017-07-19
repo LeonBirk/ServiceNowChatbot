@@ -183,12 +183,13 @@ bot.dialog('createIncident', [
         }
         else if (confirmation == 'yes') {
             session.send('Nice! I will get to work. Don\'t worry, I will get back to you when there are any news.');
+            session.send(session.dialogData.short_description.toString());
             var data = "{\"short_description\":\""+ session.dialogData.short_description.toString() +"\"}";
             var urlString = 'https://dev27563.service-now.com/api/now/table/incident';
             var options = {
                 url: urlString,
                 method: 'POST',
-                json: true,
+                //json: true,
                 body: data,
                 headers: headers,
                 auth: {
