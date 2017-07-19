@@ -202,6 +202,7 @@ bot.dialog('createIncident', [
                 for(var property in body) {
                     session.send(property + "=" + body[property]);
                 }
+                session.send(body.result);
                 if (!error && response.statusCode == 200) {
 
                     session.send("Positive response: " + body);
