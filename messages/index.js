@@ -199,7 +199,7 @@ bot.dialog('createIncident', [
                 "description":session.dialogData.description.toString(),
                 "u_phone": session.dialogData.phone_nr.toString()
             };
-            var urlString = 'https://dev27563.service-now.com/api/now/table/incident';
+            var urlString = 'https://dev27563.service-now.com/api/now/table/incident?sysparm_input_display_value=true';
             var options = {
                 url: urlString,
                 method: 'POST',
@@ -215,7 +215,7 @@ bot.dialog('createIncident', [
             function callback(error, response, body) {
                 if (!error && response.statusCode == 201) {
 
-                    //session.send("Positive response: " + body);
+                    session.send("Positive response: " + body);
                 }
             }
 
