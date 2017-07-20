@@ -19,6 +19,7 @@ var connector = useEmulator ? new builder.ChatConnector() : new botbuilder_azure
 var bot = new builder.UniversalBot(connector);
 bot.localePath(path.join(__dirname, './locale'));
 var categories = require('./categories.json');
+var isThatCorrect = ['yes', 'no'];
 
 bot.dialog('/', function (session) {
     if (session.message.text.includes("open") && session.message.text.includes("incident")) {
@@ -73,7 +74,7 @@ bot.dialog('/', function (session) {
         request(options, callback);
     } else if (session.message.text.includes("my incidents"))
     {
-        session.send("Getting your personal incidents... from Github!");
+        session.send("Getting your personal incidents...");
         var urlString = 'https://dev27563.service-now.com/api/now/table/incident?sysparm_query=caller_id=681ccaf9c0a8016400b98a06818d57c7';
         var options = {
             url: urlString,
@@ -89,7 +90,7 @@ bot.dialog('/', function (session) {
                 var respJSON = JSON.parse(body);
                 //session.send(body);
                 var incidentCount = respJSON.result.length;
-                session.send("You currently have " + incidentCount + " incidents.")
+                session.send("You currently have " + incidentCount + " incidents.");
                 for (var i = 0; i < respJSON.result.length; i++) {
                     session.send("Incident ID number " + (i + 1) + " is: " + respJSON.result[i].number + ", short description is: " + respJSON.result[i].short_description);
                 }
@@ -129,18 +130,19 @@ bot.dialog('/', function (session) {
     else {
         session.send("I'm afraid I didn't understand. You can either list your incidents through the keyphrase: ''my incidents'' or search for a specific incident through ID.");
     }
-
 });
 
 // Waterfall dialogue that gets the information needed to create a ticket in ServiceNow and uploads it
 bot.dialog('createIncident', [
     // Verifies entry into Conversation
     function (session) {
-        builder.Prompts.text(session, 'I have understood that you want to create a new Incident, is that correct?');
+
+        builder.Prompts.choice(session, 'I have understood that you want to create a new Incident, is that correct?', isThatCorrect);
     },
     // if the response is negative, returns to default dialog; if positive: ask for a keyword (possible keywords listed in categories.json
     function (session, results) {
-        if (results.response === 'no') {
+        var confirmation = results.response.entity.toString();
+        if (confirmation === 'no') {
             session.endDialog('Ok! So how can I help you?');
         } else {
             builder.Prompts.text(session, 'Okay! So let\'s start with a keyword. What is the application, product or service that is causing a problem for you?');
@@ -171,10 +173,9 @@ bot.dialog('createIncident', [
     // Asks for verification of data, sends HTTP-request if positive
     function (session, results) {
         session.dialogData.phone_nr = results.response;
-        var choices = ['yes', 'no'];
         builder.Prompts.choice(session, 'Looks good! So you want to submit a Ticket about ' + session.dialogData.keyword + ', the underlying category is ' + session.dialogData.category +
             ' with a short description of \'' + session.dialogData.short_description + '\'. And for further information, we can reach you under ' +
-            session.dialogData.phone_nr + '. Am I correct?', choices);
+            session.dialogData.phone_nr + '. Am I correct?', isThatCorrect);
     },
     function (session, results) {
         var confirmation = results.response.entity.toString();
@@ -207,7 +208,7 @@ bot.dialog('createIncident', [
             function callback(error, response, body) {
                 if (!error && response.statusCode == 201) {
 
-                    session.send("Positive response: " + body.toString());
+                    session.send("Positive response: " + body);
                 }
             }
 
@@ -218,7 +219,45 @@ bot.dialog('createIncident', [
         session.endDialog();
 
     }
+]);
 
+// Waterfall dialogue that is triggered if a user wants to reopen an incident and guides him through the process
+bot.dialog('/reopenIncident', [
+    function(session){
+        builder.Prompts.choice(session, 'I have understood you want to reopen an Incident, is that correct?', isThatCorrect);
+    },
+    function(session, results){
+        var confirmation = results.response.entity.toString();
+        if (confirmation == 'no'){
+            session.send('Ok! So how else can I help you?');
+        } else {
+            session.send('Okay, so these are the Incidents that have been closed recently. If the one you\'re looking for is among them, ask me about the INC number.' +
+                ' If you want to see more Incidents, tell me \'more\'.');
+
+            var urlString = 'https://dev27563.service-now.com/api/now/table/incident?sysparm_query=caller_id=javascript:gs.getUserID()^state=4';
+            var options = {
+                url: urlString,
+                headers: headers,
+                auth: {
+                    'user': 'admin',
+                    'pass': 'EF3tGqL5T!'
+                }
+            };
+
+            function callback(error, response, body) {
+                if (!error && response.statusCode == 200) {
+                    var respJSON = JSON.parse(body);
+                    //session.send(body);
+                    var incidentCount = respJSON.result.length;
+                    session.send("You currently have " + incidentCount + " resolved incidents.");
+                    for (var i = 0; i < respJSON.result.length; i++) {
+                        session.send("Incident ID number " + (i + 1) + " is: " + respJSON.result[i].number + ", short description is: " + respJSON.result[i].short_description);
+                    }
+                }
+            }
+            request(options, callback);
+        }
+    }
 ]);
 
 if (useEmulator) {
