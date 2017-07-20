@@ -252,11 +252,14 @@ bot.dialog('reopenIncident', [
                     var respJSON = JSON.parse(body);
                     var incidentCount = respJSON.result.length;
                     session.send("You currently have " + incidentCount + " resolved incidents.");
+                    var incidents= [];
                     var incidentChoices=[];
                     for (var i = 0; i < respJSON.result.length; i++) {
                         incidentChoices[i] = respJSON.result[i].number;
+                        incidents[i]=respJSON[i];
                         session.send("Incident number " + (i + 1) + " has the ID: " + respJSON.result[i].number + ", its short description is: " + respJSON.result[i].short_description);
                     }
+                    session.dialogData.incidents = incidents;
                     incidentChoices[incidentChoices.length] = 'more';
                     builder.Prompts.choice(session, 'So, which Incident is it going to be? Or do you want more choices?', incidentChoices);
                 }
@@ -266,7 +269,30 @@ bot.dialog('reopenIncident', [
 
     },
     function (session,results) {
-        session.send(results.response.entity)
+        //get sys_id from json object incidents holen und per PUT updaten, description anfordern
+        session.send(results.response.entity);
+        var incident_sys_id = results.response.entity.toString();
+        var urlString = 'https://dev27563.service-now.com/api/now/table/incident/' + incident_sys_id;
+        var data = {"incident_state":"2"};
+        var options = {
+            url: urlString,
+            method: 'PUT',
+            json: true,
+            body: data,
+            headers: headers,
+            auth: {
+                'user': 'admin',
+                'pass': 'EF3tGqL5T!'
+            }
+        };
+
+        function callback(error, response, body) {
+            session.send (body);
+            if (!error && response.statusCode == 200) {
+            }
+        }
+        request(options, callback);
+
     }
 ]);
 
