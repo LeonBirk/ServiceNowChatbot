@@ -183,16 +183,27 @@ bot.dialog('createIncident', [
         }
         else if (confirmation == 'yes') {
             session.send('Nice! I will get to work. Don\'t worry, I will get back to you when there are any news.');
-            var data = "{\"caller_id\":\"caller_id=javascript:gs.getUserID()^active=true\"," +
+            /*var data = "{\"caller_id\":\"javascript:gs.getUserID()^active=true\"," +
                         "\"category\":\""+session.dialogData.keyword.toString()+
                         "\",\"subcategory\":\""+ session.dialogData.subcategory.toString() +
                         "\",\"short_description\":\""+session.dialogData.short_description.toString()+
                         "\",\"description\":\""+session.dialogData.description.toString()+
                         "\",\"u_phone\":\""+session.dialogData.phone_nr.toString()+ "\"}";
+
+             */
+            var data = {
+                "caller_id":"javascript:gs.getUserID()^active=true",
+                "category":session.dialogData.keyword.toString(),
+                "subcategory":session.dialogData.subcategory.toString(),
+                "short_description":session.dialogData.short_description.toString(),
+                "description":session.dialogData.description.toString(),
+                "u_phone": session.dialogData.phone_nr.toString()
+            };
             var urlString = 'https://dev27563.service-now.com/api/now/table/incident';
             var options = {
                 url: urlString,
                 method: 'POST',
+                json: true,
                 body: data,
                 headers: headers,
                 auth: {
