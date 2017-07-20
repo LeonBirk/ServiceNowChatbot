@@ -225,7 +225,7 @@ bot.dialog('createIncident', [
 ]);
 
 // Waterfall dialogue that is triggered if a user wants to reopen an incident and guides him through the process
-bot.dialog('/reopenIncident', [
+bot.dialog('reopenIncident', [
     function(session){
         builder.Prompts.choice(session, 'I have understood you want to reopen an Incident, is that correct?', isThatCorrect);
     },
