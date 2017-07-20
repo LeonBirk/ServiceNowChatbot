@@ -184,7 +184,7 @@ bot.dialog('createIncident', [
         else if (confirmation == 'yes') {
             session.send('Nice! I will get to work. Don\'t worry, I will get back to you when there are any news.');
             var data = {
-                "caller_id":"3D6816f79cc0a8016401c5a33be04be441",
+                "incident.caller_id":"3D6816f79cc0a8016401c5a33be04be441",
                 "category":session.dialogData.keyword.toString(),
                 "subcategory":session.dialogData.subcategory.toString(),
                 "short_description":session.dialogData.short_description.toString(),
@@ -207,7 +207,7 @@ bot.dialog('createIncident', [
             function callback(error, response, body) {
                 if (!error && response.statusCode == 201) {
 
-                    session.send("Positive response: " + body);
+                    session.send("Positive response: " + body.toString());
                 }
             }
 
