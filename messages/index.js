@@ -155,8 +155,8 @@ bot.dialog('createIncident', [
     },
     // Asks for a short description
     function (session, results) {
-        session.dialogData.category = results.response.entity;
-        builder.Prompts.text(session, 'Your choice was: ' + session.dialogData.category + '. So let\'s move on with a short description. What\'s wrong exactly? In just a few words.');
+        session.dialogData.subcategory = results.response.entity;
+        builder.Prompts.text(session, 'Your choice was: ' + session.dialogData.subcategory + '. So let\'s move on with a short description. What\'s wrong exactly? In just a few words.');
     },
     // Asks for a description
     function (session, results) {
@@ -183,13 +183,16 @@ bot.dialog('createIncident', [
         }
         else if (confirmation == 'yes') {
             session.send('Nice! I will get to work. Don\'t worry, I will get back to you when there are any news.');
-            session.send(session.dialogData.short_description.toString());
-            var data = "{\"short_description\":\""+ session.dialogData.short_description.toString() +"\"}";
+            var data = "{\"caller_id\":\"idddd\"," +
+                        "\"category\":\""+session.dialogData.keyword.toString()+
+                        "\",\"subcategory\":\""+ session.dialogData.subcategory.toString() +
+                        "\",\"short_description\":\""+session.dialogData.short_description.toString()+
+                        "\",\"description\":\""+session.dialogData.description.toString()+
+                        "\",\"phone\":\""+session.dialogData.phone_nr.toString()+ "\"}";
             var urlString = 'https://dev27563.service-now.com/api/now/table/incident';
             var options = {
                 url: urlString,
                 method: 'POST',
-                //json: true,
                 body: data,
                 headers: headers,
                 auth: {
