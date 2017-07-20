@@ -127,6 +127,9 @@ bot.dialog('/', function (session) {
 
         request(options, callback);
     }
+    else if (session.message.text.includes("reopen incident")){
+        session.beginDialog('reopenIncident');
+    }
     else {
         session.send("I'm afraid I didn't understand. You can either list your incidents through the keyphrase: ''my incidents'' or search for a specific incident through ID.");
     }
@@ -208,7 +211,7 @@ bot.dialog('createIncident', [
             function callback(error, response, body) {
                 if (!error && response.statusCode == 201) {
 
-                    session.send("Positive response: " + body);
+                    session.send("Incident record created! The number is: "+ body.result.number);
                 }
             }
 
