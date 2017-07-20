@@ -184,7 +184,7 @@ bot.dialog('createIncident', [
         else if (confirmation == 'yes') {
             session.send('Nice! I will get to work. Don\'t worry, I will get back to you when there are any news.');
             var data = {
-                "caller_id":"System Administrator",
+                "caller_id": "javascript:gs.getUser().getFullName()",
                 "category":session.dialogData.keyword.toString(),
                 "subcategory":session.dialogData.subcategory.toString(),
                 "short_description":session.dialogData.short_description.toString(),
