@@ -250,16 +250,23 @@ bot.dialog('reopenIncident', [
             function callback(error, response, body) {
                 if (!error && response.statusCode == 200) {
                     var respJSON = JSON.parse(body);
-                    session.send(body);
                     var incidentCount = respJSON.result.length;
                     session.send("You currently have " + incidentCount + " resolved incidents.");
+                    var incidentChoices=[];
                     for (var i = 0; i < respJSON.result.length; i++) {
-                        session.send("Incident ID number " + (i + 1) + " is: " + respJSON.result[i].number + ", short description is: " + respJSON.result[i].short_description);
+                        incidentChoices[i] = respJSON.result[i].number;
+                        session.send("Incident number " + (i + 1) + " has the ID: " + respJSON.result[i].number + ", its short description is: " + respJSON.result[i].short_description);
                     }
+                    incidentChoices[incidentChoices.length] = 'more';
+                    builder.Prompts.choice(session, 'So, which Incident is it going to be? Or do you want more choices?', incidentChoices);
                 }
             }
             request(options, callback);
         }
+
+    },
+    function (session,results) {
+        session.send(results.response.entity)
     }
 ]);
 
