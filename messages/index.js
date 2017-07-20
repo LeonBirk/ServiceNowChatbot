@@ -188,7 +188,7 @@ bot.dialog('createIncident', [
                         "\",\"subcategory\":\""+ session.dialogData.subcategory.toString() +
                         "\",\"short_description\":\""+session.dialogData.short_description.toString()+
                         "\",\"description\":\""+session.dialogData.description.toString()+
-                        "\",\"phone\":\""+session.dialogData.phone_nr.toString()+ "\"}";
+                        "\",\"u_phone\":\""+session.dialogData.phone_nr.toString()+ "\"}";
             var urlString = 'https://dev27563.service-now.com/api/now/table/incident';
             var options = {
                 url: urlString,
