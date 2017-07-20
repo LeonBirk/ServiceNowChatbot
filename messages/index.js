@@ -250,7 +250,7 @@ bot.dialog('reopenIncident', [
             function callback(error, response, body) {
                 if (!error && response.statusCode == 200) {
                     var respJSON = JSON.parse(body);
-                    //session.send(body);
+                    session.send(body);
                     var incidentCount = respJSON.result.length;
                     session.send("You currently have " + incidentCount + " resolved incidents.");
                     for (var i = 0; i < respJSON.result.length; i++) {
