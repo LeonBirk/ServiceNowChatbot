@@ -55,13 +55,13 @@ bot.dialog('/', function (session) {
                     case "3":
                         state = "On Hold";
                         break;
-                    case "4":
+                    case "6":
                         state = "Resolved";
                         break;
-                    case "5":
+                    case "7":
                         state = "Closed";
                         break;
-                    case "6":
+                    case "8":
                         state = "Canceled";
                         break;
                     default:
@@ -237,7 +237,7 @@ bot.dialog('reopenIncident', [
             session.send('Okay, so these are the Incidents that have been closed recently. If the one you\'re looking for is among them, ask me about the INC number.' +
                 ' If you want to see more Incidents, tell me \'more\'.');
 
-            var urlString = 'https://dev27563.service-now.com/api/now/table/incident?sysparm_query=caller_id=javascript:gs.getUserID()';
+            var urlString = 'https://dev27563.service-now.com/api/now/table/incident?sysparm_query=caller_id=javascript:gs.getUserID()^incident_state=6';
             var options = {
                 url: urlString,
                 headers: headers,
