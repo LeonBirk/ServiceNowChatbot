@@ -192,7 +192,7 @@ bot.dialog('createIncident', [
 
              */
             var data = {
-                "caller_id":gs.getUser(),
+                "caller_id":"gs.getUser()",
                 "category":session.dialogData.keyword.toString(),
                 "subcategory":session.dialogData.subcategory.toString(),
                 "short_description":session.dialogData.short_description.toString(),
