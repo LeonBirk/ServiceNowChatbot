@@ -22,7 +22,7 @@ var categories = require('./categories.json');
 var isThatCorrect = ['yes', 'no'];
 
 bot.dialog('/', function (session) {
-    if (session.message.text.includes("open") && session.message.text.includes("incident")) {
+    if (session.message.text.includes("open") && session.message.text.includes("incident") && session.message.text.includes('new')) {
         session.beginDialog('createIncident');
     } else if (session.message.text.includes("INC"))
     {
