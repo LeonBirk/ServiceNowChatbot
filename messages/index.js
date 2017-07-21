@@ -274,7 +274,7 @@ bot.dialog('reopenIncident', [
         var incidents = session.dialogData.incidents;
         var incident_sys_id;
         for (var i = 0; i <incidents.length; i++){
-            if (incidents.[i] == incidentNumber){
+            if (incidents[i] == incidentNumber){
                 incident_sys_id = incidents[i].sys_id;
             }
         }
