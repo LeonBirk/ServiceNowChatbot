@@ -259,7 +259,7 @@ bot.dialog('reopenIncident', [
                         session.send("Incident ID: " + session.result[i].sys_id);
                         session.send("Incident number " + (i + 1) + " has the ID: " + respJSON.result[i].number + ", its short description is: " + respJSON.result[i].short_description);
                     }
-                    session.dialogData.incidents = incidents;
+                    //session.dialogData.incidents = incidents;
                     incidentChoices[incidentChoices.length] = 'more';
                     builder.Prompts.choice(session, 'So, which Incident is it going to be? Or do you want more choices?', incidentChoices);
                 }
