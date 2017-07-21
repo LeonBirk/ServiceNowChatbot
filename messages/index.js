@@ -278,7 +278,7 @@ bot.dialog('reopenIncident', [
                 incident_sys_id = incidents[i].sys_id;
             }
         }
-        console.log(incident_sys_id);
+        session.send(incident_sys_id);
         var urlString = 'https://dev27563.service-now.com/api/now/table/incident/' + incident_sys_id;
         var data = {"incident_state":"2"};
         var options = {
