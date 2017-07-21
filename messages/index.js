@@ -270,8 +270,14 @@ bot.dialog('reopenIncident', [
     },
     function (session,results) {
         //get sys_id from json object incidents holen und per PUT updaten, description anfordern
-        session.send(results.response.entity);
-        var incident_sys_id = session.dialogData.incidents.number[results.response.entity.toString()].sys_id;
+        var incidentNumber = results.response.entity;
+        var incidents = session.dialogData.incidents;
+        var incident_sys_id;
+        for (var i = 0; i <incidents.length; i++){
+            if (incidents.[i] == incidentNumber){
+                incident_sys_id = incidents[i].sys_id;
+            }
+        }
         console.log(incident_sys_id);
         var urlString = 'https://dev27563.service-now.com/api/now/table/incident/' + incident_sys_id;
         var data = {"incident_state":"2"};
