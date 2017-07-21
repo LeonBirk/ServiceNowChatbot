@@ -141,7 +141,7 @@ bot.dialog('createIncident', [
     // Verifies entry into Conversation
     function (session) {
 
-        builder.Prompts.choice(session, 'I have understood that you want to create a new Incident, is that correct?', isThatCorrect, builder.ListStyle.button);
+        builder.Prompts.choice(session, 'I have understood that you want to create a new Incident, is that correct?', isThatCorrect, "button");
     },
     // if the response is negative, returns to default dialog; if positive: ask for a keyword (possible keywords listed in categories.json
     function (session, results) {
