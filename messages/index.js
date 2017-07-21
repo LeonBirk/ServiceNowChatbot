@@ -257,9 +257,10 @@ bot.dialog('reopenIncident', [
                     for (var i = 0; i < respJSON.result.length; i++) {
                         incidentChoices[i] = respJSON.result[i].number;
                         session.send(respJSON.result[i].sys_id);
+                        incidents[i] = {name : respJSON.result[i].number, id : respJSON.result[i].sys_id};
                         session.send("Incident number " + (i + 1) + " has the ID: " + respJSON.result[i].number + ", its short description is: " + respJSON.result[i].short_description);
                     }
-                    //session.dialogData.incidents = incidents;
+                    session.dialogData.incidents = incidents;
                     incidentChoices[incidentChoices.length] = 'more';
                     builder.Prompts.choice(session, 'So, which Incident is it going to be? Or do you want more choices?', incidentChoices);
                 }
@@ -274,8 +275,8 @@ bot.dialog('reopenIncident', [
         var incidents = session.dialogData.incidents;
         var incident_sys_id;
         for (var i = 0; i <incidents.length; i++){
-            if (incidents[i] == incidentNumber){
-                incident_sys_id = incidents[i].sys_id;
+            if (incidents[i].name === incidentNumber){
+                incident_sys_id = incidents[i].id;
             }
         }
         // PUT request to update the correspoding incident
