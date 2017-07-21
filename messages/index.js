@@ -274,9 +274,8 @@ bot.dialog('reopenIncident', [
                         var incidentChoices = [];
                         for (var i = 0; i < respJSON.result.length; i++) {
                             incidentChoices[i] = respJSON.result[i].number;
-                            session.send(respJSON.result[i].sys_id);
                             incidents[i] = {name: respJSON.result[i].number, id: respJSON.result[i].sys_id};
-                            session.send("The Incident number is: " + respJSON.result[i].number + ", its short description is: " + respJSON.result[i].short_description);
+                            session.send("The Incident number is: \'" + respJSON.result[i].number + "\', its short description is: \'" + respJSON.result[i].short_description +"\'");
                         }
                         session.dialogData.incidents = incidents;
                         incidentChoices[incidentChoices.length] = 'more';
@@ -293,15 +292,21 @@ bot.dialog('reopenIncident', [
         var incidentNumber = results.response.entity;
         var incidents = session.dialogData.incidents;
         var incident_sys_id;
-        for (var i = 0; i <incidents.length; i++){
-            if (incidents[i].name === incidentNumber){
+        for (var i = 0; i < incidents.length; i++) {
+            if (incidents[i].name === incidentNumber) {
                 incident_sys_id = incidents[i].id;
             }
         }
         session.dialogData.sys_id_to_update = incident_sys_id;
+        builder.Prompts.text(session, "Please provide a reason for reopening the incident, so we can further investigate the issue.");
+    },
+
+    function (session, results){
+
+        var description = results.response;
         // PUT request to update the correspoding incident
         var urlString = 'https://dev27563.service-now.com/api/now/table/incident/' + incident_sys_id;
-        var data = {"incident_state":"2"};
+        var data = {"incident_state":"2", "description":description.toString()};
         var options = {
             url: urlString,
             method: 'PUT',
@@ -315,7 +320,7 @@ bot.dialog('reopenIncident', [
         };
 
         function callback(error, response, body) {
-            if (!error && response.statusCode == 201) {
+            if (!error && response.statusCode == 200) {
                 session.send("Incident reopened successfully!")
             }
         }
