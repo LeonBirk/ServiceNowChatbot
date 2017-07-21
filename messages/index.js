@@ -24,7 +24,8 @@ var isThatCorrect = ['yes', 'no'];
 bot.dialog('/', function (session) {
     if (session.message.text.includes("open") && session.message.text.includes("incident") && session.message.text.includes('new')) {
         session.beginDialog('createIncident');
-    } else if (session.message.text.includes("INC"))
+    }
+    else if (session.message.text.includes("INC"))
     {
         session.send("Getting Incident data...");
         var incidentID = session.message.text;
@@ -135,12 +136,12 @@ bot.dialog('/', function (session) {
     }
 });
 
-// Waterfall dialogue that gets the information needed to create a ticket in ServiceNow and uploads it
+// Waterfall dialog that gets the information needed to create a ticket in ServiceNow and uploads it
 bot.dialog('createIncident', [
     // Verifies entry into Conversation
     function (session) {
 
-        builder.Prompts.choice(session, 'I have understood that you want to create a new Incident, is that correct?', isThatCorrect);
+        builder.Prompts.choice(session, 'I have understood that you want to create a new Incident, is that correct?', isThatCorrect, builder.ListStyle.button);
     },
     // if the response is negative, returns to default dialog; if positive: ask for a keyword (possible keywords listed in categories.json
     function (session, results) {
@@ -224,7 +225,7 @@ bot.dialog('createIncident', [
     }
 ]);
 
-// Waterfall dialogue that is triggered if a user wants to reopen an incident and guides him through the process
+// Waterfall dialog that is triggered if a user wants to reopen an incident and guides him through the process
 bot.dialog('reopenIncident', [
     function(session){
         builder.Prompts.choice(session, 'I have understood you want to reopen an Incident, is that correct?', isThatCorrect);
@@ -320,7 +321,7 @@ bot.dialog('reopenIncident', [
 
         function callback(error, response, body) {
             if (!error && response.statusCode == 200) {
-                session.send("Incident reopened successfully!")
+                session.endDialog("Incident reopened successfully!")
             }
         }
         request(options, callback);
@@ -328,6 +329,22 @@ bot.dialog('reopenIncident', [
     }
 ]);
 
+// Waterfall dialog for ordering a hardware device
+bot.dialog('orderHardware', [
+    // Verifies entry into Conversation
+    function (session) {
+
+        builder.Prompts.choice(session, 'I have understood that you want to order a device, is that correct?', isThatCorrect);
+    },
+
+    function (session,result) {
+        if (result.response.entity.toString() == 'no'){
+            session.endDialog('Ok, how else might I be of service to you?')
+        } else {
+            builder.Prompts.choice(session, 'Okay, great! These are the categories of hardware devices available for you: ', isThatCorrect)
+        }
+    }
+]);
 if (useEmulator) {
     var restify = require('restify');
     var server = restify.createServer();
