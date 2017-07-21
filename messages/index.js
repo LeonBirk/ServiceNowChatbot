@@ -261,7 +261,6 @@ bot.dialog('reopenIncident', [
                         var incidentChoices=[];
                         for (var i = 0; i < respJSON.result.length; i++) {
                             incidentChoices[i] = respJSON.result[i].number;
-                            session.send(respJSON.result[i].sys_id);
                             incidents[i] = {name : respJSON.result[i].number, id : respJSON.result[i].sys_id};
                             session.send("Incident number " + (i + 1) + " has the ID: " + respJSON.result[i].number + ", its short description is: " + respJSON.result[i].short_description);
                         }
@@ -305,7 +304,7 @@ bot.dialog('reopenIncident', [
 
         var description = results.response;
         // PUT request to update the correspoding incident
-        var urlString = 'https://dev27563.service-now.com/api/now/table/incident/' + incident_sys_id;
+        var urlString = 'https://dev27563.service-now.com/api/now/table/incident/' + session.dialogData.sys_id_to_update;
         var data = {"incident_state":"2", "description":description.toString()};
         var options = {
             url: urlString,
