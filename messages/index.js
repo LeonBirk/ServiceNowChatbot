@@ -231,13 +231,16 @@ bot.dialog('reopenIncident', [
     },
     function(session, results){
         var confirmation = results.response.entity.toString();
+        // User does not want to reopen an incident --> leave dialog and go back to default
         if (confirmation == 'no'){
             session.endDialog('Ok! So how else can I help you?');
         } else {
-            session.send('Okay, so these are the Incidents that have been closed recently. If the one you\'re looking for is among them, ask me about the INC number.' +
+            // List the incidents available for reopening
+            session.send('Okay, so these are the Incidents that have been closed recently. ' +
+                'If the one you\'re looking for is among them, ask me about the INC number.' +
                 ' If you want to see more Incidents, tell me \'more\'.');
 
-            var urlString = 'https://dev27563.service-now.com/api/now/table/incident?sysparm_query=caller_id=javascript:gs.getUserID()^incident_state=6';
+            var urlString = 'https://dev27563.service-now.com/api/now/table/incident?sysparm_query=caller_id=javascript:gs.getUserID()^incident_state=7';
             var options = {
                 url: urlString,
                 headers: headers,
@@ -251,18 +254,34 @@ bot.dialog('reopenIncident', [
                 if (!error && response.statusCode == 200) {
                     var respJSON = JSON.parse(body);
                     var incidentCount = respJSON.result.length;
-                    session.send("You currently have " + incidentCount + " resolved incidents.");
-                    var incidents= [];
-                    var incidentChoices=[];
-                    for (var i = 0; i < respJSON.result.length; i++) {
-                        incidentChoices[i] = respJSON.result[i].number;
-                        session.send(respJSON.result[i].sys_id);
-                        incidents[i] = {name : respJSON.result[i].number, id : respJSON.result[i].sys_id};
-                        session.send("Incident number " + (i + 1) + " has the ID: " + respJSON.result[i].number + ", its short description is: " + respJSON.result[i].short_description);
+                    // Different messages for Incident counts if lower than 2
+                    if(respJSON.result.length > 1){
+                        session.send("You currently have " + incidentCount + " closed incidents.");
+                        var incidents= [];
+                        var incidentChoices=[];
+                        for (var i = 0; i < respJSON.result.length; i++) {
+                            incidentChoices[i] = respJSON.result[i].number;
+                            session.send(respJSON.result[i].sys_id);
+                            incidents[i] = {name : respJSON.result[i].number, id : respJSON.result[i].sys_id};
+                            session.send("Incident number " + (i + 1) + " has the ID: " + respJSON.result[i].number + ", its short description is: " + respJSON.result[i].short_description);
+                        }
+                        session.dialogData.incidents = incidents;
+                        incidentChoices[incidentChoices.length] = 'more';
+                        builder.Prompts.choice(session, 'So, which Incident is it going to be? Or do you want more choices?', incidentChoices);
+                    } else {
+                        session.send("You currently have " + incidentCount + " closed incident.");
+                        var incidents = [];
+                        var incidentChoices = [];
+                        for (var i = 0; i < respJSON.result.length; i++) {
+                            incidentChoices[i] = respJSON.result[i].number;
+                            session.send(respJSON.result[i].sys_id);
+                            incidents[i] = {name: respJSON.result[i].number, id: respJSON.result[i].sys_id};
+                            session.send("The Incident number is: " + respJSON.result[i].number + ", its short description is: " + respJSON.result[i].short_description);
+                        }
+                        session.dialogData.incidents = incidents;
+                        incidentChoices[incidentChoices.length] = 'more';
+                        builder.Prompts.choice(session, 'So, do you want to reopen it? Or do you want more choices?', incidentChoices);
                     }
-                    session.dialogData.incidents = incidents;
-                    incidentChoices[incidentChoices.length] = 'more';
-                    builder.Prompts.choice(session, 'So, which Incident is it going to be? Or do you want more choices?', incidentChoices);
                 }
             }
             request(options, callback);
@@ -279,8 +298,8 @@ bot.dialog('reopenIncident', [
                 incident_sys_id = incidents[i].id;
             }
         }
+        session.dialogData.sys_id_to_update = incident_sys_id;
         // PUT request to update the correspoding incident
-        session.send(incident_sys_id);
         var urlString = 'https://dev27563.service-now.com/api/now/table/incident/' + incident_sys_id;
         var data = {"incident_state":"2"};
         var options = {
@@ -296,8 +315,8 @@ bot.dialog('reopenIncident', [
         };
 
         function callback(error, response, body) {
-            session.send (body);
-            if (!error && response.statusCode == 200) {
+            if (!error && response.statusCode == 201) {
+                session.send("Incident reopened successfully!")
             }
         }
         request(options, callback);
