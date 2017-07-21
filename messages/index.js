@@ -256,7 +256,7 @@ bot.dialog('reopenIncident', [
                     var incidentChoices=[];
                     for (var i = 0; i < respJSON.result.length; i++) {
                         incidentChoices[i] = respJSON.result[i].number;
-                        session.send(JSON.stringify(respJSON.result[i].sys_id));
+                        session.send(respJSON.result[i].sys_id);
                         session.send("Incident number " + (i + 1) + " has the ID: " + respJSON.result[i].number + ", its short description is: " + respJSON.result[i].short_description);
                     }
                     //session.dialogData.incidents = incidents;
