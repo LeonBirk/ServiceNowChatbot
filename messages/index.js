@@ -232,7 +232,7 @@ bot.dialog('reopenIncident', [
     function(session, results){
         var confirmation = results.response.entity.toString();
         if (confirmation == 'no'){
-            session.send('Ok! So how else can I help you?');
+            session.endDialog('Ok! So how else can I help you?');
         } else {
             session.send('Okay, so these are the Incidents that have been closed recently. If the one you\'re looking for is among them, ask me about the INC number.' +
                 ' If you want to see more Incidents, tell me \'more\'.');
@@ -256,7 +256,7 @@ bot.dialog('reopenIncident', [
                     var incidentChoices=[];
                     for (var i = 0; i < respJSON.result.length; i++) {
                         incidentChoices[i] = respJSON.result[i].number;
-                        incidents[i]=respJSON[i];
+                        incidents[i]=respJSON.result[i];
                         session.send("Incident number " + (i + 1) + " has the ID: " + respJSON.result[i].number + ", its short description is: " + respJSON.result[i].short_description);
                     }
                     session.dialogData.incidents = incidents;
@@ -269,7 +269,7 @@ bot.dialog('reopenIncident', [
 
     },
     function (session,results) {
-        //get sys_id from json object incidents holen und per PUT updaten, description anfordern
+        //get sys_id from json, through looping the array of choices
         var incidentNumber = results.response.entity;
         var incidents = session.dialogData.incidents;
         var incident_sys_id;
@@ -278,6 +278,7 @@ bot.dialog('reopenIncident', [
                 incident_sys_id = incidents[i].sys_id;
             }
         }
+        // PUT request to update the correspoding incident
         session.send(incident_sys_id);
         var urlString = 'https://dev27563.service-now.com/api/now/table/incident/' + incident_sys_id;
         var data = {"incident_state":"2"};
