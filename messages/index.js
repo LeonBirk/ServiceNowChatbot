@@ -19,7 +19,6 @@ var connector = useEmulator ? new builder.ChatConnector() : new botbuilder_azure
 var bot = new builder.UniversalBot(connector);
 bot.localePath(path.join(__dirname, './locale'));
 var categories = require('./categories.json');
-var hardware = require('./hardware.json');
 var isThatCorrect = ['yes', 'no'];
 
 bot.dialog('/', function (session) {
@@ -131,6 +130,8 @@ bot.dialog('/', function (session) {
     }
     else if (session.message.text.includes("reopen incident")){
         session.beginDialog('reopenIncident');
+    } else if (session.message.text.includes("order hardware")){
+        sessions.beginDialog('orderHardware');
     } else if (session.message.text.includes("order hardware")){
         sessions.beginDialog('orderHardware');
     }
@@ -344,15 +345,8 @@ bot.dialog('orderHardware', [
         if (result.response.entity.toString() == 'no'){
             session.endDialog('Ok, how else might I be of service to you?')
         } else {
-            var choices = hardware.choices;
-            builder.Prompts.choice(session, 'Okay, great! These are the categories of hardware devices available for you: ', choices)
+            builder.Prompts.choice(session, 'Okay, great! These are the categories of hardware devices available for you: ', isThatCorrect)
         }
-    },
-
-    function (session, result){
-        var category = result.response.entity;
-        var choices = hardware[category];
-        builder.Prompts.choice(session, 'So you want to see the available ' + category.toString() + '? No Problem, here you are :) Please select which type you want to order.', choices);
     }
 ]);
 if (useEmulator) {
