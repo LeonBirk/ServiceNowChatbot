@@ -129,17 +129,17 @@ bot.dialog('/', function (session) {
 
         request(options, callback);
     }
-    else if (session.message.text.includes("reopen incident")){
+    else if (session.message.text.includes("reopen incident")) {
         session.beginDialog('reopenIncident');
-    } else if (session.message.text.includes("order hardware")){
-        sessions.beginDialog('orderHardware');
-    } else if (session.message.text.includes("order hardware")){
+    }
+    else if (session.message.text.includes("order hardware")){
         session.send("starting order hardware dialog:");
-        sessions.beginDialog('orderHardware');
+        session.beginDialog('orderHardware');
     }
     else {
+        // TODO: make this a choice list, or at least format correctly
         session.send("I'm afraid I didn't understand. " +
-            "I am currently somewhat lacking flexibility. The methods available for usage are: \n" +
+            "I am currently somewhat lacking flexibility. The methods available for usage are: \r" +
             "''open new incident'' - Guides you through the process of creating an incident on your behalf.\n" +
             "''reopen incident'' - Gives you the list of your incidents eligible for reopening and let''s you do it directly in chat.\n" +
             "''order hardware'' - The devices available for you can be ordered through this option.\n" +
