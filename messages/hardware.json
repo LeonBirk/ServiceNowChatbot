@@ -1,0 +1,30 @@
+{
+  "Laptops": [
+      "Dell",
+      "Apple",
+      "Acer",
+      "Sony",
+      "Fujitsu"
+    ],
+  "Tablets": [
+      "Microsoft",
+      "Apple",
+      "Sony",
+      "Amazon",
+      "Samsung"
+    ],
+  "Phones": [
+      "Apple",
+      "Samsung",
+      "Microsoft",
+      "Sony",
+      "Huawei"
+    ],
+  "Accessories": [
+      "Headphones",
+      "Mouses",
+      "Keyboards",
+      "Power cables",
+      "Phone cases"
+    ]
+}
