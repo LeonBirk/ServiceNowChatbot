@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8a191f03-0956-421e-ad62-a81abb0cfdf2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/index.js" afterPath="$PROJECT_DIR$/messages/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,11 +18,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/messages/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="199">
-              <caret line="358" column="29" lean-forward="true" selection-start-line="358" selection-start-column="29" selection-end-line="358" selection-end-column="29" />
+              <caret line="358" column="67" lean-forward="false" selection-start-line="358" selection-start-column="67" selection-end-line="358" selection-end-column="67" />
               <folding>
                 <element signature="e#979#1033#0" expanded="false" />
                 <element signature="e#1085#2913#0" expanded="false" />
@@ -56,7 +57,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hardware.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="hardware.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/messages/hardware.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="176">
@@ -75,8 +76,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/messages/index.js" />
         <option value="$PROJECT_DIR$/messages/hardware.json" />
+        <option value="$PROJECT_DIR$/messages/index.js" />
       </list>
     </option>
   </component>
@@ -240,7 +241,7 @@
       <updated>1500391151746</updated>
       <workItem from="1500391153496" duration="1725000" />
       <workItem from="1500394895553" duration="91000" />
-      <workItem from="1500914059272" duration="9954000" />
+      <workItem from="1500914059272" duration="10105000" />
     </task>
     <task id="LOCAL-00001" summary="retry with hardware categories from json">
       <created>1500920161219</created>
@@ -382,11 +383,18 @@
       <option name="project" value="LOCAL" />
       <updated>1500930537952</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="ORDER HARDWARE: 0.4155 json restructure + parsing fix">
+      <created>1500930543306</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1500930543306</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11770000" />
+    <option name="totallyTimeSpent" value="11921000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -527,10 +535,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/messages/hardware.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/messages/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
-          <caret line="358" column="29" lean-forward="true" selection-start-line="358" selection-start-column="29" selection-end-line="358" selection-end-column="29" />
+          <caret line="358" column="67" lean-forward="false" selection-start-line="358" selection-start-column="67" selection-end-line="358" selection-end-column="67" />
           <folding>
             <element signature="e#979#1033#0" expanded="false" />
             <element signature="e#1085#2913#0" expanded="false" />
@@ -541,14 +557,6 @@
             <element signature="e#10729#10862#0" expanded="false" />
             <element signature="e#10896#14275#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/messages/hardware.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
