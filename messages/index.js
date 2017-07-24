@@ -23,7 +23,7 @@ var hardware = require('./hardware.json');
 var isThatCorrect = ['yes', 'no'];
 
 bot.dialog('/', function (session) {
-    var msg = session.message.text;
+    var msg = session.message.text.toString();
     if (msg.includes("open") && msg.includes("incident") && msg.includes('new')) {
         session.beginDialog('createIncident');
     }
