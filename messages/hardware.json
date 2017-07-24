@@ -1,5 +1,5 @@
 {
-  "Laptops": {
+  "Laptops": [
 
     "Dell": [
       "1",
@@ -13,8 +13,8 @@
       "5",
       "6"
     ]
-
-  },
+]
+  ,
   "Tablets": [
     "Microsoft",
     "Apple",
