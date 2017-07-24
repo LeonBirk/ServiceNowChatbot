@@ -352,7 +352,7 @@ bot.dialog('orderHardware', [
         if (result.response.entity.toString() == 'no'){
             session.endDialog('Ok, how else might I be of service to you?')
         } else {
-            builder.Prompts.choice(session, 'Okay, great! These are the categories of hardware devices available for you: ', isThatCorrect)
+            builder.Prompts.choice(session, 'Okay, great! These are the categories of hardware devices available for you: ', hardware)
         }
     }
 ]);
