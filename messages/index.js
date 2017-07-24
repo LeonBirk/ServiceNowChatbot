@@ -151,6 +151,7 @@ bot.dialog('createIncident', [
     // Verifies entry into Conversation
     function (session) {
 
+        // TODO: change the isThatCorrect prompts to Confirmation Prompts
         builder.Prompts.choice(session, 'I have understood that you want to create a new Incident, is that correct?', isThatCorrect, "button");
     },
     // if the response is negative, returns to default dialog; if positive: ask for a keyword (possible keywords listed in categories.json
@@ -356,7 +357,7 @@ bot.dialog('orderHardware', [
 
     function (session, result){
         session.dialogData.hardwareCategory = result.response.entity;
-        var choices = hardware[session.dialogData.hardwareCategory];
+        var choices = JSON.parse(hardware[session.dialogData.hardwareCategory]);
         builder.Prompts.choice(session, 'Nice! What type of device do you want to order?', choices)
     },
 

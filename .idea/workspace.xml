@@ -21,16 +21,17 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/messages/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="364" column="73" lean-forward="false" selection-start-line="364" selection-start-column="68" selection-end-line="364" selection-end-column="73" />
+            <state relative-caret-position="176">
+              <caret line="359" column="79" lean-forward="false" selection-start-line="359" selection-start-column="79" selection-end-line="359" selection-end-column="79" />
               <folding>
                 <element signature="e#980#1034#0" expanded="false" />
                 <element signature="e#1090#2918#0" expanded="false" />
                 <element signature="e#2979#4151#0" expanded="false" />
                 <element signature="e#4222#5027#0" expanded="false" />
-                <element signature="e#10637#15686#0" expanded="false" />
-                <element signature="e#10660#10793#0" expanded="false" />
-                <element signature="e#10825#14198#0" expanded="false" />
+                <element signature="e#6096#10567#0" expanded="false" />
+                <element signature="e#10711#15760#0" expanded="false" />
+                <element signature="e#10734#10867#0" expanded="false" />
+                <element signature="e#10899#14272#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -240,7 +241,7 @@
       <updated>1500391151746</updated>
       <workItem from="1500391153496" duration="1725000" />
       <workItem from="1500394895553" duration="91000" />
-      <workItem from="1500914059272" duration="6861000" />
+      <workItem from="1500914059272" duration="7964000" />
     </task>
     <task id="LOCAL-00001" summary="retry with hardware categories from json">
       <created>1500920161219</created>
@@ -333,11 +334,18 @@
       <option name="project" value="LOCAL" />
       <updated>1500926838457</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="ORDER HARDWARE: 0.412 json structure fix">
+      <created>1500927082019</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1500927082019</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8677000" />
+    <option name="totallyTimeSpent" value="9780000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -405,14 +413,15 @@
     <MESSAGE value="ORDER HARDWARE: 0.4 new json structure" />
     <MESSAGE value="ORDER HARDWARE: 0.41 further implemented dialog" />
     <MESSAGE value="ORDER HARDWARE: 0.411 json structure fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="ORDER HARDWARE: 0.411 json structure fix" />
+    <MESSAGE value="ORDER HARDWARE: 0.412 json structure fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="ORDER HARDWARE: 0.412 json structure fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/messages/index.js</url>
-          <line>243</line>
+          <line>244</line>
           <properties />
         </line-breakpoint>
       </breakpoints>
@@ -430,9 +439,10 @@
             <element signature="e#1090#2918#0" expanded="false" />
             <element signature="e#2979#4151#0" expanded="false" />
             <element signature="e#4222#5027#0" expanded="false" />
-            <element signature="e#10637#15686#0" expanded="false" />
-            <element signature="e#10660#10793#0" expanded="false" />
-            <element signature="e#10825#14198#0" expanded="false" />
+            <element signature="e#6096#10567#0" expanded="false" />
+            <element signature="e#10711#15760#0" expanded="false" />
+            <element signature="e#10734#10867#0" expanded="false" />
+            <element signature="e#10899#14272#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -446,9 +456,10 @@
             <element signature="e#1090#2918#0" expanded="false" />
             <element signature="e#2979#4151#0" expanded="false" />
             <element signature="e#4222#5027#0" expanded="false" />
-            <element signature="e#10637#15686#0" expanded="false" />
-            <element signature="e#10660#10793#0" expanded="false" />
-            <element signature="e#10825#14198#0" expanded="false" />
+            <element signature="e#6096#10567#0" expanded="false" />
+            <element signature="e#10711#15760#0" expanded="false" />
+            <element signature="e#10734#10867#0" expanded="false" />
+            <element signature="e#10899#14272#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -479,16 +490,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/messages/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="364" column="73" lean-forward="false" selection-start-line="364" selection-start-column="68" selection-end-line="364" selection-end-column="73" />
+        <state relative-caret-position="176">
+          <caret line="359" column="79" lean-forward="false" selection-start-line="359" selection-start-column="79" selection-end-line="359" selection-end-column="79" />
           <folding>
             <element signature="e#980#1034#0" expanded="false" />
             <element signature="e#1090#2918#0" expanded="false" />
             <element signature="e#2979#4151#0" expanded="false" />
             <element signature="e#4222#5027#0" expanded="false" />
-            <element signature="e#10637#15686#0" expanded="false" />
-            <element signature="e#10660#10793#0" expanded="false" />
-            <element signature="e#10825#14198#0" expanded="false" />
+            <element signature="e#6096#10567#0" expanded="false" />
+            <element signature="e#10711#15760#0" expanded="false" />
+            <element signature="e#10734#10867#0" expanded="false" />
+            <element signature="e#10899#14272#0" expanded="false" />
           </folding>
         </state>
       </provider>
