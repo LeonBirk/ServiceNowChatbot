@@ -23,11 +23,10 @@ var hardware = require('./hardware.json');
 var isThatCorrect = ['yes', 'no'];
 
 bot.dialog('/', function (session) {
-    var msg = session.message.text.toString();
-    if (msg.includes("open") && msg.includes("incident") && msg.includes('new')) {
+    if (session.message.text.includes("open") && session.message.text.includes("incident") && session.message.text.includes('new')) {
         session.beginDialog('createIncident');
     }
-    else if (msg.includes("INC"))
+    else if (session.message.text.includes("INC"))
     {
         session.send("Getting Incident data...");
         var incidentID = session.message.text;
@@ -75,7 +74,7 @@ bot.dialog('/', function (session) {
         }
 
         request(options, callback);
-    } else if (msg.includes("my incidents"))
+    } else if (session.message.text.includes("my incidents"))
     {
         session.send("Getting your personal incidents...");
         var urlString = 'https://dev27563.service-now.com/api/now/table/incident?sysparm_query=caller_id=681ccaf9c0a8016400b98a06818d57c7';
@@ -103,7 +102,7 @@ bot.dialog('/', function (session) {
 
         request(options, callback);
     }
-    else if (msg.includes("order sales laptop"))
+    else if (session.message.text.includes("order sales laptop"))
     {
         session.send("Adding to cart: Sales Laptop...");
         var body = {'sysparm_quantity': '1'};
@@ -130,9 +129,9 @@ bot.dialog('/', function (session) {
 
         request(options, callback);
     }
-    else if (msg.includes("reopen incident")){
+    else if (session.message.text.includes("reopen incident")){
         session.beginDialog('reopenIncident');
-    } else if (msg.includes("order hardware")){
+    } else if (session.message.text.includes("order hardware")){
         sessions.beginDialog('orderHardware');
     }
     else {
