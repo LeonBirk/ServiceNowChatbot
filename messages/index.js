@@ -356,13 +356,13 @@ bot.dialog('orderHardware', [
 
     function (session, result){
         session.dialogData.hardwareCategory = result.response.entity;
-        var choices = hardware[session.dialogData.hardwareCategory].value;
+        var choices = hardware[session.dialogData.hardwareCategory];
         builder.Prompts.choice(session, 'Nice! What type of device do you want to order?', choices)
     },
 
     function (session, result){
         session.dialogData.hardwareSubcategory = result.response.entity;
-        var choices = hardware.session.dialogData.hardwareCategory[session.dialogData.hardwareSubcategory];
+        var choices = hardware[session.dialogData.hardwareCategory].value;
         session.send(session.dialogData.hardwareSubcategory.toString());
         builder.Prompts.choice(session, "So which specific device is it going to be?", choices);
     }
