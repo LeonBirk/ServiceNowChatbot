@@ -134,6 +134,7 @@ bot.dialog('/', function (session) {
     } else if (session.message.text.includes("order hardware")){
         sessions.beginDialog('orderHardware');
     } else if (session.message.text.includes("order hardware")){
+        session.send("starting order hardware dialog:");
         sessions.beginDialog('orderHardware');
     }
     else {
@@ -338,7 +339,7 @@ bot.dialog('reopenIncident', [
 bot.dialog('orderHardware', [
     // Verifies entry into Conversation
     function (session) {
-
+        session.send("order hardware dialog started");
         builder.Prompts.choice(session, 'I have understood that you want to order a device, is that correct?', isThatCorrect);
     },
 
