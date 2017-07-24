@@ -1,6 +1,8 @@
 {
-  "Laptops": [
-      "Dell",
+  "Laptops": [{
+    "Dell": ["1","2","3"]
+  },
+
       "Apple",
       "Acer",
       "Sony",
