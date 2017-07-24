@@ -21,8 +21,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/messages/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="358" column="67" lean-forward="false" selection-start-line="358" selection-start-column="67" selection-end-line="358" selection-end-column="67" />
+            <state relative-caret-position="221">
+              <caret line="359" column="30" lean-forward="true" selection-start-line="359" selection-start-column="30" selection-end-line="359" selection-end-column="30" />
               <folding>
                 <element signature="e#979#1033#0" expanded="false" />
                 <element signature="e#1085#2913#0" expanded="false" />
@@ -241,7 +241,7 @@
       <updated>1500391151746</updated>
       <workItem from="1500391153496" duration="1725000" />
       <workItem from="1500394895553" duration="91000" />
-      <workItem from="1500914059272" duration="10105000" />
+      <workItem from="1500914059272" duration="10364000" />
     </task>
     <task id="LOCAL-00001" summary="retry with hardware categories from json">
       <created>1500920161219</created>
@@ -390,11 +390,18 @@
       <option name="project" value="LOCAL" />
       <updated>1500930543306</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="ORDER HARDWARE: 0.4156 json restructure + parsing fixfix">
+      <created>1500930704043</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1500930704043</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11921000" />
+    <option name="totallyTimeSpent" value="12180000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -469,7 +476,8 @@
     <MESSAGE value="ORDER HARDWARE: 0.415 json restructure" />
     <MESSAGE value="ORDER HARDWARE: 0.415 json restructure + parsing" />
     <MESSAGE value="ORDER HARDWARE: 0.4155 json restructure + parsing fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="ORDER HARDWARE: 0.4155 json restructure + parsing fix" />
+    <MESSAGE value="ORDER HARDWARE: 0.4156 json restructure + parsing fixfix" />
+    <option name="LAST_COMMIT_MESSAGE" value="ORDER HARDWARE: 0.4156 json restructure + parsing fixfix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -545,8 +553,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/messages/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="358" column="67" lean-forward="false" selection-start-line="358" selection-start-column="67" selection-end-line="358" selection-end-column="67" />
+        <state relative-caret-position="221">
+          <caret line="359" column="30" lean-forward="true" selection-start-line="359" selection-start-column="30" selection-end-line="359" selection-end-column="30" />
           <folding>
             <element signature="e#979#1033#0" expanded="false" />
             <element signature="e#1085#2913#0" expanded="false" />

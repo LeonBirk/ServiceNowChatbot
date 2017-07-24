@@ -356,7 +356,8 @@ bot.dialog('orderHardware', [
 
     function (session, result) {
         session.dialogData.hardwareCategory = result.response.entity;
-        var choices = hardware[session.dialogData.hardwareCategory];
+        var temp = hardware[session.dialogData.hardwareCategory];
+        var choices = temp[0];
         builder.Prompts.choice(session, 'Nice! What type of device do you want to order?', choices)
     },
 
