@@ -133,7 +133,6 @@ bot.dialog('/', function (session) {
         session.beginDialog('reopenIncident');
     }
     else if (session.message.text.includes("order hardware")){
-        session.send("starting order hardware dialog:");
         session.beginDialog('orderHardware');
     }
     else {
@@ -160,7 +159,7 @@ bot.dialog('createIncident', [
         if (confirmation === 'no') {
             session.endDialog('Ok! So how can I help you?');
         } else {
-            builder.Prompts.text(session, 'Okay! So let\'s start with a keyword. What is the application, product or service that is causing a problem for you?');
+            builder.Prompts.choice(session, 'Okay! So let\'s start with a keyword. What is the application, product or service that is causing a problem for you?', categories);
         }
     },
     // Returns a list of choices for the selected category
@@ -344,7 +343,6 @@ bot.dialog('reopenIncident', [
 bot.dialog('orderHardware', [
     // Verifies entry into Conversation
     function (session) {
-        session.send("order hardware dialog started");
         builder.Prompts.choice(session, 'I have understood that you want to order a device, is that correct?', isThatCorrect);
     },
 
@@ -354,6 +352,17 @@ bot.dialog('orderHardware', [
         } else {
             builder.Prompts.choice(session, 'Okay, great! These are the categories of hardware devices available for you: ', hardware)
         }
+    },
+
+    function (session, result){
+        session.dialogData.hardwareCategory = result.response.entity;
+        var choices = hardware[session.dialogData.hardwareCategory];
+        builder.Prompts.choice(session, 'Nice! What type of device do you want to order?', choices)
+    },
+
+    function (session, result){
+        session.dialogData.hardwareSubcategory = result.response.entity;
+        session.send(session.dialogData.hardwareSubcategory.toString());
     }
 ]);
 if (useEmulator) {
