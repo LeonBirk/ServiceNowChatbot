@@ -138,7 +138,12 @@ bot.dialog('/', function (session) {
         sessions.beginDialog('orderHardware');
     }
     else {
-        session.send("I'm afraid I didn't understand. You can either list your incidents through the keyphrase: ''my incidents'' or search for a specific incident through ID.");
+        session.send("I'm afraid I didn't understand. " +
+            "I am currently somewhat lacking flexibility. The methods available for usage are: \n" +
+            "''open new incident'' - Guides you through the process of creating an incident on your behalf.\n" +
+            "''reopen incident'' - Gives you the list of your incidents eligible for reopening and let''s you do it directly in chat.\n" +
+            "''order hardware'' - The devices available for you can be ordered through this option.\n" +
+            "''my incidents'' - Displays the incidents currently associated to your account.");
     }
 });
 
