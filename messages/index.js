@@ -19,13 +19,15 @@ var connector = useEmulator ? new builder.ChatConnector() : new botbuilder_azure
 var bot = new builder.UniversalBot(connector);
 bot.localePath(path.join(__dirname, './locale'));
 var categories = require('./categories.json');
+var hardware = require('./hardware.json');
 var isThatCorrect = ['yes', 'no'];
 
 bot.dialog('/', function (session) {
-    if (session.message.text.includes("open") && session.message.text.includes("incident") && session.message.text.includes('new')) {
+    var msg = session.message.text;
+    if (msg.includes("open") && msg.includes("incident") && msg.includes('new')) {
         session.beginDialog('createIncident');
     }
-    else if (session.message.text.includes("INC"))
+    else if (msg.includes("INC"))
     {
         session.send("Getting Incident data...");
         var incidentID = session.message.text;
@@ -73,7 +75,7 @@ bot.dialog('/', function (session) {
         }
 
         request(options, callback);
-    } else if (session.message.text.includes("my incidents"))
+    } else if (msg.includes("my incidents"))
     {
         session.send("Getting your personal incidents...");
         var urlString = 'https://dev27563.service-now.com/api/now/table/incident?sysparm_query=caller_id=681ccaf9c0a8016400b98a06818d57c7';
@@ -101,7 +103,7 @@ bot.dialog('/', function (session) {
 
         request(options, callback);
     }
-    else if (session.message.text.includes("order sales laptop"))
+    else if (msg.includes("order sales laptop"))
     {
         session.send("Adding to cart: Sales Laptop...");
         var body = {'sysparm_quantity': '1'};
@@ -128,8 +130,10 @@ bot.dialog('/', function (session) {
 
         request(options, callback);
     }
-    else if (session.message.text.includes("reopen incident")){
+    else if (msg.includes("reopen incident")){
         session.beginDialog('reopenIncident');
+    } else if (msg.includes("order hardware")){
+        sessions.beginDialog('orderHardware');
     }
     else {
         session.send("I'm afraid I didn't understand. You can either list your incidents through the keyphrase: ''my incidents'' or search for a specific incident through ID.");
@@ -341,8 +345,15 @@ bot.dialog('orderHardware', [
         if (result.response.entity.toString() == 'no'){
             session.endDialog('Ok, how else might I be of service to you?')
         } else {
-            builder.Prompts.choice(session, 'Okay, great! These are the categories of hardware devices available for you: ', isThatCorrect)
+            var choices = hardware.choices;
+            builder.Prompts.choice(session, 'Okay, great! These are the categories of hardware devices available for you: ', choices)
         }
+    },
+
+    function (session, result){
+        var category = result.response.entity;
+        var choices = hardware[category];
+        builder.Prompts.choice(session, 'So you want to see the available ' + category.toString() + '? No Problem, here you are :) Please select which type you want to order.', choices);
     }
 ]);
 if (useEmulator) {
