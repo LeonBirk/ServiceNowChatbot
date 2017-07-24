@@ -1,32 +1,39 @@
 {
-  "Laptops": [{
-    "Dell": ["1","2","3"]
-  },
-
-      "Apple",
-      "Acer",
-      "Sony",
-      "Fujitsu"
-    ],
+  "Laptops": [
+    {
+      "Dell": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "Apple": [
+        "4",
+        "5",
+        "6"
+      ]
+    }
+  ],
   "Tablets": [
-      "Microsoft",
-      "Apple",
-      "Sony",
-      "Amazon",
-      "Samsung"
-    ],
+    "Microsoft",
+    "Apple",
+    "Sony",
+    "Amazon",
+    "Samsung"
+  ],
   "Phones": [
-      "Apple",
-      "Samsung",
-      "Microsoft",
-      "Sony",
-      "Huawei"
-    ],
+    "Apple",
+    "Samsung",
+    "Microsoft",
+    "Sony",
+    "Huawei"
+  ],
   "Accessories": [
-      "Headphones",
-      "Mouses",
-      "Keyboards",
-      "Power cables",
-      "Phone cases"
-    ]
+    "Headphones",
+    "Mouses",
+    "Keyboards",
+    "Power cables",
+    "Phone cases"
+  ]
 }

@@ -19,15 +19,14 @@ var connector = useEmulator ? new builder.ChatConnector() : new botbuilder_azure
 var bot = new builder.UniversalBot(connector);
 bot.localePath(path.join(__dirname, './locale'));
 var categories = require('./categories.json');
-var hardware = require ('./hardware.json');
+var hardware = require('./hardware.json');
 var isThatCorrect = ['yes', 'no'];
 
 bot.dialog('/', function (session) {
     if (session.message.text.includes("open") && session.message.text.includes("incident") && session.message.text.includes('new')) {
         session.beginDialog('createIncident');
     }
-    else if (session.message.text.includes("INC"))
-    {
+    else if (session.message.text.includes("INC")) {
         session.send("Getting Incident data...");
         var incidentID = session.message.text;
         //session.send('You requested information on the Incident with the ID ' + session.message.text);
@@ -74,8 +73,7 @@ bot.dialog('/', function (session) {
         }
 
         request(options, callback);
-    } else if (session.message.text.includes("my incidents"))
-    {
+    } else if (session.message.text.includes("my incidents")) {
         session.send("Getting your personal incidents...");
         var urlString = 'https://dev27563.service-now.com/api/now/table/incident?sysparm_query=caller_id=681ccaf9c0a8016400b98a06818d57c7';
         var options = {
@@ -102,8 +100,7 @@ bot.dialog('/', function (session) {
 
         request(options, callback);
     }
-    else if (session.message.text.includes("order sales laptop"))
-    {
+    else if (session.message.text.includes("order sales laptop")) {
         session.send("Adding to cart: Sales Laptop...");
         var body = {'sysparm_quantity': '1'};
         var urlString = 'https://dev27563.service-now.com/api/sn_sc/servicecatalog/items/e212a942c0a80165008313c59764eea1/add_to_cart';
@@ -132,7 +129,7 @@ bot.dialog('/', function (session) {
     else if (session.message.text.includes("reopen incident")) {
         session.beginDialog('reopenIncident');
     }
-    else if (session.message.text.includes("order hardware")){
+    else if (session.message.text.includes("order hardware")) {
         session.beginDialog('orderHardware');
     }
     else {
@@ -201,10 +198,10 @@ bot.dialog('createIncident', [
             session.send('Nice! I will get to work. Don\'t worry, I will get back to you when there are any news.');
             var data = {
                 "caller_id": "javascript:gs.getUser().getFullName()",
-                "category":session.dialogData.keyword.toString(),
-                "subcategory":session.dialogData.subcategory.toString(),
-                "short_description":session.dialogData.short_description.toString(),
-                "description":session.dialogData.description.toString(),
+                "category": session.dialogData.keyword.toString(),
+                "subcategory": session.dialogData.subcategory.toString(),
+                "short_description": session.dialogData.short_description.toString(),
+                "description": session.dialogData.description.toString(),
                 "u_phone": session.dialogData.phone_nr.toString()
             };
             var urlString = 'https://dev27563.service-now.com/api/now/table/incident?sysparm_input_display_value=true';
@@ -223,7 +220,7 @@ bot.dialog('createIncident', [
             function callback(error, response, body) {
                 if (!error && response.statusCode == 201) {
 
-                    session.send("Incident record created! The number is: "+ body.result.number);
+                    session.send("Incident record created! The number is: " + body.result.number);
                 }
             }
 
@@ -238,13 +235,13 @@ bot.dialog('createIncident', [
 
 // Waterfall dialog that is triggered if a user wants to reopen an incident and guides him through the process
 bot.dialog('reopenIncident', [
-    function(session){
+    function (session) {
         builder.Prompts.choice(session, 'I have understood you want to reopen an Incident, is that correct?', isThatCorrect);
     },
-    function(session, results){
+    function (session, results) {
         var confirmation = results.response.entity.toString();
         // User does not want to reopen an incident --> leave dialog and go back to default
-        if (confirmation == 'no'){
+        if (confirmation == 'no') {
             session.endDialog('Ok! So how else can I help you?');
         } else {
             // List the incidents available for reopening
@@ -267,13 +264,13 @@ bot.dialog('reopenIncident', [
                     var respJSON = JSON.parse(body);
                     var incidentCount = respJSON.result.length;
                     // Different messages for Incident counts if lower than 2
-                    if(respJSON.result.length > 1){
+                    if (respJSON.result.length > 1) {
                         session.send("You currently have " + incidentCount + " closed incidents.");
-                        var incidents= [];
-                        var incidentChoices=[];
+                        var incidents = [];
+                        var incidentChoices = [];
                         for (var i = 0; i < respJSON.result.length; i++) {
                             incidentChoices[i] = respJSON.result[i].number;
-                            incidents[i] = {name : respJSON.result[i].number, id : respJSON.result[i].sys_id};
+                            incidents[i] = {name: respJSON.result[i].number, id: respJSON.result[i].sys_id};
                             session.send("Incident number " + (i + 1) + " has the ID: " + respJSON.result[i].number + ", its short description is: " + respJSON.result[i].short_description);
                         }
                         session.dialogData.incidents = incidents;
@@ -286,7 +283,7 @@ bot.dialog('reopenIncident', [
                         for (var i = 0; i < respJSON.result.length; i++) {
                             incidentChoices[i] = respJSON.result[i].number;
                             incidents[i] = {name: respJSON.result[i].number, id: respJSON.result[i].sys_id};
-                            session.send("The Incident number is: \'" + respJSON.result[i].number + "\', its short description is: \'" + respJSON.result[i].short_description +"\'");
+                            session.send("The Incident number is: \'" + respJSON.result[i].number + "\', its short description is: \'" + respJSON.result[i].short_description + "\'");
                         }
                         session.dialogData.incidents = incidents;
                         incidentChoices[incidentChoices.length] = 'more';
@@ -294,11 +291,12 @@ bot.dialog('reopenIncident', [
                     }
                 }
             }
+
             request(options, callback);
         }
 
     },
-    function (session,results) {
+    function (session, results) {
         //get sys_id from json, through looping the array of choices
         var incidentNumber = results.response.entity;
         var incidents = session.dialogData.incidents;
@@ -312,12 +310,12 @@ bot.dialog('reopenIncident', [
         builder.Prompts.text(session, "Please provide a reason for reopening the incident, so we can further investigate the issue.");
     },
 
-    function (session, results){
+    function (session, results) {
 
         var description = results.response;
         // PUT request to update the correspoding incident
         var urlString = 'https://dev27563.service-now.com/api/now/table/incident/' + session.dialogData.sys_id_to_update;
-        var data = {"incident_state":"2", "description":description.toString()};
+        var data = {"incident_state": "2", "description": description.toString()};
         var options = {
             url: urlString,
             method: 'PUT',
@@ -335,6 +333,7 @@ bot.dialog('reopenIncident', [
                 session.endDialog("Incident reopened successfully!")
             }
         }
+
         request(options, callback);
 
     }
@@ -347,21 +346,21 @@ bot.dialog('orderHardware', [
         builder.Prompts.choice(session, 'I have understood that you want to order a device, is that correct?', isThatCorrect);
     },
 
-    function (session,result) {
-        if (result.response.entity.toString() == 'no'){
+    function (session, result) {
+        if (result.response.entity.toString() == 'no') {
             session.endDialog('Ok, how else might I be of service to you?')
         } else {
             builder.Prompts.choice(session, 'Okay, great! These are the categories of hardware devices available for you: ', hardware)
         }
     },
 
-    function (session, result){
+    function (session, result) {
         session.dialogData.hardwareCategory = result.response.entity;
         var choices = JSON.parse(hardware[session.dialogData.hardwareCategory]);
         builder.Prompts.choice(session, 'Nice! What type of device do you want to order?', choices)
     },
 
-    function (session, result){
+    function (session, result) {
         session.dialogData.hardwareSubcategory = result.response.entity;
         var choices = hardware[session.dialogData.hardwareCategory].value;
         session.send(session.dialogData.hardwareSubcategory.toString());
