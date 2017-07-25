@@ -364,8 +364,8 @@ bot.dialog('orderHardware', [
     function (session, result) {
         session.dialogData.hardwareSubcategory = result.response.entity;
         var temp = hardware[session.dialogData.hardwareCategory];
-        // TODO: Find out how to get the last bits of data HERE
-        var choices = temp[0].hardwareSubcategory;
+        var temp2 = temp[0];
+        var choices = temp2[session.dialogData.hardwareSubcategory];
         session.send(session.dialogData.hardwareSubcategory.toString());
         builder.Prompts.choice(session, "So which specific device is it going to be?", choices);
     }
