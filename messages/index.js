@@ -356,8 +356,8 @@ bot.dialog('orderHardware', [
 
     function (session, result) {
         session.dialogData.hardwareCategory = result.response.entity;
-        var temp = hardware[session.dialogData.hardwareCategory];
-        var choices = temp[0];
+        var choices = hardware[session.dialogData.hardwareCategory];
+       // var choices = temp[0];
         builder.Prompts.choice(session, 'Nice! What type of device do you want to order?', choices)
     },
 
@@ -366,8 +366,9 @@ bot.dialog('orderHardware', [
         var temp = hardware[session.dialogData.hardwareCategory];
         var temp2 = temp[0];
         var choices = temp2[session.dialogData.hardwareSubcategory];
+
         session.send(session.dialogData.hardwareSubcategory.toString());
-        builder.Prompts.choice(session, "So which specific device is it going to be?", choices);
+        builder.Prompts.choice(session, 'So which specific device is it going to be?', choices);
     }
 ]);
 if (useEmulator) {
