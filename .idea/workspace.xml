@@ -21,8 +21,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/messages/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
-              <caret line="437" column="0" lean-forward="true" selection-start-line="437" selection-start-column="0" selection-end-line="437" selection-end-column="0" />
+            <state relative-caret-position="695">
+              <caret line="439" column="9" lean-forward="true" selection-start-line="439" selection-start-column="9" selection-end-line="439" selection-end-column="9" />
               <folding>
                 <element signature="e#1196#3024#0" expanded="false" />
                 <element signature="e#3081#4253#0" expanded="false" />
@@ -254,13 +254,6 @@
       <workItem from="1500394895553" duration="91000" />
       <workItem from="1500914059272" duration="10875000" />
       <workItem from="1500995464592" duration="3104000" />
-    </task>
-    <task id="LOCAL-00001" summary="retry with hardware categories from json">
-      <created>1500920161219</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1500920161219</updated>
     </task>
     <task id="LOCAL-00002" summary="ORDER HARDWARE: 0.202 dialog trigger logging">
       <created>1500920439270</created>
@@ -598,11 +591,18 @@
       <option name="project" value="LOCAL" />
       <updated>1501102079004</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="ORDER HARDWARE: 0.956 timeouts cause the dialog to crash">
+      <created>1501102587009</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1501102587010</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29486000" />
+    <option name="totallyTimeSpent" value="29761000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -689,7 +689,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ORDER HARDWARE: 0.415 json restructure + parsing" />
     <MESSAGE value="ORDER HARDWARE: 0.4155 json restructure + parsing fix" />
     <MESSAGE value="ORDER HARDWARE: 0.4156 json restructure + parsing fixfix" />
     <MESSAGE value="ORDER HARDWARE: 0.4156 json restructure with temp" />
@@ -714,7 +713,8 @@
     <MESSAGE value="ORDER HARDWARE: 0.9 Working with answer body, restarting dialog for more than one order, ending if order should be placed" />
     <MESSAGE value="ORDER HARDWARE: 0.95 submitting order" />
     <MESSAGE value="ORDER HARDWARE: 0.955 timeout to wait for callbacks to be triggered before moving on to the next step in the waterfall" />
-    <option name="LAST_COMMIT_MESSAGE" value="ORDER HARDWARE: 0.955 timeout to wait for callbacks to be triggered before moving on to the next step in the waterfall" />
+    <MESSAGE value="ORDER HARDWARE: 0.956 timeouts cause the dialog to crash" />
+    <option name="LAST_COMMIT_MESSAGE" value="ORDER HARDWARE: 0.956 timeouts cause the dialog to crash" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1264,8 +1264,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/messages/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="437" column="0" lean-forward="true" selection-start-line="437" selection-start-column="0" selection-end-line="437" selection-end-column="0" />
+        <state relative-caret-position="695">
+          <caret line="439" column="9" lean-forward="true" selection-start-line="439" selection-start-column="9" selection-end-line="439" selection-end-column="9" />
           <folding>
             <element signature="e#1196#3024#0" expanded="false" />
             <element signature="e#3081#4253#0" expanded="false" />

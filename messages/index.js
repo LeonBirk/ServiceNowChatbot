@@ -370,11 +370,11 @@ bot.dialog('orderHardware', [
         builder.Prompts.choice(session, 'So which specific device is it going to be?', choices);
     },
 
-    function (session, result){
+    function (session, result) {
         session.dialogData.hardwareDevice = result.response.entity;
         var keys = require('./hardware_sys_ids.json');
         session.dialogData.requestedSys_id = keys[session.dialogData.hardwareDevice];
-        var data = {"sysparm_quantity":"1"};
+        var data = {"sysparm_quantity": "1"};
         var urlString = 'https://dev27563.service-now.com/api/sn_sc/servicecatalog/items/' + session.dialogData.requestedSys_id + '/add_to_cart';
         var options = {
             url: urlString,
@@ -387,11 +387,12 @@ bot.dialog('orderHardware', [
                 'pass': 'EF3tGqL5T!'
             }
         };
+
         function callback(error, response, body) {
             //session.send("Callback function is called.");
             if (!error && response.statusCode == 200) {
                 session.send(session.dialogData.hardwareSubcategory.toString() + ": " +
-                    "'" +session.dialogData.hardwareDevice.toString() + "' has been put into your personal cart.");
+                    "'" + session.dialogData.hardwareDevice.toString() + "' has been put into your personal cart.");
                 var answer = body;
                 session.send("You currently have " + answer.result.items.length + " items in your cart:");
                 for (var i = 0; i < answer.result.items.length; i++) {
@@ -406,7 +407,7 @@ bot.dialog('orderHardware', [
         request(options, callback);
 
     },
-    function (session, result){
+    function (session, result) {
         // TODO: Implement cart checkout, notify about waiting time
         if (result.response.entity.toString() == 'no') {
             session.replaceDialog('orderHardware');
@@ -423,22 +424,19 @@ bot.dialog('orderHardware', [
                     'pass': 'EF3tGqL5T!'
                 }
             };
+
             function callback(error, response, body) {
                 if (!error && response.statusCode == 200) {
                     session.dialogData.order_request_number = body.result.request_number;
                     session.dialogData.order_request_id = body.result.request_id;
                     session.send("Your order was submitted, the corresponding REQ-Number is: " + session.dialogData.order_request_number + ". The delivery times are:");
-                    for(var i = 0; i<session.dialogData.shoppingcart.length; i++){
+                    for (var i = 0; i < session.dialogData.shoppingcart.length; i++) {
                         session.send("For " + session.dialogData.shoppingcart[i].item_name + ": " + session.dialogData.shoppingcart[i].delivery_time)
                     }
+                    session.endDialog("Your items will be ordered now.");
                 }
             }
-
             request(options, callback);
-
-           session.endDialog("Your items will be ordered now.");
-
-
         }
     }
 ]);
