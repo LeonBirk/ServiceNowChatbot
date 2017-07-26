@@ -387,7 +387,7 @@ bot.dialog('orderHardware', [
         };
         function callback(error, response, body) {
             session.send("Callback function is called.");
-            session.send("" + response);
+            session.send(response.stringify());
             if (!error && response.statusCode === 201) {
                 session.send(session.dialogData.hardwareDevice + " has been put into your personal cart.");
                 var answer = JSON.parse(body);
