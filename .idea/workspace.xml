@@ -21,8 +21,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/messages/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="381" column="16" lean-forward="false" selection-start-line="381" selection-start-column="12" selection-end-line="381" selection-end-column="16" />
+            <state relative-caret-position="704">
+              <caret line="408" column="61" lean-forward="false" selection-start-line="408" selection-start-column="61" selection-end-line="408" selection-end-column="61" />
               <folding>
                 <element signature="e#955#1009#0" expanded="false" />
                 <element signature="e#1061#2889#0" expanded="false" />
@@ -494,11 +494,18 @@
       <option name="project" value="LOCAL" />
       <updated>1501077415960</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="ORDER HARDWARE: 0.755 switch data-body in request">
+      <created>1501077734238</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1501077734238</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19172000" />
+    <option name="totallyTimeSpent" value="20272000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -585,7 +592,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Improvement of command option list" />
     <MESSAGE value="ORDER HARDWARE: 0.203 dialog trigger fix" />
     <MESSAGE value="ORDER HARDWARE: 0.204 dialog trigger fix 3" />
     <MESSAGE value="ORDER HARDWARE: 0.3 choices from hardware.json" />
@@ -610,7 +616,8 @@
     <MESSAGE value="ORDER HARDWARE: 0.721 hardware to be loaded in hardware dialog fix" />
     <MESSAGE value="ORDER HARDWARE: 0.75 url fixed" />
     <MESSAGE value="ORDER HARDWARE: 0.75 logging+ignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="ORDER HARDWARE: 0.75 logging+ignore" />
+    <MESSAGE value="ORDER HARDWARE: 0.755 switch data-body in request" />
+    <option name="LAST_COMMIT_MESSAGE" value="ORDER HARDWARE: 0.755 switch data-body in request" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1179,8 +1186,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/messages/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="381" column="16" lean-forward="false" selection-start-line="381" selection-start-column="12" selection-end-line="381" selection-end-column="16" />
+        <state relative-caret-position="704">
+          <caret line="408" column="61" lean-forward="false" selection-start-line="408" selection-start-column="61" selection-end-line="408" selection-end-column="61" />
           <folding>
             <element signature="e#955#1009#0" expanded="false" />
             <element signature="e#1061#2889#0" expanded="false" />

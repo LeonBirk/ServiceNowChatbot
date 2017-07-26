@@ -374,7 +374,6 @@ bot.dialog('orderHardware', [
         session.dialogData.requestedSys_id = keys[session.dialogData.hardwareDevice];
         var data = {"sysparm_quantity":"1"};
         var urlString = 'https://dev27563.service-now.com/api/sn_sc/servicecatalog/items/' + session.dialogData.requestedSys_id + '/add_to_cart';
-        session.send(urlString);
         var options = {
             url: urlString,
             method: 'POST',
@@ -387,8 +386,14 @@ bot.dialog('orderHardware', [
             }
         };
         function callback(error, response, body) {
-            if (!error && response.statusCode == 201) {
+            if (!error && response.statusCode === 200) {
                 session.send(session.dialogData.hardwareDevice + " has been put into your personal cart.");
+                var answer = JSON.parse(body);
+                session.send("You currently have " + answer.result.items.length + " items in your cart:");
+                for (var i = 0; i < answer.result.items.length; i++){
+                    session.send(answer.resilt.items[i].item_name + " for " + answer.resilt.items[i].localized_price)
+                }
+                builder.Prompts.choice(session, "The subtotal is"+ answer.result.subtotal +"Are you ready to proceed to checkout?", isThatCorrect);
             }
             else {
                 session.send(body);
@@ -396,6 +401,13 @@ bot.dialog('orderHardware', [
         }
 
         request(options, callback);
+    },
+    function (session, result, next){
+        if (result.response.entity.toString() == 'no') {
+            next();
+        } else {
+           session.send("Your cart items will be ordered now.")
+        }
     }
 ]);
 
