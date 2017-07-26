@@ -386,7 +386,7 @@ bot.dialog('orderHardware', [
             }
         };
         function callback(error, response, body) {
-            if (!error && response.statusCode === 200) {
+            if (!error && response.statusCode === 201) {
                 session.send(session.dialogData.hardwareDevice + " has been put into your personal cart.");
                 var answer = JSON.parse(body);
                 session.send("You currently have " + answer.result.items.length + " items in your cart:");
