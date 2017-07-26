@@ -137,9 +137,9 @@ bot.dialog('/', function (session) {
     else {
         // TODO: make this a choice list, or at least format correctly
         session.send("I'm afraid I didn't understand. " +
-            "I am currently somewhat lacking flexibility. The methods available for usage are: \r" +
+            "I am currently somewhat lacking flexibility. The methods available for usage are: \b" +
             "''open new incident'' - Guides you through the process of creating an incident on your behalf.\n" +
-            "''reopen incident'' - Gives you the list of your incidents eligible for reopening and let''s you do it directly in chat.\n" +
+            "''reopen incident'' - Gives you the list of your incidents eligible for reopening and let's you do it directly in chat.\n" +
             "''order hardware'' - The devices available for you can be ordered through this option.\n" +
             "''my incidents'' - Displays the incidents currently associated to your account.");
     }
@@ -404,7 +404,6 @@ bot.dialog('orderHardware', [
         }
 
         request(options, callback);
-        setTimeout(1000);
 
     },
     function (session, result){
@@ -436,7 +435,6 @@ bot.dialog('orderHardware', [
             }
 
             request(options, callback);
-            setTimeout(1000);
 
            session.endDialog("Your items will be ordered now.");
 
