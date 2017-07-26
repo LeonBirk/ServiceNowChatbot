@@ -22,6 +22,8 @@ var categories = require('./categories.json');
 var hardware = {};
 var isThatCorrect = ['yes', 'no'];
 
+
+// TODO: Implement escape possibility for choice options: to end or restart the dialog (cancel and/or one step back in the waterfall)
 bot.dialog('/', function (session) {
     if (session.message.text.includes("open") && session.message.text.includes("incident") && session.message.text.includes('new')) {
         session.beginDialog('createIncident');
@@ -395,7 +397,8 @@ bot.dialog('orderHardware', [
                 for (var i = 0; i < answer.result.items.length; i++) {
                     session.send(answer.result.items[i].item_name + " for " + answer.result.items[i].localized_price)
                 }
-                builder.Prompts.choice(session, "The subtotal is " + answer.result.subtotal + ". Are you ready to proceed to checkout?", isThatCorrect);
+                session.dialogData.shoppingcart = answer.result.items;
+                builder.Prompts.choice(session, "The subtotal is " + answer.result.subtotal + ". Are you ready to submit your order?", isThatCorrect);
 
             }
         }
@@ -404,10 +407,38 @@ bot.dialog('orderHardware', [
 
     },
     function (session, result){
+        // TODO: Implement cart checkout, notify about waiting time
         if (result.response.entity.toString() == 'no') {
             session.beginDialog('orderHardware');
         } else {
-           session.endDialog("Your cart items will be ordered now.");
+            // submit the order, all items in session.dialogData.shoppingcart will be ordered
+            var urlString = 'https://dev27563.service-now.com/api/sn_sc/servicecatalog/cart/submit_order';
+            var options = {
+                url: urlString,
+                method: 'POST',
+                json: true,
+                headers: headers,
+                auth: {
+                    'user': 'admin',
+                    'pass': 'EF3tGqL5T!'
+                }
+            };
+            function callback(error, response, body) {
+                if (!error && response.statusCode == 200) {
+                    session.dialogData.order_request_number = body.result.request_number;
+                    session.dialogData.order_request_id = body.result.request_id;
+                    session.send("Your order was submitted, the corresponding REQ-Number is: " + session.dialogData.order_request_number + ". The delivery times are:");
+                    for(var i = 0; i<session.dialogData.shoppingcart.length; i++){
+                        session.send("For " + session.dialogData.shoppingcart[i].item_name + ": " + session.dialogData.shoppingcart[i].delivery_time)
+                    }
+                }
+            }
+
+            request(options, callback);
+
+           session.endDialog("Your items will be ordered now.");
+
+
         }
     }
 ]);
