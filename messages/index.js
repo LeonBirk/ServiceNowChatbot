@@ -407,7 +407,7 @@ bot.dialog('orderHardware', [
         if (result.response.entity.toString() == 'no') {
             session.beginDialog('orderHardware');
         } else {
-           session.send("Your cart items will be ordered now.")
+           session.endDialog("Your cart items will be ordered now.");
         }
     }
 ]);
