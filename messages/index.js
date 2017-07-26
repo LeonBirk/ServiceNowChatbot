@@ -343,7 +343,7 @@ bot.dialog('reopenIncident', [
 bot.dialog('orderHardware', [
     // Verifies entry into Conversation
     function (session) {
-        builder.Prompts.choice(session, 'I have understood that you want to order a device, is that correct?', isThatCorrect);
+        builder.Prompts.choice(session, 'I have understood that you want to order a device, is that correct?', isThatCorrect, builder.ListStyle.button);
     },
 
     function (session, result) {
@@ -364,11 +364,39 @@ bot.dialog('orderHardware', [
         session.dialogData.hardwareSubcategory = result.response.entity;
         var temp = hardware[session.dialogData.hardwareCategory];
         var choices = temp[session.dialogData.hardwareSubcategory];
-
-        session.send(session.dialogData.hardwareSubcategory.toString());
         builder.Prompts.choice(session, 'So which specific device is it going to be?', choices);
+    },
+
+    function (session, result){
+        session.dialogData.hardwareDevice = result.response.entity;
+        var keys = require('./hardware_sys_ids.json');
+        session.dialogData.requestedSys_id = keys[session.dialogData.hardwareDevice];
+        var body = {'sysparm_quantity': '1'};
+        var urlString = 'https://dev27563.service-now.com/api/sn_sc/servicecatalog/items/' + session.dialogData.requestedSys_id + 'add_to_cart';
+        var options = {
+            url: urlString,
+            method: 'POST',
+            json: true,
+            data: body,
+            headers: headers,
+            auth: {
+                'user': 'admin',
+                'pass': 'EF3tGqL5T!'
+            }
+        };
+        function callback(error, response, body) {
+            if (!error && response.statusCode == 201) {
+                session.send(session.dialogData.hardwareDevice + " has been put into your personal cart.");
+            }
+            else {
+                session.send(body);
+            }
+        }
+
+        request(options, callback);
     }
 ]);
+
 if (useEmulator) {
     var restify = require('restify');
     var server = restify.createServer();
