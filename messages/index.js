@@ -387,8 +387,7 @@ bot.dialog('orderHardware', [
         };
         function callback(error, response, body) {
             session.send("Callback function is called.");
-            session.send(response.stringify());
-            if (!error && response.statusCode === 201) {
+
                 session.send(session.dialogData.hardwareDevice + " has been put into your personal cart.");
                 var answer = JSON.parse(body);
                 session.send("You currently have " + answer.result.items.length + " items in your cart:");
@@ -396,10 +395,8 @@ bot.dialog('orderHardware', [
                     session.send(answer.result.items[i].item_name + " for " + answer.result.items[i].localized_price)
                 }
                 builder.Prompts.choice(session, "The subtotal is"+ answer.result.subtotal +"Are you ready to proceed to checkout?", isThatCorrect);
-            }
-            else {
-                session.send(body);
-            }
+
+
         }
 
         request(options, callback);
