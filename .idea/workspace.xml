@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a191f03-0956-421e-ad62-a81abb0cfdf2" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/index.js" afterPath="$PROJECT_DIR$/messages/index.js" />
     </list>
@@ -21,8 +22,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/messages/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="402" column="68" lean-forward="false" selection-start-line="402" selection-start-column="68" selection-end-line="402" selection-end-column="68" />
+            <state relative-caret-position="682">
+              <caret line="401" column="35" lean-forward="false" selection-start-line="401" selection-start-column="35" selection-end-line="401" selection-end-column="35" />
               <folding>
                 <element signature="e#955#1009#0" expanded="false" />
                 <element signature="e#1061#2889#0" expanded="false" />
@@ -543,11 +544,18 @@
       <option name="project" value="LOCAL" />
       <updated>1501081864501</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="ORDER HARDWARE: 0.80555 logging">
+      <created>1501082048936</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1501082048936</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22907000" />
+    <option name="totallyTimeSpent" value="23348000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -634,7 +642,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ORDER HARDWARE: 0.41 further implemented dialog" />
     <MESSAGE value="ORDER HARDWARE: 0.411 json structure fix" />
     <MESSAGE value="ORDER HARDWARE: 0.412 json structure fix" />
     <MESSAGE value="ORDER HARDWARE: 0.413 json structure parse" />
@@ -659,7 +666,8 @@
     <MESSAGE value="ORDER HARDWARE: 0.805 more logging" />
     <MESSAGE value="ORDER HARDWARE: 0.8051 more logging" />
     <MESSAGE value="ORDER HARDWARE: 0.8055 callback without checking for error" />
-    <option name="LAST_COMMIT_MESSAGE" value="ORDER HARDWARE: 0.8055 callback without checking for error" />
+    <MESSAGE value="ORDER HARDWARE: 0.80555 logging" />
+    <option name="LAST_COMMIT_MESSAGE" value="ORDER HARDWARE: 0.80555 logging" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1228,8 +1236,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/messages/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="402" column="68" lean-forward="false" selection-start-line="402" selection-start-column="68" selection-end-line="402" selection-end-column="68" />
+        <state relative-caret-position="682">
+          <caret line="401" column="35" lean-forward="false" selection-start-line="401" selection-start-column="35" selection-end-line="401" selection-end-column="35" />
           <folding>
             <element signature="e#955#1009#0" expanded="false" />
             <element signature="e#1061#2889#0" expanded="false" />
