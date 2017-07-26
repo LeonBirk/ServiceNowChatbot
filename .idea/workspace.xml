@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8a191f03-0956-421e-ad62-a81abb0cfdf2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/hardware.json" afterPath="$PROJECT_DIR$/messages/hardware.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,7 +35,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="categories.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="categories.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/messages/categories.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -46,7 +45,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hardware.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="hardware.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/messages/hardware.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="462">
@@ -442,11 +441,18 @@
       <option name="project" value="LOCAL" />
       <updated>1501074026346</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="ORDER HARDWARE: 0.71 hardware specifications added">
+      <created>1501074455769</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1501074455769</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16868000" />
+    <option name="totallyTimeSpent" value="17513000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -555,7 +561,8 @@
     <MESSAGE value="ORDER HARDWARE: 0.42 third iteration" />
     <MESSAGE value="ORDER HARDWARE: 0.43 double temp, this is stupid" />
     <MESSAGE value="ORDER HARDWARE: 0.7 added sys_id file and POST request" />
-    <option name="LAST_COMMIT_MESSAGE" value="ORDER HARDWARE: 0.7 added sys_id file and POST request" />
+    <MESSAGE value="ORDER HARDWARE: 0.71 hardware specifications added" />
+    <option name="LAST_COMMIT_MESSAGE" value="ORDER HARDWARE: 0.71 hardware specifications added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1122,18 +1129,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/messages/hardware.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/messages/categories.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/messages/hardware.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
           <folding />
         </state>
       </provider>
