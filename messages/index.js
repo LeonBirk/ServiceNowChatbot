@@ -391,7 +391,7 @@ bot.dialog('orderHardware', [
             //session.send("Callback function is called.");
             if (!error && response.statusCode == 200) {
                 session.send(session.dialogData.hardwareSubcategory.toString() + ": " +
-                    "" +session.dialogData.hardwareDevice.toString() + " has been put into your personal cart.");
+                    "'" +session.dialogData.hardwareDevice.toString() + "' has been put into your personal cart.");
                 var answer = body;
                 session.send("You currently have " + answer.result.items.length + " items in your cart:");
                 for (var i = 0; i < answer.result.items.length; i++) {
@@ -404,12 +404,13 @@ bot.dialog('orderHardware', [
         }
 
         request(options, callback);
+        setTimeout(1000);
 
     },
     function (session, result){
         // TODO: Implement cart checkout, notify about waiting time
         if (result.response.entity.toString() == 'no') {
-            session.beginDialog('orderHardware');
+            session.replaceDialog('orderHardware');
         } else {
             // submit the order, all items in session.dialogData.shoppingcart will be ordered
             var urlString = 'https://dev27563.service-now.com/api/sn_sc/servicecatalog/cart/submit_order';
@@ -435,6 +436,7 @@ bot.dialog('orderHardware', [
             }
 
             request(options, callback);
+            setTimeout(1000);
 
            session.endDialog("Your items will be ordered now.");
 

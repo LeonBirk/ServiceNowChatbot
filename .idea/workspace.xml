@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a191f03-0956-421e-ad62-a81abb0cfdf2" name="Default" comment="">
+    <list default="true" id="8a191f03-0956-421e-ad62-a81abb0cfdf2" name="Default" comment="ORDER HARDWARE: 0.955 timeout to wait for callbacks to be triggered before moving on to the next step in the waterfall">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/index.js" afterPath="$PROJECT_DIR$/messages/index.js" />
     </list>
@@ -21,8 +21,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/messages/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="409" column="8" lean-forward="false" selection-start-line="409" selection-start-column="8" selection-end-line="409" selection-end-column="8" />
+            <state relative-caret-position="682">
+              <caret line="438" column="29" lean-forward="false" selection-start-line="438" selection-start-column="29" selection-end-line="438" selection-end-column="29" />
               <folding>
                 <element signature="e#1196#3024#0" expanded="false" />
                 <element signature="e#3081#4253#0" expanded="false" />
@@ -584,11 +584,18 @@
       <option name="project" value="LOCAL" />
       <updated>1501087964802</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="ORDER HARDWARE: 0.95 submitting order">
+      <created>1501100453984</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1501100453984</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27611000" />
+    <option name="totallyTimeSpent" value="29020000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -675,8 +682,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ORDER HARDWARE: 0.4141 json structure" />
-    <MESSAGE value="ORDER HARDWARE: 0.415 json restructure" />
     <MESSAGE value="ORDER HARDWARE: 0.415 json restructure + parsing" />
     <MESSAGE value="ORDER HARDWARE: 0.4155 json restructure + parsing fix" />
     <MESSAGE value="ORDER HARDWARE: 0.4156 json restructure + parsing fixfix" />
@@ -700,7 +705,9 @@
     <MESSAGE value="ORDER HARDWARE: 0.9 Working with answer body" />
     <MESSAGE value="ORDER HARDWARE: 0.9 Working with answer body, restarting dialog for more than one order" />
     <MESSAGE value="ORDER HARDWARE: 0.9 Working with answer body, restarting dialog for more than one order, ending if order should be placed" />
-    <option name="LAST_COMMIT_MESSAGE" value="ORDER HARDWARE: 0.9 Working with answer body, restarting dialog for more than one order, ending if order should be placed" />
+    <MESSAGE value="ORDER HARDWARE: 0.95 submitting order" />
+    <MESSAGE value="ORDER HARDWARE: 0.955 timeout to wait for callbacks to be triggered before moving on to the next step in the waterfall" />
+    <option name="LAST_COMMIT_MESSAGE" value="ORDER HARDWARE: 0.955 timeout to wait for callbacks to be triggered before moving on to the next step in the waterfall" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1250,8 +1257,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/messages/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="409" column="8" lean-forward="false" selection-start-line="409" selection-start-column="8" selection-end-line="409" selection-end-column="8" />
+        <state relative-caret-position="682">
+          <caret line="438" column="29" lean-forward="false" selection-start-line="438" selection-start-column="29" selection-end-line="438" selection-end-column="29" />
           <folding>
             <element signature="e#1196#3024#0" expanded="false" />
             <element signature="e#3081#4253#0" expanded="false" />
