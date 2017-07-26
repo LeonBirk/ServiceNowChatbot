@@ -372,14 +372,14 @@ bot.dialog('orderHardware', [
         session.dialogData.hardwareDevice = result.response.entity;
         var keys = require('./hardware_sys_ids.json');
         session.dialogData.requestedSys_id = keys[session.dialogData.hardwareDevice];
-        var body = {'sysparm_quantity': '1'};
+        var data = {"sysparm_quantity":"1"};
         var urlString = 'https://dev27563.service-now.com/api/sn_sc/servicecatalog/items/' + session.dialogData.requestedSys_id + '/add_to_cart';
         session.send(urlString);
         var options = {
             url: urlString,
             method: 'POST',
             json: true,
-            data: body,
+            body: data,
             headers: headers,
             auth: {
                 'user': 'admin',
