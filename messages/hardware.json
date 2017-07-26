@@ -2,16 +2,16 @@
   "Laptops":
     {
       "Dell": [
-        "1",
-        "2",
-        "3"
+        "Small version: 4GB RAM, 12 inches, 20hrs battery",
+        "Medium version: 6GB RAM, 14 inches, 24hrs battery",
+        "Large version: 8GB RAM, 16 inches, 30hrs battery"
       ]
     ,
 
       "Apple": [
-        "4",
-        "5",
-        "6"
+        "Macbook Air: 6GB, 13 inches, 30hrs battery",
+        "Macbook Pro: 8GB, 15 inches, 35hrs battery",
+        "Macbook SuperPro: 32GB, 25 inches, 856hrs battery"
       ]
     }
   ,
