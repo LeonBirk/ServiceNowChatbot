@@ -400,6 +400,7 @@ bot.dialog('orderHardware', [
         }
 
         request(options, callback);
+        session.send("this will help calling the callback I think");
 
     },
     function (session, result, next){
