@@ -21,8 +21,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/messages/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="21" column="16" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+            <state relative-caret-position="506">
+              <caret line="375" column="132" lean-forward="false" selection-start-line="375" selection-start-column="132" selection-end-line="375" selection-end-column="132" />
               <folding>
                 <element signature="e#955#1009#0" expanded="false" />
                 <element signature="e#1061#2889#0" expanded="false" />
@@ -463,11 +463,18 @@
       <option name="project" value="LOCAL" />
       <updated>1501076848128</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="ORDER HARDWARE: 0.721 hardware to be loaded in hardware dialog fix">
+      <created>1501077045165</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1501077045165</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18487000" />
+    <option name="totallyTimeSpent" value="18609000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -578,7 +585,8 @@
     <MESSAGE value="ORDER HARDWARE: 0.7 added sys_id file and POST request" />
     <MESSAGE value="ORDER HARDWARE: 0.71 hardware specifications added" />
     <MESSAGE value="ORDER HARDWARE: 0.72 hardware to be loaded in hardware dialog" />
-    <option name="LAST_COMMIT_MESSAGE" value="ORDER HARDWARE: 0.72 hardware to be loaded in hardware dialog" />
+    <MESSAGE value="ORDER HARDWARE: 0.721 hardware to be loaded in hardware dialog fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="ORDER HARDWARE: 0.721 hardware to be loaded in hardware dialog fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1147,8 +1155,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/messages/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="16" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+        <state relative-caret-position="506">
+          <caret line="375" column="132" lean-forward="false" selection-start-line="375" selection-start-column="132" selection-end-line="375" selection-end-column="132" />
           <folding>
             <element signature="e#955#1009#0" expanded="false" />
             <element signature="e#1061#2889#0" expanded="false" />

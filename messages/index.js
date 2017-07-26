@@ -373,7 +373,7 @@ bot.dialog('orderHardware', [
         var keys = require('./hardware_sys_ids.json');
         session.dialogData.requestedSys_id = keys[session.dialogData.hardwareDevice];
         var body = {'sysparm_quantity': '1'};
-        var urlString = 'https://dev27563.service-now.com/api/sn_sc/servicecatalog/items/' + session.dialogData.requestedSys_id + 'add_to_cart';
+        var urlString = 'https://dev27563.service-now.com/api/sn_sc/servicecatalog/items/' + session.dialogData.requestedSys_id + '/add_to_cart';
         var options = {
             url: urlString,
             method: 'POST',
