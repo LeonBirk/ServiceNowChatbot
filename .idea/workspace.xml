@@ -21,8 +21,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/messages/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="704">
-              <caret line="408" column="61" lean-forward="false" selection-start-line="408" selection-start-column="61" selection-end-line="408" selection-end-column="61" />
+            <state relative-caret-position="132">
+              <caret line="388" column="57" lean-forward="false" selection-start-line="388" selection-start-column="57" selection-end-line="388" selection-end-column="57" />
               <folding>
                 <element signature="e#955#1009#0" expanded="false" />
                 <element signature="e#1061#2889#0" expanded="false" />
@@ -100,10 +100,10 @@
     <handled-path value="$PROJECT_DIR$/messages/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="1912" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -501,22 +501,36 @@
       <option name="project" value="LOCAL" />
       <updated>1501077734238</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="ORDER HARDWARE: 0.8 use response body to proceed to cart checkout">
+      <created>1501078844317</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1501078844317</updated>
+    </task>
+    <task id="LOCAL-00037" summary="ORDER HARDWARE: 0.8 use response body to proceed to cart checkout">
+      <created>1501079315736</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1501079315736</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20272000" />
+    <option name="totallyTimeSpent" value="21902000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1912" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32982087" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.04092262" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15220949" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -592,7 +606,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ORDER HARDWARE: 0.203 dialog trigger fix" />
     <MESSAGE value="ORDER HARDWARE: 0.204 dialog trigger fix 3" />
     <MESSAGE value="ORDER HARDWARE: 0.3 choices from hardware.json" />
     <MESSAGE value="ORDER HARDWARE: 0.35 subcategory choices from hardware.json + choiceDialog for opening Incident + erase logging" />
@@ -617,7 +630,8 @@
     <MESSAGE value="ORDER HARDWARE: 0.75 url fixed" />
     <MESSAGE value="ORDER HARDWARE: 0.75 logging+ignore" />
     <MESSAGE value="ORDER HARDWARE: 0.755 switch data-body in request" />
-    <option name="LAST_COMMIT_MESSAGE" value="ORDER HARDWARE: 0.755 switch data-body in request" />
+    <MESSAGE value="ORDER HARDWARE: 0.8 use response body to proceed to cart checkout" />
+    <option name="LAST_COMMIT_MESSAGE" value="ORDER HARDWARE: 0.8 use response body to proceed to cart checkout" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1186,8 +1200,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/messages/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="408" column="61" lean-forward="false" selection-start-line="408" selection-start-column="61" selection-end-line="408" selection-end-column="61" />
+        <state relative-caret-position="132">
+          <caret line="388" column="57" lean-forward="false" selection-start-line="388" selection-start-column="57" selection-end-line="388" selection-end-column="57" />
           <folding>
             <element signature="e#955#1009#0" expanded="false" />
             <element signature="e#1061#2889#0" expanded="false" />

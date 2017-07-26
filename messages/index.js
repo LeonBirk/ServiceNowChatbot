@@ -386,12 +386,13 @@ bot.dialog('orderHardware', [
             }
         };
         function callback(error, response, body) {
+            session.send("Callback function is called.");
             if (!error && response.statusCode === 201) {
                 session.send(session.dialogData.hardwareDevice + " has been put into your personal cart.");
                 var answer = JSON.parse(body);
                 session.send("You currently have " + answer.result.items.length + " items in your cart:");
                 for (var i = 0; i < answer.result.items.length; i++){
-                    session.send(answer.resilt.items[i].item_name + " for " + answer.resilt.items[i].localized_price)
+                    session.send(answer.result.items[i].item_name + " for " + answer.result.items[i].localized_price)
                 }
                 builder.Prompts.choice(session, "The subtotal is"+ answer.result.subtotal +"Are you ready to proceed to checkout?", isThatCorrect);
             }
@@ -401,6 +402,7 @@ bot.dialog('orderHardware', [
         }
 
         request(options, callback);
+
     },
     function (session, result, next){
         if (result.response.entity.toString() == 'no') {
