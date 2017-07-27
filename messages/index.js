@@ -367,7 +367,7 @@ bot.dialog('orderHardware', [
         session.dialogData.hardwareSubcategory = result.response.entity;
         var temp = hardware[session.dialogData.hardwareCategory];
         var choices = temp[session.dialogData.hardwareSubcategory];
-        builder.Prompts.choice(session, 'So which specific device is it going to be?', choices);
+        builder.Prompts.choice(session, 'So which specific device is it going to be?', choices, builder.ListStyle.list);
     },
 
     function (session, result) {
@@ -439,7 +439,9 @@ bot.dialog('orderHardware', [
             request(options, callback);
         }
     }
-]);
+]).cancelAction('cancelAction', 'Ok, cancel order.', {
+    matches: /^nevermind$|^cancel$|^cancel.*order/i
+});
 
 if (useEmulator) {
     var restify = require('restify');
