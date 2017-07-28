@@ -429,10 +429,11 @@ bot.dialog('orderHardware', [
                 if (!error && response.statusCode == 200) {
                     session.dialogData.order_request_number = body.result.request_number;
                     session.dialogData.order_request_id = body.result.request_id;
-                    session.send("Your order was submitted, the corresponding REQ-Number is: " + session.dialogData.order_request_number + ". The delivery times are:");
-                    for (var i = 0; i < session.dialogData.shoppingcart.length; i++) {
-                        session.send("For " + session.dialogData.shoppingcart[i].item_name + ": " + session.dialogData.shoppingcart[i].delivery_time)
-                    }
+                    session.send("Your order was submitted, the corresponding REQ-Number is: " + session.dialogData.order_request_number + ". ");
+                    //    "The delivery times are:");
+                    //for (var i = 0; i < session.dialogData.shoppingcart.length; i++) {
+                    //   session.send("For " + session.dialogData.shoppingcart[i].item_name + ": " + session.dialogData.shoppingcart[i].delivery_time)
+                    //}
                     session.endDialog("Your items will be ordered now.");
                 }
             }
