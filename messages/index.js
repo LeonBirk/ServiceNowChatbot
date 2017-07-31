@@ -24,7 +24,10 @@ var isThatCorrect = ['yes', 'no'];
 
 
 // TODO: Implement escape possibility for choice options: to end or restart the dialog (cancel and/or one step back in the waterfall)
+// possibility 1: add a "cancel" option to every single choice prompt, to enable the user to go back to the default Dialog
+
 bot.dialog('/', function (session) {
+    // TODO: fix incident creation
     if (session.message.text.includes("open") && session.message.text.includes("incident") && session.message.text.includes('new')) {
         session.beginDialog('createIncident');
     }
@@ -164,7 +167,7 @@ bot.dialog('createIncident', [
     },
     // Returns a list of choices for the selected category
     function (session, results) {
-        session.dialogData.keyword = results.response;
+        session.dialogData.keyword = results.response.toString();
         session.send(session.dialogData.keyword + " huh? I always struggle with that, too.");
         var choices = categories[session.dialogData.keyword];
         builder.Prompts.choice(session, 'Please specify one of the following categories:', choices);
