@@ -18,6 +18,8 @@ var connector = useEmulator ? new builder.ChatConnector() : new botbuilder_azure
 
 var bot = new builder.UniversalBot(connector);
 bot.localePath(path.join(__dirname, './locale'));
+var model = "https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/e9a5b433-7ac9-4804-a9ab-9d8def0af94f?subscription-key=3b46d549d216495ebee6dccc193449d0&timezoneOffset=0&verbose=true&q=";
+bot.recognizer(new builder.LuisRecognizer(model));
 var categories = require('./categories.json');
 var hardware = {};
 var isThatCorrect = ['yes', 'no'];
@@ -235,7 +237,8 @@ bot.dialog('createIncident', [
         }
         session.endDialog();
 
-    }]);
+    }]).triggerAction({ matches: 'openTicket' });
+
 
 // Waterfall dialog that is triggered if a user wants to reopen an incident and guides him through the process
 bot.dialog('reopenIncident', [
