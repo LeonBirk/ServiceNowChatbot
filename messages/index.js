@@ -236,8 +236,7 @@ bot.dialog('createIncident', [
         }
         session.endDialog();
 
-    }
-]);
+    }]);
 
 // Waterfall dialog that is triggered if a user wants to reopen an incident and guides him through the process
 bot.dialog('reopenIncident', [
@@ -444,9 +443,7 @@ bot.dialog('orderHardware', [
             request(options, callback);
         }
     }
-]).cancelAction('cancelAction', 'Ok, cancel order.', {
-    matches: /^nevermind$|^cancel$|^cancel.*order/i
-});
+]);
 
 if (useEmulator) {
     var restify = require('restify');
