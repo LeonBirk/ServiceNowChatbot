@@ -344,7 +344,7 @@ bot.dialog('reopenIncident', [
         request(options, callback);
 
     }
-]);
+]).triggerAction({ matches: 'reopenTicket' });
 
 // Waterfall dialog for ordering a hardware device
 bot.dialog('orderHardware', [
@@ -445,7 +445,7 @@ bot.dialog('orderHardware', [
             request(options, callback);
         }
     }
-]);
+]).triggerAction({ matches: 'orderHardware' });
 
 if (useEmulator) {
     var restify = require('restify');
