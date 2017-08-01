@@ -167,7 +167,7 @@ bot.dialog('createIncident', [
     },
     // Returns a list of choices for the selected category
     function (session, results) {
-        session.dialogData.keyword = results.response.toString();
+        session.dialogData.keyword = Object.keys(results.response)[0];
         session.send(session.dialogData.keyword + " huh? I always struggle with that, too.");
         var choices = categories[session.dialogData.keyword];
         builder.Prompts.choice(session, 'Please specify one of the following categories:', choices);
