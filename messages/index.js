@@ -230,7 +230,7 @@ bot.dialog('createIncident', [
                     session.send("Incident record created! The number is: " + body.result.number);
                 }
             }
-
+            session.sendTyping();
             request(options, callback);
         } else {
             session.send('I am confuuuuused. :(')
@@ -238,10 +238,7 @@ bot.dialog('createIncident', [
         session.endDialog();
 
     }]).triggerAction({ matches: 'openTicket' })
-    .cancelAction('cancelCreateIncident', "Ticket creation canceled.", {
-    matches: 'cancel',
-    confirmPrompt: "Are you sure?"
-});
+    .cancelAction({ matches: 'cancel', confirmPrompt: "Are you sure?"});
 
 
 // Waterfall dialog that is triggered if a user wants to reopen an incident and guides him through the process
@@ -302,7 +299,7 @@ bot.dialog('reopenIncident', [
                     }
                 }
             }
-
+            session.sendTyping();
             request(options, callback);
         }
 
@@ -344,7 +341,7 @@ bot.dialog('reopenIncident', [
                 session.endDialog("Incident reopened successfully!")
             }
         }
-
+        session.sendTyping();
         request(options, callback);
 
     }
@@ -412,7 +409,7 @@ bot.dialog('orderHardware', [
 
             }
         }
-
+        session.sendTyping();
         request(options, callback);
 
     },
@@ -446,6 +443,7 @@ bot.dialog('orderHardware', [
                     session.endDialog("Your items will be ordered now.");
                 }
             }
+            session.sendTyping();
             request(options, callback);
         }
     }
