@@ -351,7 +351,11 @@ bot.dialog('reopenIncident', [
         request(options, callback);
 
     }
-]).triggerAction({matches: 'reopenTicket'});
+]).triggerAction({matches: 'reopenTicket'})
+    .cancelAction('cancelAction', 'okay, canceling action', {matches: /^cancel$/i})
+    .reloadAction('startOver', 'Ok, starting over.', {
+        matches: /^start over$/i
+    });
 
 // Waterfall dialog for ordering a hardware device
 bot.dialog('orderHardware', [
@@ -453,7 +457,11 @@ bot.dialog('orderHardware', [
             request(options, callback);
         }
     }
-]).triggerAction({matches: 'orderHardware'});
+]).triggerAction({matches: 'orderHardware'})
+    .cancelAction('cancelAction', 'okay, canceling action', {matches: /^cancel$/i})
+    .reloadAction('startOver', 'Ok, starting over.', {
+        matches: /^start over$/i
+    });
 
 if (useEmulator) {
     var restify = require('restify');
