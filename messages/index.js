@@ -238,7 +238,7 @@ bot.dialog('createIncident', [
         session.endDialog();
 
     }]).triggerAction({matches: 'openTicket'})
-    .cancelAction({matches: /^cancel$/, confirmPrompt: "Are you sure?"});
+    .cancelAction('cancelAction', {matches: /^cancel$/});
 
 
 // Waterfall dialog that is triggered if a user wants to reopen an incident and guides him through the process
