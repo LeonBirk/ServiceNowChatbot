@@ -157,7 +157,7 @@ bot.dialog('createIncident', [
 
         // TODO: change the isThatCorrect prompts to Confirmation Prompts
         var options = {listStyle: builder.ListStyle.button};
-        builder.Prompts.choice(session, 'I have understood that you want to create a new Incident, is that correct?', isThatCorrect, options);
+        builder.Prompts.choice(session, "Which color?", "red|green|blue", builder.ListStyle.button);
     },
     // if the response is negative, returns to default dialog; if positive: ask for a keyword (possible keywords listed in categories.json
     function (session, results) {
