@@ -241,10 +241,8 @@ bot.dialog('createIncident', [
         session.endDialog();
 
     }]).triggerAction({matches: 'openTicket'})
-    .cancelAction('cancelAction', 'okay, canceling action', {matches: /^cancel$/i})
-    .reloadAction('startOver', 'Ok, starting over.', {
-        matches: /^start over$/i
-    });
+    .cancelAction('cancelAction', 'Okay, canceling action.', {matches: /^cancel$/i, confirmPrompt: "Are you sure?"} )
+    .reloadAction('startOver', 'Ok, starting over.', {matches: /^start over$/i, confirmPrompt: "Are you sure?"});
 
 
 // Waterfall dialog that is triggered if a user wants to reopen an incident and guides him through the process
