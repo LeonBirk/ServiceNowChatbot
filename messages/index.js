@@ -156,7 +156,8 @@ bot.dialog('createIncident', [
     function (session) {
 
         // TODO: change the isThatCorrect prompts to Confirmation Prompts
-        builder.Prompts.choice(session, 'I have understood that you want to create a new Incident, is that correct?', isThatCorrect, "button");
+        var options = {listStyle: builder.ListStyle.button};
+        builder.Prompts.choice(session, 'I have understood that you want to create a new Incident, is that correct?', isThatCorrect, options);
     },
     // if the response is negative, returns to default dialog; if positive: ask for a keyword (possible keywords listed in categories.json
     function (session, results) {
@@ -224,6 +225,7 @@ bot.dialog('createIncident', [
                 }
             };
 
+            //noinspection JSAnnotator
             function callback(error, response, body) {
                 if (!error && response.statusCode == 201) {
 
@@ -268,6 +270,7 @@ bot.dialog('reopenIncident', [
                 }
             };
 
+            //noinspection JSAnnotator
             function callback(error, response, body) {
                 if (!error && response.statusCode == 200) {
                     var respJSON = JSON.parse(body);
@@ -354,7 +357,7 @@ bot.dialog('reopenIncident', [
 bot.dialog('orderHardware', [
     // Verifies entry into Conversation
     function (session) {
-        builder.Prompts.choice(session, 'I have understood that you want to order a device, is that correct?', isThatCorrect, builder.ListStyle.button);
+        builder.Prompts.choice(session, 'I have understood that you want to order a device, is that correct?', isThatCorrect, botbuilder_azure.);
     },
 
     function (session, result) {
@@ -434,6 +437,7 @@ bot.dialog('orderHardware', [
                 }
             };
 
+            //noinspection JSAnnotator
             function callback(error, response, body) {
                 if (!error && response.statusCode == 200) {
                     session.dialogData.order_request_number = body.result.request_number;
