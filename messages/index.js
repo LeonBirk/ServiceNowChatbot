@@ -241,7 +241,7 @@ bot.dialog('createIncident', [
         session.endDialog();
 
     }]).triggerAction({matches: 'openTicket'})
-    .cancelAction('cancelAction', {matches: 'cancel'})
+    .cancelAction('cancelAction', 'okay, canceling action', {matches: 'cancel'})
     .reloadAction('startOver', 'Ok, starting over.', {
         matches: /^start over$/i
     });
