@@ -29,126 +29,126 @@ var isThatCorrect = ['yes', 'no'];
 // possibility 1: add a "cancel" option to every single choice prompt, to enable the user to go back to the default Dialog
 
 /*bot.dialog('/', function (session) {
-    // TODO: fix incident creation
-    if (session.message.text.includes("open") && session.message.text.includes("incident") && session.message.text.includes('new')) {
-        session.beginDialog('createIncident');
-    }
-    else if (session.message.text.includes("INC")) {
-        session.send("Getting Incident data...");
-        var incidentID = session.message.text;
-        //session.send('You requested information on the Incident with the ID ' + session.message.text);
-        var urlString = 'https://dev27563.service-now.com/api/now/table/incident?sysparm_query=number=' + incidentID;
-        var options = {
-            url: urlString,
-            headers: headers,
-            auth: {
-                'user': 'admin',
-                'pass': 'EF3tGqL5T!'
-            }
-        };
+ // TODO: fix incident creation
+ if (session.message.text.includes("open") && session.message.text.includes("incident") && session.message.text.includes('new')) {
+ session.beginDialog('createIncident');
+ }
+ else if (session.message.text.includes("INC")) {
+ session.send("Getting Incident data...");
+ var incidentID = session.message.text;
+ //session.send('You requested information on the Incident with the ID ' + session.message.text);
+ var urlString = 'https://dev27563.service-now.com/api/now/table/incident?sysparm_query=number=' + incidentID;
+ var options = {
+ url: urlString,
+ headers: headers,
+ auth: {
+ 'user': 'admin',
+ 'pass': 'EF3tGqL5T!'
+ }
+ };
 
-        function callback(error, response, body) {
-            if (!error && response.statusCode == 200) {
-                var respJSON = JSON.parse(body);
-                //session.send(body)
-                var state = "empty";
-                state = respJSON.result[0].state;
-                switch (state) {
-                    case "1":
-                        state = "New";
-                        break;
-                    case "2":
-                        state = "In Progress";
-                        break;
-                    case "3":
-                        state = "On Hold";
-                        break;
-                    case "6":
-                        state = "Resolved";
-                        break;
-                    case "7":
-                        state = "Closed";
-                        break;
-                    case "8":
-                        state = "Canceled";
-                        break;
-                    default:
-                        state = "undefined";
-                }
-                session.send('Requested ID: ' + respJSON.result[0].number + '\n Status: ' + state + '\n Urgency: ' + respJSON.result[0].urgency + '\n Short Description: ' + respJSON.result[0].short_description);
-            }
-        }
+ function callback(error, response, body) {
+ if (!error && response.statusCode == 200) {
+ var respJSON = JSON.parse(body);
+ //session.send(body)
+ var state = "empty";
+ state = respJSON.result[0].state;
+ switch (state) {
+ case "1":
+ state = "New";
+ break;
+ case "2":
+ state = "In Progress";
+ break;
+ case "3":
+ state = "On Hold";
+ break;
+ case "6":
+ state = "Resolved";
+ break;
+ case "7":
+ state = "Closed";
+ break;
+ case "8":
+ state = "Canceled";
+ break;
+ default:
+ state = "undefined";
+ }
+ session.send('Requested ID: ' + respJSON.result[0].number + '\n Status: ' + state + '\n Urgency: ' + respJSON.result[0].urgency + '\n Short Description: ' + respJSON.result[0].short_description);
+ }
+ }
 
-        request(options, callback);
-    } else if (session.message.text.includes("my incidents")) {
-        session.send("Getting your personal incidents...");
-        var urlString = 'https://dev27563.service-now.com/api/now/table/incident?sysparm_query=caller_id=681ccaf9c0a8016400b98a06818d57c7';
-        var options = {
-            url: urlString,
-            headers: headers,
-            auth: {
-                'user': 'admin',
-                'pass': 'EF3tGqL5T!'
-            }
-        };
+ request(options, callback);
+ } else if (session.message.text.includes("my incidents")) {
+ session.send("Getting your personal incidents...");
+ var urlString = 'https://dev27563.service-now.com/api/now/table/incident?sysparm_query=caller_id=681ccaf9c0a8016400b98a06818d57c7';
+ var options = {
+ url: urlString,
+ headers: headers,
+ auth: {
+ 'user': 'admin',
+ 'pass': 'EF3tGqL5T!'
+ }
+ };
 
-        function callback(error, response, body) {
-            if (!error && response.statusCode == 200) {
-                var respJSON = JSON.parse(body);
-                //session.send(body);
-                var incidentCount = respJSON.result.length;
-                session.send("You currently have " + incidentCount + " incidents.");
-                for (var i = 0; i < respJSON.result.length; i++) {
-                    session.send("Incident ID number " + (i + 1) + " is: " + respJSON.result[i].number + ", short description is: " + respJSON.result[i].short_description);
-                }
-                session.send("If you want more information on one of those incidents, ask me about its ID.")
-            }
-        }
+ function callback(error, response, body) {
+ if (!error && response.statusCode == 200) {
+ var respJSON = JSON.parse(body);
+ //session.send(body);
+ var incidentCount = respJSON.result.length;
+ session.send("You currently have " + incidentCount + " incidents.");
+ for (var i = 0; i < respJSON.result.length; i++) {
+ session.send("Incident ID number " + (i + 1) + " is: " + respJSON.result[i].number + ", short description is: " + respJSON.result[i].short_description);
+ }
+ session.send("If you want more information on one of those incidents, ask me about its ID.")
+ }
+ }
 
-        request(options, callback);
-    }
-    else if (session.message.text.includes("order sales laptop")) {
-        session.send("Adding to cart: Sales Laptop...");
-        var body = {'sysparm_quantity': '1'};
-        var urlString = 'https://dev27563.service-now.com/api/sn_sc/servicecatalog/items/e212a942c0a80165008313c59764eea1/add_to_cart';
-        var options = {
-            url: urlString,
-            method: 'POST',
-            json: true,
-            data: body,
-            headers: headers,
-            auth: {
-                'user': 'admin',
-                'pass': 'EF3tGqL5T!'
-            }
-        };
+ request(options, callback);
+ }
+ else if (session.message.text.includes("order sales laptop")) {
+ session.send("Adding to cart: Sales Laptop...");
+ var body = {'sysparm_quantity': '1'};
+ var urlString = 'https://dev27563.service-now.com/api/sn_sc/servicecatalog/items/e212a942c0a80165008313c59764eea1/add_to_cart';
+ var options = {
+ url: urlString,
+ method: 'POST',
+ json: true,
+ data: body,
+ headers: headers,
+ auth: {
+ 'user': 'admin',
+ 'pass': 'EF3tGqL5T!'
+ }
+ };
 
-        function callback(error, response, body) {
-            session.send(body);
-            if (!error && response.statusCode == 201) {
-                var respJSON = JSON.parse(body);
-                session.send(body);
-            }
-        }
+ function callback(error, response, body) {
+ session.send(body);
+ if (!error && response.statusCode == 201) {
+ var respJSON = JSON.parse(body);
+ session.send(body);
+ }
+ }
 
-        request(options, callback);
-    }
-    else if (session.message.text.includes("reopen incident")) {
-        session.beginDialog('reopenIncident');
-    }
-    else if (session.message.text.includes("order hardware")) {
-        session.beginDialog('orderHardware');
-    }
-    else {
-        // TODO: make this a choice list, or at least format correctly
-        session.send("I'm afraid I didn't understand. " +
-            "I am currently somewhat lacking flexibility. The methods available for usage are: \b" +
-            "''open new incident'' - Guides you through the process of creating an incident on your behalf.\n" +
-            "''reopen incident'' - Gives you the list of your incidents eligible for reopening and let's you do it directly in chat.\n" +
-            "''order hardware'' - The devices available for you can be ordered through this option.\n" +
-            "''my incidents'' - Displays the incidents currently associated to your account.");
-    }
-});*/
+ request(options, callback);
+ }
+ else if (session.message.text.includes("reopen incident")) {
+ session.beginDialog('reopenIncident');
+ }
+ else if (session.message.text.includes("order hardware")) {
+ session.beginDialog('orderHardware');
+ }
+ else {
+ // TODO: make this a choice list, or at least format correctly
+ session.send("I'm afraid I didn't understand. " +
+ "I am currently somewhat lacking flexibility. The methods available for usage are: \b" +
+ "''open new incident'' - Guides you through the process of creating an incident on your behalf.\n" +
+ "''reopen incident'' - Gives you the list of your incidents eligible for reopening and let's you do it directly in chat.\n" +
+ "''order hardware'' - The devices available for you can be ordered through this option.\n" +
+ "''my incidents'' - Displays the incidents currently associated to your account.");
+ }
+ });*/
 
 // Waterfall dialog that gets the information needed to create a ticket in ServiceNow and uploads it
 bot.dialog('createIncident', [
@@ -230,15 +230,15 @@ bot.dialog('createIncident', [
                     session.send("Incident record created! The number is: " + body.result.number);
                 }
             }
-            session.sendTyping();
+
             request(options, callback);
         } else {
             session.send('I am confuuuuused. :(')
         }
         session.endDialog();
 
-    }]).triggerAction({ matches: 'openTicket' })
-    .cancelAction(cancelAction,{ matches: /^cancel$/, confirmPrompt: "Are you sure?"});
+    }]).triggerAction({matches: 'openTicket'})
+    .cancelAction({matches: /^cancel$/, confirmPrompt: "Are you sure?"});
 
 
 // Waterfall dialog that is triggered if a user wants to reopen an incident and guides him through the process
@@ -299,7 +299,7 @@ bot.dialog('reopenIncident', [
                     }
                 }
             }
-            session.sendTyping();
+
             request(options, callback);
         }
 
@@ -341,11 +341,11 @@ bot.dialog('reopenIncident', [
                 session.endDialog("Incident reopened successfully!")
             }
         }
-        session.sendTyping();
+
         request(options, callback);
 
     }
-]).triggerAction({ matches: 'reopenTicket' });
+]).triggerAction({matches: 'reopenTicket'});
 
 // Waterfall dialog for ordering a hardware device
 bot.dialog('orderHardware', [
@@ -409,7 +409,7 @@ bot.dialog('orderHardware', [
 
             }
         }
-        session.sendTyping();
+
         request(options, callback);
 
     },
@@ -443,11 +443,11 @@ bot.dialog('orderHardware', [
                     session.endDialog("Your items will be ordered now.");
                 }
             }
-            session.sendTyping();
+
             request(options, callback);
         }
     }
-]).triggerAction({ matches: 'orderHardware' });
+]).triggerAction({matches: 'orderHardware'});
 
 if (useEmulator) {
     var restify = require('restify');
