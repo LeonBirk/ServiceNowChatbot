@@ -357,7 +357,7 @@ bot.dialog('reopenIncident', [
 bot.dialog('orderHardware', [
     // Verifies entry into Conversation
     function (session) {
-        builder.Prompts.choice(session, 'I have understood that you want to order a device, is that correct?', isThatCorrect, botbuilder_azure.);
+        builder.Prompts.choice(session, 'I have understood that you want to order a device, is that correct?', isThatCorrect);
     },
 
     function (session, result) {
