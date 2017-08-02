@@ -454,6 +454,21 @@ bot.dialog('orderHardware', [
     .cancelAction('cancelAction', 'okay, canceling action', {matches: /^cancel$/i, confirmPrompt: "Are you sure?"})
     .reloadAction('startOver', 'Ok, starting over.', {matches: /^start over$/i, confirmPrompt: "Are you sure?"});
 
+// Greeting the user upon starting a new Conversation
+bot.on('conversationUpdate', function (message) {
+
+    if (message.membersAdded && message.membersAdded.length > 0) {
+
+        bot.send(new builder.Message()
+
+            .address(message.address)
+
+            .text('Hello user, good to meet you!'));
+
+    }
+
+});
+
 if (useEmulator) {
     var restify = require('restify');
     var server = restify.createServer();
