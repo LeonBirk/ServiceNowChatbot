@@ -28,6 +28,9 @@ var isThatCorrect = ['yes', 'no'];
 // TODO: Implement escape possibility for choice options: to end or restart the dialog (cancel and/or one step back in the waterfall)
 // possibility 1: add a "cancel" option to every single choice prompt, to enable the user to go back to the default Dialog
 
+bot.dialog('/', function (session) {
+
+    });
 /*bot.dialog('/', function (session) {
  // TODO: fix incident creation
  if (session.message.text.includes("open") && session.message.text.includes("incident") && session.message.text.includes('new')) {
