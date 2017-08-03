@@ -492,7 +492,7 @@ function createHeroCard(session) {
             builder.CardImage.create(session, 'http://clipart-library.com/images/8T65akk8c.png')
         ])
         .buttons([
-            builder.CardAction.playAudio(session, 'http://sep800.mine.nu/files/sounds/fanfare.wav', 'Call the Dark Knight')
+            builder.CardAction.playAudio(session, 'http://www.moviesoundclips.net/movies1/batmanbegins/batman.mp3', 'Call the Dark Knight')
         ]);
 }
 
