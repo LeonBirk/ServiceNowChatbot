@@ -154,10 +154,17 @@ var buttonStyle = {listStyle: builder.ListStyle.button};
 // Waterfall dialog that greets the user and informs him/her about the currently available functions
 bot.dialog('greeting', [
     function (session) {
-        session.send("Hello there beautiful :)");
-        session.send('I am a little program that will help you in your daily tasks. You can talk to me if you want to <b>order some hardware</b>, <b>open a new Ticket</b> or <b>reopen a closed Ticket</b>.');
-        session.send("If you change your mind while in one of those processes and want to start again, say '<b>start over</b>' when ever you feel like it. Also, you can cancel any process by saying '<b>cancel</b>'.")
-    }
+
+        var card = createAnimationCard();
+        var msg = new builder.Message(session).addAttachment();
+        session.send(msg);
+    },
+        function (session) {
+            session.send('I am a little program that will help you in your daily tasks. You can talk to me if you want to <b>order some hardware</b>, <b>open a new Ticket</b> or <b>reopen a closed Ticket</b>.');
+            session.send("If you change your mind while in one of those processes and want to start again, say '<b>start over</b>' when ever you feel like it. Also, you can cancel any process by saying '<b>cancel</b>'.")
+
+        }
+
 ]).triggerAction({matches: 'greeting'});
 
 // Waterfall dialog that gets the information needed to create a ticket in ServiceNow and uploads it
@@ -295,7 +302,7 @@ bot.dialog('reopenIncident', [
                             session.send("Incident number " + (i + 1) + " has the ID: " + respJSON.result[i].number + ", its short description is: " + respJSON.result[i].short_description);
                         }
                         session.dialogData.incidents = incidents;
-                        builder.Prompts.choice(session, 'So, which Incident is it going to be? Or do you want more choices?', incidentChoices, buttonStyle);
+                        builder.Prompts.choice(session, 'So, which Incident is it going to be?', incidentChoices, buttonStyle);
                     } else {
                         session.send("You currently have " + incidentCount + " closed incident.");
                         var incidents = [];
