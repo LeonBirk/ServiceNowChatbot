@@ -489,9 +489,10 @@ bot.on('conversationUpdate', function (message) {
 
 function createHeroCard(session) {
     return new builder.HeroCard(session)
-        .title('BotFramework Hero Card')
-        .subtitle('Your bots — wherever your users are talking')
-        .text('Build and connect intelligent bots to interact with your users naturally wherever they are, from text/sms to Skype, Slack, Office 365 mail and other popular services.')
+        .title('Snow.ai')
+        .subtitle("I'm here for you.")
+        .text('I am a little program that will help you in your daily tasks. You can talk to me if you want to <b>order some hardware</b>, <b>open a new Ticket</b> or <b>reopen a closed Ticket</b>. <br/>' +
+            "If you change your mind while in one of those processes and want to start again, say '<b>start over</b>' when ever you feel like it. Also, you can cancel any process by saying '<b>cancel</b>'.")
         .images([
             builder.CardImage.create(session, 'https://sec.ch9.ms/ch9/7ff5/e07cfef0-aa3b-40bb-9baa-7c9ef8ff7ff5/buildreactionbotframework_960.jpg')
         ])
