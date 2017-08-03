@@ -20,7 +20,7 @@ var bot = new builder.UniversalBot(connector);
 bot.localePath(path.join(__dirname, './locale'));
 var model = "https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/e9a5b433-7ac9-4804-a9ab-9d8def0af94f?subscription-key=3b46d549d216495ebee6dccc193449d0&timezoneOffset=0&verbose=true&q=";
 bot.recognizer(new builder.LuisRecognizer(model));
-var categories = require('./categories.json');
+var categories = {};
 var hardware = {};
 var isThatCorrect = ['yes', 'no'];
 var buttonStyle = {listStyle: builder.ListStyle.button};
@@ -171,6 +171,7 @@ bot.dialog('createIncident', [
     // if the response is negative, returns to default dialog; if positive: ask for a keyword (possible keywords listed in categories.json
     function (session, results) {
         var confirmation = results.response.entity.toString();
+        categories = require('./categories.json');
         if (confirmation === 'no') {
             session.endDialog('Ok! So how can I help you?');
         } else {
@@ -476,11 +477,21 @@ bot.on('conversationUpdate', function (message) {
 
             .address(message.address)
 
-            .text('Hello user, good to meet you!'));
+            .text(''));
 
     }
 
 });
+
+function createAnimationCard(session) {
+    return new builder.AnimationCard(session)
+        .title('Nice to greet you!')
+        .subtitle('I hope I can be of service to you.')
+        .image(builder.CardImage.create(session, 'https://docs.microsoft.com/en-us/bot-framework/media/how-it-works/architecture-resize.png'))
+        .media([
+            { url: 'http://i.giphy.com/Ki55RUbOV5njy.gif' }
+        ]);
+}
 
 if (useEmulator) {
     var restify = require('restify');
