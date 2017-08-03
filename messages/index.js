@@ -240,7 +240,7 @@ bot.dialog('createIncident', [
         session.endDialog();
 
     }]).triggerAction({matches: 'openTicket'})
-    .cancelAction('cancelAction', 'Okay, canceling action.', {matches: /^cancel$/i, confirmPrompt: "Are you sure?"} )
+    .cancelAction('cancelAction', 'Okay, action canceled.', {matches: /^cancel$/i, confirmPrompt: "Are you sure?"} )
     .reloadAction('startOver', 'Ok, starting over.', {matches: /^start over$/i, confirmPrompt: "Are you sure?"});
 
 
@@ -350,7 +350,7 @@ bot.dialog('reopenIncident', [
 
     }
 ]).triggerAction({matches: 'reopenTicket'})
-    .cancelAction('cancelAction', 'okay, canceling action', {matches: /^cancel$/i, confirmPrompt: "Are you sure?"})
+    .cancelAction('cancelAction', 'okay, action canceled', {matches: /^cancel$/i, confirmPrompt: "Are you sure?"})
     .reloadAction('startOver', 'Ok, starting over.', {matches: /^start over$/i, confirmPrompt: "Are you sure?"});
 
 // Waterfall dialog for ordering a hardware device
@@ -455,7 +455,7 @@ bot.dialog('orderHardware', [
         }
     }
 ]).triggerAction({matches: 'orderHardware'})
-    .cancelAction('cancelAction', 'okay, canceling action', {matches: /^cancel$/i, confirmPrompt: "Are you sure?"})
+    .cancelAction('cancelAction', 'okay, action canceled', {matches: /^cancel$/i, confirmPrompt: "Are you sure?"})
     .reloadAction('startOver', 'Ok, starting over.', {matches: /^start over$/i, confirmPrompt: "Are you sure?"});
 
 // Greeting the user upon starting a new Conversation
