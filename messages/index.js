@@ -154,7 +154,7 @@ var buttonStyle = {listStyle: builder.ListStyle.button};
 // Waterfall dialog that greets the user and informs him/her about the currently available functions
 bot.dialog('greeting', [
     function (session) {
-
+        session.send("Greeting triggered.");
         var card = createAnimationCard();
         var msg = new builder.Message(session).addAttachment(card);
         session.send(msg);
