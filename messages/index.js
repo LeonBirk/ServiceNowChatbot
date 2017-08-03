@@ -154,7 +154,9 @@ var buttonStyle = {listStyle: builder.ListStyle.button};
 // Waterfall dialog that greets the user and informs him/her about the currently available functions
 bot.dialog('greeting', [
     function (session) {
-        session.send("Hiiiiii there")
+        session.send("Hello there beautiful :)");
+        session.send("I am a little program that will help you in your daily tasks. You can talk to me if you want to order some hardware, open a new Ticket or reopen a closed Ticket.");
+        session.send("If you change your mind while in one of those processes and want to start again, say 'start over' when ever you feel like it. Also, you can cancel any process by saying 'cancel'.")
     }
 ]).triggerAction({matches: 'greeting'});
 
