@@ -154,17 +154,14 @@ var buttonStyle = {listStyle: builder.ListStyle.button};
 // Waterfall dialog that greets the user and informs him/her about the currently available functions
 bot.dialog('greeting', [
     function (session) {
-        session.send("Greeting triggered.");
         var card = createHeroCard(session);
         var msg = new builder.Message(session).addAttachment(card);
         session.send(msg);
-    },
-        function (session) {
-            session.send('I am a little program that will help you in your daily tasks. You can talk to me if you want to <b>order some hardware</b>, <b>open a new Ticket</b> or <b>reopen a closed Ticket</b>.');
-            session.send("If you change your mind while in one of those processes and want to start again, say '<b>start over</b>' when ever you feel like it. Also, you can cancel any process by saying '<b>cancel</b>'.")
 
-        }
+        session.send('I am a little program that will help you in your daily tasks. You can talk to me if you want to <b>order some hardware</b>, <b>open a new Ticket</b> or <b>reopen a closed Ticket</b>.');
+        session.send("If you change your mind while in one of those processes and want to start again, say '<b>start over</b>' when ever you feel like it. Also, you can cancel any process by saying '<b>cancel</b>'.")
 
+    }
 ]).triggerAction({matches: 'greeting'});
 
 // Waterfall dialog that gets the information needed to create a ticket in ServiceNow and uploads it
@@ -491,8 +488,6 @@ function createHeroCard(session) {
     return new builder.HeroCard(session)
         .title('Snow.ai')
         .subtitle("I'm here for you.")
-        .text('I am a little program that will help you in your daily tasks. You can talk to me if you want to <b>order some hardware</b>, <b>open a new Ticket</b> or <b>reopen a closed Ticket</b>. <br/>' +
-            "If you change your mind while in one of those processes and want to start again, say '<b>start over</b>' when ever you feel like it. Also, you can cancel any process by saying '<b>cancel</b>'.")
         .images([
             builder.CardImage.create(session, 'http://clipart-library.com/images/8T65akk8c.png')
         ])
