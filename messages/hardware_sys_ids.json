@@ -4,5 +4,15 @@
   "Large version: 8GB RAM, 16 inches, 30hrs battery": "7e87837237153000158bbfc8bcbe5df6",
   "Macbook Air: 6GB, 13 inches, 30hrs battery" : "3cecd2350a0a0a6a013a3a35a5e41c07",
   "Macbook Pro: 8GB, 15 inches, 35hrs battery" : "2ab7077237153000158bbfc8bcbe5da9",
-  "Macbook SuperPro: 32GB, 25 inches, 856hrs battery" : "e46305bdc0a8010a00645e608031eb0f"
+  "Macbook SuperPro: 32GB, 25 inches, 856hrs battery" : "e46305bdc0a8010a00645e608031eb0f",
+  "Microsoft Surface Pro 3": "d130ad75d7620200a9ad1e173e24d43c",
+  "Microsoft Surface Pro 4": "ae44f5804f889200086eeed18110c73f",
+  "Apple iPad 3": "060f3afa3731300054b6a3549dbe5d3e",
+  "iPhone 6s": "bd6fa75a4f334200086eeed18110c79e",
+  "iPhone 6s Plus": "d82ea08510247200964f77ffeec6c4ee",
+  "Samsung Galaxy S7": "84d4fcc510247200964f77ffeec6c4fc",
+  "Samsung Galaxy S7 Edge": "0c61f0c510247200964f77ffeec6c499",
+  "Apple Watch": "4a17d6a3ff133100ba13ffffffffffe7",
+  "Apple Watch Series 2": "acc73c0910247200964f77ffeec6c4af"
+
 }

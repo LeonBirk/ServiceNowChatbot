@@ -1,39 +1,42 @@
 {
-  "Laptops":
-    {
-      "Dell": [
-        "Small version: 4GB RAM, 12 inches, 20hrs battery",
-        "Medium version: 6GB RAM, 14 inches, 24hrs battery",
-        "Large version: 8GB RAM, 16 inches, 30hrs battery"
-      ]
-    ,
+  "Laptops": {
+    "Dell": [
+      "Small version: 4GB RAM, 12 inches, 20hrs battery",
+      "Medium version: 6GB RAM, 14 inches, 24hrs battery",
+      "Large version: 8GB RAM, 16 inches, 30hrs battery"
+    ],
+    "Apple": [
+      "Macbook Air: 6GB, 13 inches, 30hrs battery",
+      "Macbook Pro: 8GB, 15 inches, 35hrs battery",
+      "Macbook SuperPro: 32GB, 25 inches, 856hrs battery"
+    ]
+  },
 
-      "Apple": [
-        "Macbook Air: 6GB, 13 inches, 30hrs battery",
-        "Macbook Pro: 8GB, 15 inches, 35hrs battery",
-        "Macbook SuperPro: 32GB, 25 inches, 856hrs battery"
-      ]
-    }
-  ,
-  "Tablets": [
-    "Microsoft",
-    "Apple",
-    "Sony",
-    "Amazon",
-    "Samsung"
-  ],
-  "Phones": [
-    "Apple",
-    "Samsung",
-    "Microsoft",
-    "Sony",
-    "Huawei"
-  ],
-  "Accessories": [
-    "Headphones",
-    "Mouses",
-    "Keyboards",
-    "Power cables",
-    "Phone cases"
-  ]
+  "Tablets": {
+    "Microsoft": [
+      "Microsoft Surface Pro 3",
+      "Microsoft Surface Pro 4"
+    ],
+    "Apple": [
+      "Apple iPad 3"
+    ]
+  },
+
+  "Phones": {
+    "Samsung": [
+      "Samsung Galaxy S7",
+      "Samsung Galaxy S7 Edge"
+    ],
+    "Apple": [
+      "iPhone 6s",
+      "iPhone 6s Plus"
+    ]
+  },
+
+  "Accessories": {
+    "Apple": [
+      "Apple Watch",
+      "Apple Watch Series 2"
+    ]
+  }
 }
