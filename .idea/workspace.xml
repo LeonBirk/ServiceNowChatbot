@@ -30,8 +30,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/messages/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="494" column="13" lean-forward="false" selection-start-line="494" selection-start-column="13" selection-end-line="494" selection-end-column="13" />
+            <state relative-caret-position="368">
+              <caret line="499" column="113" lean-forward="false" selection-start-line="499" selection-start-column="113" selection-end-line="499" selection-end-column="113" />
               <folding>
                 <element signature="e#6168#10795#0" expanded="false" />
                 <element signature="e#11209#16102#0" expanded="false" />
@@ -283,14 +283,7 @@
       <workItem from="1500394895553" duration="91000" />
       <workItem from="1500914059272" duration="10875000" />
       <workItem from="1500995464592" duration="3104000" />
-      <workItem from="1501622360830" duration="24189000" />
-    </task>
-    <task id="LOCAL-00050" summary="ORDER HARDWARE: 0.956 timeouts cause the dialog to crash">
-      <created>1501102587009</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1501102587010</updated>
+      <workItem from="1501622360830" duration="24954000" />
     </task>
     <task id="LOCAL-00051" summary="ORDER HARDWARE: 0.96 endDialog is called in Callback">
       <created>1501102840125</created>
@@ -628,11 +621,18 @@
       <option name="project" value="LOCAL" />
       <updated>1501786685339</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="GREETING: 0.7 herocard functional">
+      <created>1501786974461</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1501786974461</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69647000" />
+    <option name="totallyTimeSpent" value="70412000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -721,7 +721,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LUIS INTEGRATION - 0.402 cancel trigger as regex again" />
     <MESSAGE value="LUIS INTEGRATION - 0.5 cancel and startover triggers added to every dialog" />
     <MESSAGE value="LUIS INTEGRATION - 0.55 confirmPrompt for cancel and start over on new incident" />
     <MESSAGE value="LUIS INTEGRATION - 0.6 confirmPrompt for all dialogs, again without default dialog" />
@@ -746,7 +745,8 @@
     <MESSAGE value="GREETING: 0.502 log" />
     <MESSAGE value="GREETING: 0.503 fix: session as a parameter" />
     <MESSAGE value="GREETING: 0.504 herocard try" />
-    <option name="LAST_COMMIT_MESSAGE" value="GREETING: 0.504 herocard try" />
+    <MESSAGE value="GREETING: 0.7 herocard functional" />
+    <option name="LAST_COMMIT_MESSAGE" value="GREETING: 0.7 herocard functional" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1246,8 +1246,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/messages/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="494" column="13" lean-forward="false" selection-start-line="494" selection-start-column="13" selection-end-line="494" selection-end-column="13" />
+        <state relative-caret-position="368">
+          <caret line="499" column="113" lean-forward="false" selection-start-line="499" selection-start-column="113" selection-end-line="499" selection-end-column="113" />
           <folding>
             <element signature="e#6168#10795#0" expanded="false" />
             <element signature="e#11209#16102#0" expanded="false" />
