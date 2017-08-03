@@ -151,6 +151,13 @@ var buttonStyle = {listStyle: builder.ListStyle.button};
  }
  });*/
 
+// Waterfall dialog that greets the user and informs him/her about the currently available functions
+bot.dialog('greeting', [
+    function (session) {
+        session.send("Hiiiiii there")
+    }
+]).triggerAction({matches: 'greeting'});
+
 // Waterfall dialog that gets the information needed to create a ticket in ServiceNow and uploads it
 bot.dialog('createIncident', [
     // Verifies entry into Conversation
