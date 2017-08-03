@@ -156,7 +156,7 @@ bot.dialog('greeting', [
     function (session) {
 
         var card = createAnimationCard();
-        var msg = new builder.Message(session).addAttachment();
+        var msg = new builder.Message(session).addAttachment(card);
         session.send(msg);
     },
         function (session) {
