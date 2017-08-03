@@ -23,6 +23,7 @@ bot.recognizer(new builder.LuisRecognizer(model));
 var categories = require('./categories.json');
 var hardware = {};
 var isThatCorrect = ['yes', 'no'];
+var buttonStyle = {listStyle: builder.ListStyle.button};
 
 
 // TODO: Implement escape possibility for choice options: to end or restart the dialog (cancel and/or one step back in the waterfall)
@@ -156,8 +157,7 @@ bot.dialog('createIncident', [
     function (session) {
 
         // TODO: change the isThatCorrect prompts to Confirmation Prompts
-        var options = {listStyle: builder.ListStyle.button};
-        builder.Prompts.choice(session, 'I have understood that you want to create a new Incident, is that correct?', isThatCorrect, options);
+        builder.Prompts.choice(session, 'I have understood that you want to create a new Incident, is that correct?', isThatCorrect, buttonStyle);
     },
     // if the response is negative, returns to default dialog; if positive: ask for a keyword (possible keywords listed in categories.json
     function (session, results) {
@@ -165,7 +165,7 @@ bot.dialog('createIncident', [
         if (confirmation === 'no') {
             session.endDialog('Ok! So how can I help you?');
         } else {
-            builder.Prompts.choice(session, 'Okay! So let\'s start with a keyword. What is the application, product or service that is causing a problem for you?', categories);
+            builder.Prompts.choice(session, 'Okay! So let\'s start with a keyword. What is the application, product or service that is causing a problem for you?', categories, buttonStyle);
         }
     },
     // Returns a list of choices for the selected category
@@ -173,7 +173,7 @@ bot.dialog('createIncident', [
         session.dialogData.keyword = results.response.entity.toString();
         session.send(session.dialogData.keyword + " huh? I always struggle with that, too.");
         var choices = categories[session.dialogData.keyword];
-        builder.Prompts.choice(session, 'Please specify one of the following categories:', choices);
+        builder.Prompts.choice(session, 'Please specify one of the following categories:', choices, buttonStyle);
     },
     // Asks for a short description
     function (session, results) {
@@ -195,7 +195,7 @@ bot.dialog('createIncident', [
         session.dialogData.phone_nr = results.response;
         builder.Prompts.choice(session, 'Looks good! So you want to submit a Ticket about ' + session.dialogData.keyword + ', the underlying category is ' + session.dialogData.category +
             ' with a short description of \'' + session.dialogData.short_description + '\'. And for further information, we can reach you under ' +
-            session.dialogData.phone_nr + '. Am I correct?', isThatCorrect);
+            session.dialogData.phone_nr + '. Am I correct?', isThatCorrect, buttonStyle);
     },
     function (session, results) {
         var confirmation = results.response.entity.toString();
@@ -247,7 +247,7 @@ bot.dialog('createIncident', [
 // Waterfall dialog that is triggered if a user wants to reopen an incident and guides him through the process
 bot.dialog('reopenIncident', [
     function (session) {
-        builder.Prompts.choice(session, 'I have understood you want to reopen an Incident, is that correct?', isThatCorrect);
+        builder.Prompts.choice(session, 'I have understood you want to reopen an Incident, is that correct?', isThatCorrect, buttonStyle);
     },
     function (session, results) {
         var confirmation = results.response.entity.toString();
@@ -287,7 +287,7 @@ bot.dialog('reopenIncident', [
                         }
                         session.dialogData.incidents = incidents;
                         incidentChoices[incidentChoices.length] = 'more';
-                        builder.Prompts.choice(session, 'So, which Incident is it going to be? Or do you want more choices?', incidentChoices);
+                        builder.Prompts.choice(session, 'So, which Incident is it going to be? Or do you want more choices?', incidentChoices, buttonStyle);
                     } else {
                         session.send("You currently have " + incidentCount + " closed incident.");
                         var incidents = [];
@@ -299,7 +299,7 @@ bot.dialog('reopenIncident', [
                         }
                         session.dialogData.incidents = incidents;
                         incidentChoices[incidentChoices.length] = 'more';
-                        builder.Prompts.choice(session, 'So, do you want to reopen it? Or do you want more choices?', incidentChoices);
+                        builder.Prompts.choice(session, 'So, do you want to reopen it? Or do you want more choices?', incidentChoices, buttonStyle);
                     }
                 }
             }
@@ -357,7 +357,7 @@ bot.dialog('reopenIncident', [
 bot.dialog('orderHardware', [
     // Verifies entry into Conversation
     function (session) {
-        builder.Prompts.choice(session, 'I have understood that you want to order a device, is that correct?', isThatCorrect);
+        builder.Prompts.choice(session, 'I have understood that you want to order a device, is that correct?', isThatCorrect, buttonStyle);
     },
 
     function (session, result) {
@@ -365,21 +365,21 @@ bot.dialog('orderHardware', [
             session.endDialog('Ok, how else might I be of service to you?')
         } else {
             hardware = require('./hardware.json');
-            builder.Prompts.choice(session, 'Okay, great! These are the categories of hardware devices available for you: ', hardware)
+            builder.Prompts.choice(session, 'Okay, great! These are the categories of hardware devices available for you: ', hardware, buttonStyle)
         }
     },
 
     function (session, result) {
         session.dialogData.hardwareCategory = result.response.entity;
         var choices = hardware[session.dialogData.hardwareCategory];
-        builder.Prompts.choice(session, 'Nice! What type of device do you want to order?', choices)
+        builder.Prompts.choice(session, 'Nice! What type of device do you want to order?', choices, buttonStyle)
     },
 
     function (session, result) {
         session.dialogData.hardwareSubcategory = result.response.entity;
         var temp = hardware[session.dialogData.hardwareCategory];
         var choices = temp[session.dialogData.hardwareSubcategory];
-        builder.Prompts.choice(session, 'So which specific device is it going to be?', choices, builder.ListStyle.list);
+        builder.Prompts.choice(session, 'So which specific device is it going to be?', choices, buttonStyle);
     },
 
     function (session, result) {
@@ -411,7 +411,7 @@ bot.dialog('orderHardware', [
                     session.send(answer.result.items[i].item_name + " for " + answer.result.items[i].localized_price)
                 }
                 session.dialogData.shoppingcart = answer.result.items;
-                builder.Prompts.choice(session, "The subtotal is " + answer.result.subtotal + ". Are you ready to submit your order?", isThatCorrect);
+                builder.Prompts.choice(session, "The subtotal is " + answer.result.subtotal + ". Are you ready to submit your order?", isThatCorrect,buttonStyle);
 
             }
         }
