@@ -166,7 +166,7 @@ bot.dialog('createIncident', [
     function (session) {
 
         // TODO: change the isThatCorrect prompts to Confirmation Prompts
-        builder.Prompts.choice(session, 'I have understood that you want to create a new Incident, is that correct?', isThatCorrect, buttonStyle);
+        builder.Prompts.choice(session, 'I have understood that you want to create a new Ticket, is that correct?', isThatCorrect, buttonStyle);
     },
     // if the response is negative, returns to default dialog; if positive: ask for a keyword (possible keywords listed in categories.json
     function (session, results) {
@@ -175,7 +175,7 @@ bot.dialog('createIncident', [
         if (confirmation === 'no') {
             session.endDialog('Ok! So how can I help you?');
         } else {
-            builder.Prompts.choice(session, 'Okay! So let\'s start with a keyword. What is the application, product or service that is causing a problem for you?', categories, buttonStyle);
+            builder.Prompts.choice(session, 'Okay! So let\'s start with a keyword. What is the application, product or service that you want to open a ticket for?', categories, buttonStyle);
         }
     },
     // Returns a list of choices for the selected category
@@ -188,7 +188,7 @@ bot.dialog('createIncident', [
     // Asks for a short description
     function (session, results) {
         session.dialogData.subcategory = results.response.entity;
-        builder.Prompts.text(session, 'Your choice was: ' + session.dialogData.subcategory + '. So let\'s move on with a short description. What\'s wrong exactly? In just a few words.');
+        builder.Prompts.text(session, 'Your choice was: ' + session.dialogData.subcategory + '. So let\'s move on with a short description. What do you need exactly? In just a few words.');
     },
     // Asks for a description
     function (session, results) {
@@ -421,7 +421,7 @@ bot.dialog('orderHardware', [
                     session.send(answer.result.items[i].item_name + " for " + answer.result.items[i].localized_price)
                 }
                 session.dialogData.shoppingcart = answer.result.items;
-                builder.Prompts.choice(session, "The subtotal is " + answer.result.subtotal + ". Are you ready to submit your order?", isThatCorrect,buttonStyle);
+                builder.Prompts.choice(session, "The subtotal (including additional cost) is " + answer.result.subtotal + ". Are you ready to submit your order?", isThatCorrect,buttonStyle);
 
             }
         }
