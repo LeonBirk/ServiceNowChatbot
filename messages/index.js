@@ -497,7 +497,7 @@ function createHeroCard(session) {
             builder.CardImage.create(session, 'http://clipart-library.com/images/8T65akk8c.png')
         ])
         .buttons([
-            builder.CardAction.openUrl(session, 'https://docs.microsoft.com/bot-framework', 'Call the Dark Knight')
+            builder.CardAction.playAudio(session, 'http://sep800.mine.nu/files/sounds/fanfare.wav', 'Call the Dark Knight')
         ]);
 }
 
