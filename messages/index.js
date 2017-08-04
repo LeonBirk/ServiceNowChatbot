@@ -489,7 +489,7 @@ function createHeroCard(session) {
         .title('Hello there, my name is <b>Snow.ai</b>')
         .subtitle("I'm here for you.")
         .images([
-            builder.CardImage.create(session, 'http://www.siliconweek.com/wp-content/uploads/2016/10/38-01.png')
+            builder.CardImage.create(session, '../src/img/Carlitator.jpg')
         ])
         ;
 }
