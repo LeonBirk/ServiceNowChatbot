@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8a191f03-0956-421e-ad62-a81abb0cfdf2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/index.js" afterPath="$PROJECT_DIR$/messages/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,8 +29,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/messages/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="491" column="74" lean-forward="false" selection-start-line="491" selection-start-column="74" selection-end-line="491" selection-end-column="74" />
+            <state relative-caret-position="264">
+              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding>
                 <element signature="e#11116#16009#0" expanded="false" />
                 <element signature="e#16361#21060#0" expanded="false" />
@@ -300,14 +299,7 @@
       <workItem from="1500394895553" duration="91000" />
       <workItem from="1500914059272" duration="10875000" />
       <workItem from="1500995464592" duration="3104000" />
-      <workItem from="1501622360830" duration="29692000" />
-    </task>
-    <task id="LOCAL-00056" summary="createIncident fix: get key through Object.keys logging">
-      <created>1501602991676</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1501602991676</updated>
+      <workItem from="1501622360830" duration="30416000" />
     </task>
     <task id="LOCAL-00057" summary="createIncident fix: score as response seemed to indicate usage of a recognizer when none was implemented -&gt; match statement deleted">
       <created>1501603375601</created>
@@ -645,11 +637,18 @@
       <option name="project" value="LOCAL" />
       <updated>1501852268186</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="GREETING: 0.9 new picture">
+      <created>1501864183055</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1501864183055</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75150000" />
+    <option name="totallyTimeSpent" value="75874000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -662,7 +661,7 @@
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21585903" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -738,7 +737,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Sidequest: button name fix" />
     <MESSAGE value="Sidequest: button example try" />
     <MESSAGE value="Sidequest: button rollback" />
     <MESSAGE value="Sidequest: cancelaction notification" />
@@ -763,7 +761,8 @@
     <MESSAGE value="GREETING: 0.8 text cleanup" />
     <MESSAGE value="GREETING: 0.8 new button function" />
     <MESSAGE value="GREETING: 0.85 new picture &amp; greeting" />
-    <option name="LAST_COMMIT_MESSAGE" value="GREETING: 0.85 new picture &amp; greeting" />
+    <MESSAGE value="GREETING: 0.9 new picture" />
+    <option name="LAST_COMMIT_MESSAGE" value="GREETING: 0.9 new picture" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1245,8 +1244,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/messages/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="491" column="74" lean-forward="false" selection-start-line="491" selection-start-column="74" selection-end-line="491" selection-end-column="74" />
+        <state relative-caret-position="264">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
             <element signature="e#11116#16009#0" expanded="false" />
             <element signature="e#16361#21060#0" expanded="false" />
