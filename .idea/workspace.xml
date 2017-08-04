@@ -30,8 +30,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/messages/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="494" column="113" lean-forward="false" selection-start-line="494" selection-start-column="113" selection-end-line="494" selection-end-column="113" />
+            <state relative-caret-position="766">
+              <caret line="488" column="54" lean-forward="false" selection-start-line="488" selection-start-column="54" selection-end-line="488" selection-end-column="54" />
               <folding>
                 <element signature="e#6075#10702#0" expanded="false" />
                 <element signature="e#11116#16009#0" expanded="false" />
@@ -283,14 +283,7 @@
       <workItem from="1500394895553" duration="91000" />
       <workItem from="1500914059272" duration="10875000" />
       <workItem from="1500995464592" duration="3104000" />
-      <workItem from="1501622360830" duration="26848000" />
-    </task>
-    <task id="LOCAL-00054" summary="FIX - incident creation keyword categories">
-      <created>1501537359664</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1501537359664</updated>
+      <workItem from="1501622360830" duration="27079000" />
     </task>
     <task id="LOCAL-00055" summary="createIncident fix: get key through Object.keys">
       <created>1501602759243</created>
@@ -628,11 +621,18 @@
       <option name="project" value="LOCAL" />
       <updated>1501791631299</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="GREETING: 0.8 new button function">
+      <created>1501792123818</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1501792123818</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72306000" />
+    <option name="totallyTimeSpent" value="72537000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -721,7 +721,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Sidequest: Greeting a user upon new conversation" />
     <MESSAGE value="Sidequest: Greeting a user upon new conversation, noInspection Annotation + new try with button" />
     <MESSAGE value="Sidequest: button name fix" />
     <MESSAGE value="Sidequest: button example try" />
@@ -746,7 +745,8 @@
     <MESSAGE value="GREETING: 0.7 herocard image + button change" />
     <MESSAGE value="GREETING: 0.7 button playAudio" />
     <MESSAGE value="GREETING: 0.8 text cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="GREETING: 0.8 text cleanup" />
+    <MESSAGE value="GREETING: 0.8 new button function" />
+    <option name="LAST_COMMIT_MESSAGE" value="GREETING: 0.8 new button function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1246,8 +1246,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/messages/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="494" column="113" lean-forward="false" selection-start-line="494" selection-start-column="113" selection-end-line="494" selection-end-column="113" />
+        <state relative-caret-position="766">
+          <caret line="488" column="54" lean-forward="false" selection-start-line="488" selection-start-column="54" selection-end-line="488" selection-end-column="54" />
           <folding>
             <element signature="e#6075#10702#0" expanded="false" />
             <element signature="e#11116#16009#0" expanded="false" />

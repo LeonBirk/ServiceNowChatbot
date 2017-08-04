@@ -486,14 +486,12 @@ bot.on('conversationUpdate', function (message) {
 
 function createHeroCard(session) {
     return new builder.HeroCard(session)
-        .title('Snow.ai')
+        .title('Hello there, my name is <b>Snow.ai</b>')
         .subtitle("I'm here for you.")
         .images([
-            builder.CardImage.create(session, 'http://clipart-library.com/images/8T65akk8c.png')
+            builder.CardImage.create(session, 'http://www.siliconweek.com/wp-content/uploads/2016/10/38-01.png')
         ])
-        .buttons([
-            builder.CardAction.playAudio(session, 'http://www.moviesoundclips.net/movies1/batmanbegins/batman.mp3', 'Call the Dark Knight')
-        ]);
+        ;
 }
 
 if (useEmulator) {
