@@ -25,7 +25,6 @@ var hardware = {};
 var isThatCorrect = ['yes', 'no'];
 var buttonStyle = {listStyle: builder.ListStyle.button};
 
-var carlitos = require ('../src/img/Carlitator.jpg');
 
 // TODO: Implement escape possibility for choice options: to end or restart the dialog (cancel and/or one step back in the waterfall)
 // possibility 1: add a "cancel" option to every single choice prompt, to enable the user to go back to the default Dialog
