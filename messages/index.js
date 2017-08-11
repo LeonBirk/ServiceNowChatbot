@@ -329,7 +329,8 @@ bot.dialog('incidentStatus', [
             }
         } request(options, callback);
     }
-]).triggerAction({matches: 'ticketStatus'});
+]).triggerAction({matches: 'ticketStatus'})
+    .cancelAction('cancelAction', 'Okay, action canceled.', {matches: /^cancel$/i, confirmPrompt: "Are you sure?"} );
 
 
 // Waterfall dialog that is triggered if a user wants to reopen an incident and guides him through the process

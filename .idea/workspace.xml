@@ -30,12 +30,12 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/messages/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="278" column="41" lean-forward="false" selection-start-line="278" selection-start-column="41" selection-end-line="278" selection-end-column="41" />
+            <state relative-caret-position="279">
+              <caret line="332" column="116" lean-forward="false" selection-start-line="332" selection-start-column="116" selection-end-line="332" selection-end-column="116" />
               <folding>
                 <element signature="e#4951#5551#0" expanded="false" />
                 <element signature="e#5722#10349#0" expanded="false" />
-                <element signature="e#24307#24490#0" expanded="false" />
+                <element signature="e#24424#24607#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -274,14 +274,7 @@
       <workItem from="1500914059272" duration="10875000" />
       <workItem from="1500995464592" duration="3104000" />
       <workItem from="1501622360830" duration="36239000" />
-      <workItem from="1502460637745" duration="6242000" />
-    </task>
-    <task id="LOCAL-00065" summary="LUIS INTEGRATION - 0.38 retry cancel trigger on createIncident, with cancelAction as handler">
-      <created>1501616820137</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1501616820137</updated>
+      <workItem from="1502460637745" duration="6428000" />
     </task>
     <task id="LOCAL-00066" summary="LUIS INTEGRATION - 0.4 retry cancel trigger according to: https://github.com/Microsoft/BotBuilder/issues/2839">
       <created>1501619280741</created>
@@ -619,11 +612,18 @@
       <option name="project" value="LOCAL" />
       <updated>1502468447417</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="INCIDENT STATUS: 0.46 choice fix">
+      <created>1502470436012</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1502470436012</updated>
+    </task>
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87939000" />
+    <option name="totallyTimeSpent" value="88125000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -713,7 +713,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Sidequest: More options in incident and hardware ordering" />
     <MESSAGE value="Sidequest: Categories load fix" />
     <MESSAGE value="Sidequest: minor formulation improvements" />
     <MESSAGE value="Sidequest: fix reopen formulating" />
@@ -738,7 +737,8 @@
     <MESSAGE value="INCIDENT STATUS: 0.31 fix" />
     <MESSAGE value="INCIDENT STATUS: 0.4 functional fix" />
     <MESSAGE value="INCIDENT STATUS: 0.45 working choices (maybe)" />
-    <option name="LAST_COMMIT_MESSAGE" value="INCIDENT STATUS: 0.45 working choices (maybe)" />
+    <MESSAGE value="INCIDENT STATUS: 0.46 choice fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="INCIDENT STATUS: 0.46 choice fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -762,7 +762,7 @@
           <folding>
             <element signature="e#4951#5551#0" expanded="false" />
             <element signature="e#5722#10349#0" expanded="false" />
-            <element signature="e#24307#24490#0" expanded="false" />
+            <element signature="e#24424#24607#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -774,7 +774,7 @@
           <folding>
             <element signature="e#4951#5551#0" expanded="false" />
             <element signature="e#5722#10349#0" expanded="false" />
-            <element signature="e#24307#24490#0" expanded="false" />
+            <element signature="e#24424#24607#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -810,7 +810,7 @@
           <folding>
             <element signature="e#4951#5551#0" expanded="false" />
             <element signature="e#5722#10349#0" expanded="false" />
-            <element signature="e#24307#24490#0" expanded="false" />
+            <element signature="e#24424#24607#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -822,7 +822,7 @@
           <folding>
             <element signature="e#4951#5551#0" expanded="false" />
             <element signature="e#5722#10349#0" expanded="false" />
-            <element signature="e#24307#24490#0" expanded="false" />
+            <element signature="e#24424#24607#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -858,7 +858,7 @@
           <folding>
             <element signature="e#4951#5551#0" expanded="false" />
             <element signature="e#5722#10349#0" expanded="false" />
-            <element signature="e#24307#24490#0" expanded="false" />
+            <element signature="e#24424#24607#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -870,7 +870,7 @@
           <folding>
             <element signature="e#4951#5551#0" expanded="false" />
             <element signature="e#5722#10349#0" expanded="false" />
-            <element signature="e#24307#24490#0" expanded="false" />
+            <element signature="e#24424#24607#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -906,7 +906,7 @@
           <folding>
             <element signature="e#4951#5551#0" expanded="false" />
             <element signature="e#5722#10349#0" expanded="false" />
-            <element signature="e#24307#24490#0" expanded="false" />
+            <element signature="e#24424#24607#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -918,7 +918,7 @@
           <folding>
             <element signature="e#4951#5551#0" expanded="false" />
             <element signature="e#5722#10349#0" expanded="false" />
-            <element signature="e#24307#24490#0" expanded="false" />
+            <element signature="e#24424#24607#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -954,7 +954,7 @@
           <folding>
             <element signature="e#4951#5551#0" expanded="false" />
             <element signature="e#5722#10349#0" expanded="false" />
-            <element signature="e#24307#24490#0" expanded="false" />
+            <element signature="e#24424#24607#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -966,7 +966,7 @@
           <folding>
             <element signature="e#4951#5551#0" expanded="false" />
             <element signature="e#5722#10349#0" expanded="false" />
-            <element signature="e#24307#24490#0" expanded="false" />
+            <element signature="e#24424#24607#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1002,7 +1002,7 @@
           <folding>
             <element signature="e#4951#5551#0" expanded="false" />
             <element signature="e#5722#10349#0" expanded="false" />
-            <element signature="e#24307#24490#0" expanded="false" />
+            <element signature="e#24424#24607#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1014,7 +1014,7 @@
           <folding>
             <element signature="e#4951#5551#0" expanded="false" />
             <element signature="e#5722#10349#0" expanded="false" />
-            <element signature="e#24307#24490#0" expanded="false" />
+            <element signature="e#24424#24607#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1050,7 +1050,7 @@
           <folding>
             <element signature="e#4951#5551#0" expanded="false" />
             <element signature="e#5722#10349#0" expanded="false" />
-            <element signature="e#24307#24490#0" expanded="false" />
+            <element signature="e#24424#24607#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1062,7 +1062,7 @@
           <folding>
             <element signature="e#4951#5551#0" expanded="false" />
             <element signature="e#5722#10349#0" expanded="false" />
-            <element signature="e#24307#24490#0" expanded="false" />
+            <element signature="e#24424#24607#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1098,7 +1098,7 @@
           <folding>
             <element signature="e#4951#5551#0" expanded="false" />
             <element signature="e#5722#10349#0" expanded="false" />
-            <element signature="e#24307#24490#0" expanded="false" />
+            <element signature="e#24424#24607#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1110,7 +1110,7 @@
           <folding>
             <element signature="e#4951#5551#0" expanded="false" />
             <element signature="e#5722#10349#0" expanded="false" />
-            <element signature="e#24307#24490#0" expanded="false" />
+            <element signature="e#24424#24607#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1146,7 +1146,7 @@
           <folding>
             <element signature="e#4951#5551#0" expanded="false" />
             <element signature="e#5722#10349#0" expanded="false" />
-            <element signature="e#24307#24490#0" expanded="false" />
+            <element signature="e#24424#24607#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1158,7 +1158,7 @@
           <folding>
             <element signature="e#4951#5551#0" expanded="false" />
             <element signature="e#5722#10349#0" expanded="false" />
-            <element signature="e#24307#24490#0" expanded="false" />
+            <element signature="e#24424#24607#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1226,12 +1226,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/messages/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="278" column="41" lean-forward="false" selection-start-line="278" selection-start-column="41" selection-end-line="278" selection-end-column="41" />
+        <state relative-caret-position="279">
+          <caret line="332" column="116" lean-forward="false" selection-start-line="332" selection-start-column="116" selection-end-line="332" selection-end-column="116" />
           <folding>
             <element signature="e#4951#5551#0" expanded="false" />
             <element signature="e#5722#10349#0" expanded="false" />
-            <element signature="e#24307#24490#0" expanded="false" />
+            <element signature="e#24424#24607#0" expanded="false" />
           </folding>
         </state>
       </provider>
