@@ -138,7 +138,6 @@ var buttonStyle = {listStyle: builder.ListStyle.button};
  session.beginDialog('orderHardware');
  }
  else {
- // TODO: make this a choice list, or at least format correctly
  session.send("I'm afraid I didn't understand. " +
  "I am currently somewhat lacking flexibility. The methods available for usage are: \b" +
  "''open new incident'' - Guides you through the process of creating an incident on your behalf.\n" +
@@ -288,7 +287,50 @@ bot.dialog('incidentStatus', [
         request(options, callback);
     },
     function (session, results) {
+        session.send("Getting Incident data...");
+        var incidentID = results.response.entity;
+        //session.send('You requested information on the Incident with the ID ' + session.message.text);
+        var urlString = 'https://dev27563.service-now.com/api/now/table/incident?sysparm_query=number=' + incidentID;
+        var options = {
+            url: urlString,
+            headers: headers,
+            auth: {
+                'user': 'admin',
+                'pass': 'EF3tGqL5T!'
+            }
+        };
 
+        function callback(error, response, body) {
+            if (!error && response.statusCode == 200) {
+                var respJSON = JSON.parse(body);
+                //session.send(body)
+                var state = "empty";
+                state = respJSON.result[0].state;
+                switch (state) {
+                    case "1":
+                        state = "New";
+                        break;
+                    case "2":
+                        state = "In Progress";
+                        break;
+                    case "3":
+                        state = "On Hold";
+                        break;
+                    case "6":
+                        state = "Resolved";
+                        break;
+                    case "7":
+                        state = "Closed";
+                        break;
+                    case "8":
+                        state = "Canceled";
+                        break;
+                    default:
+                        state = "undefined";
+                }
+                session.send('Requested ID: ' + respJSON.result[0].number + '\n Status: ' + state + '\n Urgency: ' + respJSON.result[0].urgency + '\n Short Description: ' + respJSON.result[0].short_description);
+            }
+        } request(options, callback);
     }
 ]).triggerAction({matches: 'ticketStatus'});
 
