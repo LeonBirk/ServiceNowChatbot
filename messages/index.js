@@ -281,11 +281,11 @@ bot.dialog('incidentStatus', [
                     session.send("Incident ID number " + (i + 1) + " is: " + respJSON.result[i].number + ", short description is: " + respJSON.result[i].short_description);
                 }
 
-                //session.Prompts.choice("If you want more information on one of those incidents, ask me about its ID.",choices);
+                builder.Prompts.choice("If you want more information on one of those incidents, ask me about its ID.",choices);
             }
         }
         request(options, callback);
-    }/*,
+    },
     function (session, results) {
         session.send("Getting Incident data...");
         var incidentID = results.response.entity;
@@ -331,7 +331,7 @@ bot.dialog('incidentStatus', [
                 session.send('Requested ID: ' + respJSON.result[0].number + '\n Status: ' + state + '\n Urgency: ' + respJSON.result[0].urgency + '\n Short Description: ' + respJSON.result[0].short_description);
             }
         } request(options, callback);
-    }*/
+    }
 ]).triggerAction({matches: 'ticketStatus'});
 
 
