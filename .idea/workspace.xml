@@ -4,9 +4,140 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a191f03-0956-421e-ad62-a81abb0cfdf2" name="Default" comment="">
+    <list default="true" id="8a191f03-0956-421e-ad62-a81abb0cfdf2" name="Default" comment="INCIDENT STATUS: 0.1 trigger and function">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/CHANGELOG_20170424191735.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/CHANGELOG_20170517113221.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/CHANGELOG_20170517113321.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/README_20170513163312.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/sign_20170216133031.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/sign_20170308134619.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/sign_20170308134646.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/sign_20170308140651.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/async_sign.tests_20170308134859.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/async_sign.tests_20170308135641.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/issue_70.tests_20170321165837.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/issue_70.tests_20170321165848.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513143941.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513145829.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513154325.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513155354.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513155439.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513155454.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513160038.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513160219.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513160322.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513160425.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513163356.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513163601.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513163715.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513163904.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513164126.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513164226.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513164631.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513164846.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513165123.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513165254.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513165528.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513165610.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513165649.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513165838.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513165848.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513165930.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513170022.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513170217.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513170326.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513170345.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513170401.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513170437.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513170504.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513170522.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513170741.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513170816.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513171243.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513171418.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513171450.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513171456.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513171617.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513171931.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513172028.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513172038.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513172123.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513172506.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513172519.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513172637.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170516110727.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170516110926.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170516111003.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170516111045.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170516111149.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170516111224.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170516111501.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170516111544.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170516111615.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170516111736.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170513141638.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170513141721.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170513141900.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170513160544.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170513161150.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170513161232.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170513161617.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170513162315.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170513162823.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170513162938.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170513163049.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170513163058.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170513164052.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170513172602.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170513172907.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170516110653.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170516110827.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170516111751.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170516111805.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/test/jwt.rs.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/Carlitator.JPG" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/index.js" afterPath="$PROJECT_DIR$/messages/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/Message.js" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/Message.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/botbuilder.d.ts" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/botbuilder.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/bots/ChatConnector.js" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/bots/ChatConnector.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/bots/ConsoleConnector.js" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/bots/ConsoleConnector.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/cards/CardAction.js" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/cards/CardAction.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/cards/MediaCard.js" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/cards/MediaCard.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/dialogs/LuisRecognizer.js" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/dialogs/LuisRecognizer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/dialogs/Prompt.js" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/dialogs/Prompt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/dialogs/PromptChoice.js" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/dialogs/PromptChoice.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/dialogs/PromptNumber.js" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/dialogs/PromptNumber.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/de/BotBuilder.json" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/de/BotBuilder.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/en/BotBuilder.json" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/en/BotBuilder.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/es/BotBuilder.json" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/es/BotBuilder.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/fr/BotBuilder.json" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/fr/BotBuilder.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/it/BotBuilder.json" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/it/BotBuilder.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/nl/BotBuilder.json" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/nl/BotBuilder.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/pt/BotBuilder.json" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/pt/BotBuilder.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/ru/BotBuilder.json" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/ru/BotBuilder.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/tr/BotBuilder.json" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/tr/BotBuilder.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/zh-Hans/BotBuilder.json" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/zh-Hans/BotBuilder.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/package.json" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/chrono-node/README.md" afterPath="$PROJECT_DIR$/messages/node_modules/chrono-node/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/chrono-node/bower.json" afterPath="$PROJECT_DIR$/messages/node_modules/chrono-node/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/chrono-node/chrono.js" afterPath="$PROJECT_DIR$/messages/node_modules/chrono-node/chrono.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/chrono-node/chrono.map.json" afterPath="$PROJECT_DIR$/messages/node_modules/chrono-node/chrono.map.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/chrono-node/chrono.min.js" afterPath="$PROJECT_DIR$/messages/node_modules/chrono-node/chrono.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/chrono-node/package.json" afterPath="$PROJECT_DIR$/messages/node_modules/chrono-node/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/chrono-node/src/options.js" afterPath="$PROJECT_DIR$/messages/node_modules/chrono-node/src/options.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/chrono-node/src/parsers/EN/ENCasualDateParser.js" afterPath="$PROJECT_DIR$/messages/node_modules/chrono-node/src/parsers/EN/ENCasualDateParser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/chrono-node/src/parsers/EN/ENTimeAgoFormatParser.js" afterPath="$PROJECT_DIR$/messages/node_modules/chrono-node/src/parsers/EN/ENTimeAgoFormatParser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/chrono-node/src/parsers/parser.js" afterPath="$PROJECT_DIR$/messages/node_modules/chrono-node/src/parsers/parser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/chrono-node/src/refiners/EN/ENMergeDateRangeRefiner.js" afterPath="$PROJECT_DIR$/messages/node_modules/chrono-node/src/refiners/EN/ENMergeDateRangeRefiner.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/chrono-node/test/test_en.js" afterPath="$PROJECT_DIR$/messages/node_modules/chrono-node/test/test_en.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/chrono-node/test/test_en_time_ago.js" afterPath="$PROJECT_DIR$/messages/node_modules/chrono-node/test/test_en_time_ago.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/CHANGELOG.md" afterPath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/README.md" afterPath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/package.json" afterPath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/sign.js" afterPath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/sign.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/test/async_sign.tests.js" afterPath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/test/async_sign.tests.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/package.json" afterPath="$PROJECT_DIR$/messages/package.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,12 +161,26 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/messages/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="490" column="38" lean-forward="false" selection-start-line="490" selection-start-column="38" selection-end-line="490" selection-end-column="38" />
+            <state relative-caret-position="515">
+              <caret line="282" column="9" lean-forward="true" selection-start-line="282" selection-start-column="9" selection-end-line="282" selection-end-column="9" />
               <folding>
-                <element signature="e#11170#16063#0" expanded="false" />
-                <element signature="e#16415#21114#0" expanded="false" />
-                <element signature="e#21490#21673#0" expanded="false" />
+                <element signature="e#5015#5615#0" expanded="false" />
+                <element signature="e#5786#10413#0" expanded="false" />
+                <element signature="e#12157#17050#0" expanded="false" />
+                <element signature="e#17402#22101#0" expanded="false" />
+                <element signature="e#22477#22660#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ENTimeFromNowFormatParser.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/messages/node_modules/chrono-node/src/parsers/EN/ENTimeFromNowFormatParser.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -46,7 +191,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+              <folding>
+                <marker date="1502462089880" expanded="true" signature="0:340" ph="{&quot;name&quot;: &quot;emptybot&quot;...}" />
+                <marker date="1502462089880" expanded="true" signature="197:224" ph="{&quot;restify&quot;: &quot;^4.1.1&quot;...}" />
+                <marker date="1502462089880" expanded="true" signature="239:302" ph="{&quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -64,7 +213,7 @@
       <file leaf-file-name="hardware.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/messages/hardware.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
+            <state relative-caret-position="770">
               <caret line="35" column="11" lean-forward="false" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
               <folding />
             </state>
@@ -111,11 +260,14 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/messages/node_modules" />
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1912" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -132,6 +284,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -154,24 +307,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ServiceNowChatbot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ServiceNowChatbot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="messages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -179,7 +314,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -297,21 +431,8 @@
       <workItem from="1500394895553" duration="91000" />
       <workItem from="1500914059272" duration="10875000" />
       <workItem from="1500995464592" duration="3104000" />
-      <workItem from="1501622360830" duration="32284000" />
-    </task>
-    <task id="LOCAL-00058" summary="createIncident fix: score as response seemed to indicate usage of a recognizer when none was implemented -&gt; match statement deleted; logging">
-      <created>1501604189179</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1501604189179</updated>
-    </task>
-    <task id="LOCAL-00059" summary="createIncident fix: results.response.ENTITY was needed">
-      <created>1501604444131</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1501604444131</updated>
+      <workItem from="1501622360830" duration="36239000" />
+      <workItem from="1502460637745" duration="2038000" />
     </task>
     <task id="LOCAL-00060" summary="LUIS INTEGRATION - 0.01 first try openIncident intent">
       <created>1501605328478</created>
@@ -642,24 +763,36 @@
       <option name="project" value="LOCAL" />
       <updated>1501864903864</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="GREETING: 0.91 greeting card without image">
+      <created>1501870623654</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1501870623654</updated>
+    </task>
+    <task id="LOCAL-00108" summary="GREETING: 0.915 fix">
+      <created>1501873979812</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1501873979812</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77742000" />
+    <option name="totallyTimeSpent" value="83735000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24627976" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1743941" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21585903" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41778523" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21585903" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27422908" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -670,6 +803,8 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -735,9 +870,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Sidequest: button rollback" />
-    <MESSAGE value="Sidequest: cancelaction notification" />
-    <MESSAGE value="Sidequest: BUTTONS" />
     <MESSAGE value="GREETING: 0.1 trigger" />
     <MESSAGE value="GREETING: 0.3 message formulated" />
     <MESSAGE value="GREETING: 0.4 message formatting" />
@@ -760,7 +892,10 @@
     <MESSAGE value="GREETING: 0.85 new picture &amp; greeting" />
     <MESSAGE value="GREETING: 0.9 new picture" />
     <MESSAGE value="GREETING: 0.9 new picture fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="GREETING: 0.9 new picture fix" />
+    <MESSAGE value="GREETING: 0.91 greeting card without image" />
+    <MESSAGE value="GREETING: 0.915 fix" />
+    <MESSAGE value="INCIDENT STATUS: 0.1 trigger and function" />
+    <option name="LAST_COMMIT_MESSAGE" value="INCIDENT STATUS: 0.1 trigger and function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -769,14 +904,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/messages/categories.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/messages/hardware.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -790,9 +917,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#11170#16063#0" expanded="false" />
-            <element signature="e#16415#21114#0" expanded="false" />
-            <element signature="e#21490#21673#0" expanded="false" />
+            <element signature="e#5015#5615#0" expanded="false" />
+            <element signature="e#5786#10413#0" expanded="false" />
+            <element signature="e#12157#17050#0" expanded="false" />
+            <element signature="e#17402#22101#0" expanded="false" />
+            <element signature="e#22477#22660#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -802,9 +931,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#11170#16063#0" expanded="false" />
-            <element signature="e#16415#21114#0" expanded="false" />
-            <element signature="e#21490#21673#0" expanded="false" />
+            <element signature="e#5015#5615#0" expanded="false" />
+            <element signature="e#5786#10413#0" expanded="false" />
+            <element signature="e#12157#17050#0" expanded="false" />
+            <element signature="e#17402#22101#0" expanded="false" />
+            <element signature="e#22477#22660#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -838,9 +969,11 @@
         <state relative-caret-position="744">
           <caret line="367" column="96" lean-forward="false" selection-start-line="367" selection-start-column="96" selection-end-line="367" selection-end-column="96" />
           <folding>
-            <element signature="e#11170#16063#0" expanded="false" />
-            <element signature="e#16415#21114#0" expanded="false" />
-            <element signature="e#21490#21673#0" expanded="false" />
+            <element signature="e#5015#5615#0" expanded="false" />
+            <element signature="e#5786#10413#0" expanded="false" />
+            <element signature="e#12157#17050#0" expanded="false" />
+            <element signature="e#17402#22101#0" expanded="false" />
+            <element signature="e#22477#22660#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -850,9 +983,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#11170#16063#0" expanded="false" />
-            <element signature="e#16415#21114#0" expanded="false" />
-            <element signature="e#21490#21673#0" expanded="false" />
+            <element signature="e#5015#5615#0" expanded="false" />
+            <element signature="e#5786#10413#0" expanded="false" />
+            <element signature="e#12157#17050#0" expanded="false" />
+            <element signature="e#17402#22101#0" expanded="false" />
+            <element signature="e#22477#22660#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -886,9 +1021,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#11170#16063#0" expanded="false" />
-            <element signature="e#16415#21114#0" expanded="false" />
-            <element signature="e#21490#21673#0" expanded="false" />
+            <element signature="e#5015#5615#0" expanded="false" />
+            <element signature="e#5786#10413#0" expanded="false" />
+            <element signature="e#12157#17050#0" expanded="false" />
+            <element signature="e#17402#22101#0" expanded="false" />
+            <element signature="e#22477#22660#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -898,9 +1035,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#11170#16063#0" expanded="false" />
-            <element signature="e#16415#21114#0" expanded="false" />
-            <element signature="e#21490#21673#0" expanded="false" />
+            <element signature="e#5015#5615#0" expanded="false" />
+            <element signature="e#5786#10413#0" expanded="false" />
+            <element signature="e#12157#17050#0" expanded="false" />
+            <element signature="e#17402#22101#0" expanded="false" />
+            <element signature="e#22477#22660#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -934,9 +1073,11 @@
         <state relative-caret-position="700">
           <caret line="368" column="96" lean-forward="false" selection-start-line="368" selection-start-column="96" selection-end-line="368" selection-end-column="96" />
           <folding>
-            <element signature="e#11170#16063#0" expanded="false" />
-            <element signature="e#16415#21114#0" expanded="false" />
-            <element signature="e#21490#21673#0" expanded="false" />
+            <element signature="e#5015#5615#0" expanded="false" />
+            <element signature="e#5786#10413#0" expanded="false" />
+            <element signature="e#12157#17050#0" expanded="false" />
+            <element signature="e#17402#22101#0" expanded="false" />
+            <element signature="e#22477#22660#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -946,9 +1087,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#11170#16063#0" expanded="false" />
-            <element signature="e#16415#21114#0" expanded="false" />
-            <element signature="e#21490#21673#0" expanded="false" />
+            <element signature="e#5015#5615#0" expanded="false" />
+            <element signature="e#5786#10413#0" expanded="false" />
+            <element signature="e#12157#17050#0" expanded="false" />
+            <element signature="e#17402#22101#0" expanded="false" />
+            <element signature="e#22477#22660#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -982,9 +1125,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#11170#16063#0" expanded="false" />
-            <element signature="e#16415#21114#0" expanded="false" />
-            <element signature="e#21490#21673#0" expanded="false" />
+            <element signature="e#5015#5615#0" expanded="false" />
+            <element signature="e#5786#10413#0" expanded="false" />
+            <element signature="e#12157#17050#0" expanded="false" />
+            <element signature="e#17402#22101#0" expanded="false" />
+            <element signature="e#22477#22660#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -994,9 +1139,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#11170#16063#0" expanded="false" />
-            <element signature="e#16415#21114#0" expanded="false" />
-            <element signature="e#21490#21673#0" expanded="false" />
+            <element signature="e#5015#5615#0" expanded="false" />
+            <element signature="e#5786#10413#0" expanded="false" />
+            <element signature="e#12157#17050#0" expanded="false" />
+            <element signature="e#17402#22101#0" expanded="false" />
+            <element signature="e#22477#22660#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1030,9 +1177,11 @@
         <state relative-caret-position="722">
           <caret line="396" column="5" lean-forward="false" selection-start-line="396" selection-start-column="5" selection-end-line="396" selection-end-column="5" />
           <folding>
-            <element signature="e#11170#16063#0" expanded="false" />
-            <element signature="e#16415#21114#0" expanded="false" />
-            <element signature="e#21490#21673#0" expanded="false" />
+            <element signature="e#5015#5615#0" expanded="false" />
+            <element signature="e#5786#10413#0" expanded="false" />
+            <element signature="e#12157#17050#0" expanded="false" />
+            <element signature="e#17402#22101#0" expanded="false" />
+            <element signature="e#22477#22660#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1042,9 +1191,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#11170#16063#0" expanded="false" />
-            <element signature="e#16415#21114#0" expanded="false" />
-            <element signature="e#21490#21673#0" expanded="false" />
+            <element signature="e#5015#5615#0" expanded="false" />
+            <element signature="e#5786#10413#0" expanded="false" />
+            <element signature="e#12157#17050#0" expanded="false" />
+            <element signature="e#17402#22101#0" expanded="false" />
+            <element signature="e#22477#22660#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1078,9 +1229,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#11170#16063#0" expanded="false" />
-            <element signature="e#16415#21114#0" expanded="false" />
-            <element signature="e#21490#21673#0" expanded="false" />
+            <element signature="e#5015#5615#0" expanded="false" />
+            <element signature="e#5786#10413#0" expanded="false" />
+            <element signature="e#12157#17050#0" expanded="false" />
+            <element signature="e#17402#22101#0" expanded="false" />
+            <element signature="e#22477#22660#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1090,9 +1243,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#11170#16063#0" expanded="false" />
-            <element signature="e#16415#21114#0" expanded="false" />
-            <element signature="e#21490#21673#0" expanded="false" />
+            <element signature="e#5015#5615#0" expanded="false" />
+            <element signature="e#5786#10413#0" expanded="false" />
+            <element signature="e#12157#17050#0" expanded="false" />
+            <element signature="e#17402#22101#0" expanded="false" />
+            <element signature="e#22477#22660#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1126,9 +1281,11 @@
         <state relative-caret-position="348">
           <caret line="369" column="5" lean-forward="true" selection-start-line="369" selection-start-column="5" selection-end-line="369" selection-end-column="5" />
           <folding>
-            <element signature="e#11170#16063#0" expanded="false" />
-            <element signature="e#16415#21114#0" expanded="false" />
-            <element signature="e#21490#21673#0" expanded="false" />
+            <element signature="e#5015#5615#0" expanded="false" />
+            <element signature="e#5786#10413#0" expanded="false" />
+            <element signature="e#12157#17050#0" expanded="false" />
+            <element signature="e#17402#22101#0" expanded="false" />
+            <element signature="e#22477#22660#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1138,9 +1295,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#11170#16063#0" expanded="false" />
-            <element signature="e#16415#21114#0" expanded="false" />
-            <element signature="e#21490#21673#0" expanded="false" />
+            <element signature="e#5015#5615#0" expanded="false" />
+            <element signature="e#5786#10413#0" expanded="false" />
+            <element signature="e#12157#17050#0" expanded="false" />
+            <element signature="e#17402#22101#0" expanded="false" />
+            <element signature="e#22477#22660#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1174,9 +1333,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#11170#16063#0" expanded="false" />
-            <element signature="e#16415#21114#0" expanded="false" />
-            <element signature="e#21490#21673#0" expanded="false" />
+            <element signature="e#5015#5615#0" expanded="false" />
+            <element signature="e#5786#10413#0" expanded="false" />
+            <element signature="e#12157#17050#0" expanded="false" />
+            <element signature="e#17402#22101#0" expanded="false" />
+            <element signature="e#22477#22660#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1186,9 +1347,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#11170#16063#0" expanded="false" />
-            <element signature="e#16415#21114#0" expanded="false" />
-            <element signature="e#21490#21673#0" expanded="false" />
+            <element signature="e#5015#5615#0" expanded="false" />
+            <element signature="e#5786#10413#0" expanded="false" />
+            <element signature="e#12157#17050#0" expanded="false" />
+            <element signature="e#17402#22101#0" expanded="false" />
+            <element signature="e#22477#22660#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1226,7 +1389,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/messages/hardware.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
+        <state relative-caret-position="770">
           <caret line="35" column="11" lean-forward="false" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
           <folding />
         </state>
@@ -1236,18 +1399,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1502462089880" expanded="true" signature="0:340" ph="{&quot;name&quot;: &quot;emptybot&quot;...}" />
+            <marker date="1502462089880" expanded="true" signature="197:224" ph="{&quot;restify&quot;: &quot;^4.1.1&quot;...}" />
+            <marker date="1502462089880" expanded="true" signature="239:302" ph="{&quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/messages/node_modules/chrono-node/src/parsers/EN/ENTimeFromNowFormatParser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/messages/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="490" column="38" lean-forward="false" selection-start-line="490" selection-start-column="38" selection-end-line="490" selection-end-column="38" />
+        <state relative-caret-position="515">
+          <caret line="282" column="9" lean-forward="true" selection-start-line="282" selection-start-column="9" selection-end-line="282" selection-end-column="9" />
           <folding>
-            <element signature="e#11170#16063#0" expanded="false" />
-            <element signature="e#16415#21114#0" expanded="false" />
-            <element signature="e#21490#21673#0" expanded="false" />
+            <element signature="e#5015#5615#0" expanded="false" />
+            <element signature="e#5786#10413#0" expanded="false" />
+            <element signature="e#12157#17050#0" expanded="false" />
+            <element signature="e#17402#22101#0" expanded="false" />
+            <element signature="e#22477#22660#0" expanded="false" />
           </folding>
         </state>
       </provider>

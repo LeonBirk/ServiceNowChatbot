@@ -26,11 +26,7 @@ var isThatCorrect = ['yes', 'no'];
 var buttonStyle = {listStyle: builder.ListStyle.button};
 
 
-// TODO: Implement escape possibility for choice options: to end or restart the dialog (cancel and/or one step back in the waterfall)
-// possibility 1: add a "cancel" option to every single choice prompt, to enable the user to go back to the default Dialog
-
 /*bot.dialog('/', function (session) {
- // TODO: fix incident creation
  if (session.message.text.includes("open") && session.message.text.includes("incident") && session.message.text.includes('new')) {
  session.beginDialog('createIncident');
  }
@@ -82,6 +78,7 @@ var buttonStyle = {listStyle: builder.ListStyle.button};
 
  request(options, callback);
  } else if (session.message.text.includes("my incidents")) {
+
  session.send("Getting your personal incidents...");
  var urlString = 'https://dev27563.service-now.com/api/now/table/incident?sysparm_query=caller_id=681ccaf9c0a8016400b98a06818d57c7';
  var options = {
@@ -256,6 +253,37 @@ bot.dialog('createIncident', [
     }]).triggerAction({matches: 'openTicket'})
     .cancelAction('cancelAction', 'Okay, action canceled.', {matches: /^cancel$/i, confirmPrompt: "Are you sure?"} )
     .reloadAction('startOver', 'Ok, starting over.', {matches: /^start over$/i, confirmPrompt: "Are you sure?"});
+
+// Waterfall dialog that gets the users personal incidents
+bot.dialog('incidentStatus', [
+    function(session){
+
+        session.send("Getting your personal incidents...");
+        var urlString = 'https://dev27563.service-now.com/api/now/table/incident?sysparm_query=caller_id=681ccaf9c0a8016400b98a06818d57c7';
+        var options = {
+            url: urlString,
+            headers: headers,
+            auth: {
+                'user': 'admin',
+                'pass': 'EF3tGqL5T!'
+            }
+        };
+
+        function callback(error, response, body) {
+            if (!error && response.statusCode == 200) {
+                var respJSON = JSON.parse(body);
+                //session.send(body);
+                var incidentCount = respJSON.result.length;
+                session.send("You currently have " + incidentCount + " incidents.");
+                for (var i = 0; i < respJSON.result.length; i++) {
+                    session.send("Incident ID number " + (i + 1) + " is: " + respJSON.result[i].number + ", short description is: " + respJSON.result[i].short_description);
+                }
+                session.send("If you want more information on one of those incidents, ask me about its ID.")
+            }
+        }
+        request(options, callback);
+    }
+]).triggerAction({matches: 'ticketStatus'});
 
 
 // Waterfall dialog that is triggered if a user wants to reopen an incident and guides him through the process
