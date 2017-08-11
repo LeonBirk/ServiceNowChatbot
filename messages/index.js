@@ -272,16 +272,14 @@ bot.dialog('incidentStatus', [
             if (!error && response.statusCode == 200) {
                 var respJSON = JSON.parse(body);
                 session.dialogData.myIncidents = respJSON;
-                //session.send(body);
                 var incidentCount = respJSON.result.length;
                 session.send("You currently have " + incidentCount + " incidents.");
-                var choices = {};
+                var choices ={};
                 for (var i = 0; i < respJSON.result.length; i++) {
-                    choices[i] = session.dialogData.myIncidents.result[i].number;
+                    choices[i] = respJSON.result[i].number;
                     session.send("Incident ID number " + (i + 1) + " is: " + respJSON.result[i].number + ", short description is: " + respJSON.result[i].short_description);
                 }
-
-                builder.Prompts.choice(session, "If you want more information on one of those incidents, ask me about its ID.",choices);
+                builder.Prompts.choice(session, "If you want more information on one of those incidents, ask me about its ID.", choices);
             }
         }
         request(options, callback);
@@ -289,7 +287,6 @@ bot.dialog('incidentStatus', [
     function (session, results) {
         session.send("Getting Incident data...");
         var incidentID = results.response.entity;
-        //session.send('You requested information on the Incident with the ID ' + session.message.text);
         var urlString = 'https://dev27563.service-now.com/api/now/table/incident?sysparm_query=number=' + incidentID;
         var options = {
             url: urlString,
