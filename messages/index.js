@@ -281,7 +281,7 @@ bot.dialog('incidentStatus', [
                     session.send("Incident ID number " + (i + 1) + " is: " + respJSON.result[i].number + ", short description is: " + respJSON.result[i].short_description);
                 }
 
-                builder.Prompts.choice("If you want more information on one of those incidents, ask me about its ID.",choices);
+                builder.Prompts.choice(session, "If you want more information on one of those incidents, ask me about its ID.",choices);
             }
         }
         request(options, callback);
