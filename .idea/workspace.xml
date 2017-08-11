@@ -5,139 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a191f03-0956-421e-ad62-a81abb0cfdf2" name="Default" comment="INCIDENT STATUS: 0.1 trigger and function">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/CHANGELOG_20170424191735.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/CHANGELOG_20170517113221.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/CHANGELOG_20170517113321.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/README_20170513163312.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/sign_20170216133031.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/sign_20170308134619.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/sign_20170308134646.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/sign_20170308140651.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/async_sign.tests_20170308134859.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/async_sign.tests_20170308135641.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/issue_70.tests_20170321165837.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/issue_70.tests_20170321165848.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513143941.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513145829.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513154325.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513155354.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513155439.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513155454.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513160038.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513160219.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513160322.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513160425.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513163356.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513163601.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513163715.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513163904.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513164126.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513164226.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513164631.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513164846.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513165123.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513165254.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513165528.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513165610.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513165649.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513165838.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513165848.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513165930.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513170022.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513170217.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513170326.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513170345.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513170401.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513170437.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513170504.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513170522.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513170741.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513170816.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513171243.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513171418.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513171450.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513171456.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513171617.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513171931.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513172028.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513172038.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513172123.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513172506.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513172519.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170513172637.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170516110727.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170516110926.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170516111003.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170516111045.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170516111149.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170516111224.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170516111501.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170516111544.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170516111615.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/test/verify.tests_20170516111736.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170513141638.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170513141721.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170513141900.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170513160544.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170513161150.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170513161232.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170513161617.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170513162315.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170513162823.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170513162938.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170513163049.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170513163058.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170513164052.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170513172602.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170513172907.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170516110653.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170516110827.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170516111751.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/.history/verify_20170516111805.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/test/jwt.rs.tests.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/Carlitator.JPG" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/index.js" afterPath="$PROJECT_DIR$/messages/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/Message.js" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/Message.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/botbuilder.d.ts" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/botbuilder.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/bots/ChatConnector.js" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/bots/ChatConnector.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/bots/ConsoleConnector.js" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/bots/ConsoleConnector.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/cards/CardAction.js" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/cards/CardAction.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/cards/MediaCard.js" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/cards/MediaCard.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/dialogs/LuisRecognizer.js" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/dialogs/LuisRecognizer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/dialogs/Prompt.js" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/dialogs/Prompt.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/dialogs/PromptChoice.js" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/dialogs/PromptChoice.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/dialogs/PromptNumber.js" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/dialogs/PromptNumber.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/de/BotBuilder.json" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/de/BotBuilder.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/en/BotBuilder.json" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/en/BotBuilder.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/es/BotBuilder.json" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/es/BotBuilder.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/fr/BotBuilder.json" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/fr/BotBuilder.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/it/BotBuilder.json" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/it/BotBuilder.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/nl/BotBuilder.json" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/nl/BotBuilder.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/pt/BotBuilder.json" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/pt/BotBuilder.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/ru/BotBuilder.json" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/ru/BotBuilder.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/tr/BotBuilder.json" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/tr/BotBuilder.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/zh-Hans/BotBuilder.json" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/lib/locale/zh-Hans/BotBuilder.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/botbuilder/package.json" afterPath="$PROJECT_DIR$/messages/node_modules/botbuilder/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/chrono-node/README.md" afterPath="$PROJECT_DIR$/messages/node_modules/chrono-node/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/chrono-node/bower.json" afterPath="$PROJECT_DIR$/messages/node_modules/chrono-node/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/chrono-node/chrono.js" afterPath="$PROJECT_DIR$/messages/node_modules/chrono-node/chrono.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/chrono-node/chrono.map.json" afterPath="$PROJECT_DIR$/messages/node_modules/chrono-node/chrono.map.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/chrono-node/chrono.min.js" afterPath="$PROJECT_DIR$/messages/node_modules/chrono-node/chrono.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/chrono-node/package.json" afterPath="$PROJECT_DIR$/messages/node_modules/chrono-node/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/chrono-node/src/options.js" afterPath="$PROJECT_DIR$/messages/node_modules/chrono-node/src/options.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/chrono-node/src/parsers/EN/ENCasualDateParser.js" afterPath="$PROJECT_DIR$/messages/node_modules/chrono-node/src/parsers/EN/ENCasualDateParser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/chrono-node/src/parsers/EN/ENTimeAgoFormatParser.js" afterPath="$PROJECT_DIR$/messages/node_modules/chrono-node/src/parsers/EN/ENTimeAgoFormatParser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/chrono-node/src/parsers/parser.js" afterPath="$PROJECT_DIR$/messages/node_modules/chrono-node/src/parsers/parser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/chrono-node/src/refiners/EN/ENMergeDateRangeRefiner.js" afterPath="$PROJECT_DIR$/messages/node_modules/chrono-node/src/refiners/EN/ENMergeDateRangeRefiner.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/chrono-node/test/test_en.js" afterPath="$PROJECT_DIR$/messages/node_modules/chrono-node/test/test_en.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/chrono-node/test/test_en_time_ago.js" afterPath="$PROJECT_DIR$/messages/node_modules/chrono-node/test/test_en_time_ago.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/CHANGELOG.md" afterPath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/CHANGELOG.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/README.md" afterPath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/package.json" afterPath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/sign.js" afterPath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/sign.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/test/async_sign.tests.js" afterPath="$PROJECT_DIR$/messages/node_modules/jsonwebtoken/test/async_sign.tests.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/package.json" afterPath="$PROJECT_DIR$/messages/package.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -161,14 +30,14 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/messages/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
-              <caret line="282" column="9" lean-forward="true" selection-start-line="282" selection-start-column="9" selection-end-line="282" selection-end-column="9" />
+            <state relative-caret-position="333">
+              <caret line="284" column="125" lean-forward="false" selection-start-line="284" selection-start-column="125" selection-end-line="284" selection-end-column="125" />
               <folding>
                 <element signature="e#5015#5615#0" expanded="false" />
                 <element signature="e#5786#10413#0" expanded="false" />
-                <element signature="e#12157#17050#0" expanded="false" />
-                <element signature="e#17402#22101#0" expanded="false" />
-                <element signature="e#22477#22660#0" expanded="false" />
+                <element signature="e#12394#17287#0" expanded="false" />
+                <element signature="e#17639#22338#0" expanded="false" />
+                <element signature="e#22714#22897#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -432,7 +301,7 @@
       <workItem from="1500914059272" duration="10875000" />
       <workItem from="1500995464592" duration="3104000" />
       <workItem from="1501622360830" duration="36239000" />
-      <workItem from="1502460637745" duration="2038000" />
+      <workItem from="1502460637745" duration="3048000" />
     </task>
     <task id="LOCAL-00060" summary="LUIS INTEGRATION - 0.01 first try openIncident intent">
       <created>1501605328478</created>
@@ -781,17 +650,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83735000" />
+    <option name="totallyTimeSpent" value="84745000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1743941" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21585903" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21585903" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27422908" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -919,9 +789,9 @@
           <folding>
             <element signature="e#5015#5615#0" expanded="false" />
             <element signature="e#5786#10413#0" expanded="false" />
-            <element signature="e#12157#17050#0" expanded="false" />
-            <element signature="e#17402#22101#0" expanded="false" />
-            <element signature="e#22477#22660#0" expanded="false" />
+            <element signature="e#12394#17287#0" expanded="false" />
+            <element signature="e#17639#22338#0" expanded="false" />
+            <element signature="e#22714#22897#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -933,9 +803,9 @@
           <folding>
             <element signature="e#5015#5615#0" expanded="false" />
             <element signature="e#5786#10413#0" expanded="false" />
-            <element signature="e#12157#17050#0" expanded="false" />
-            <element signature="e#17402#22101#0" expanded="false" />
-            <element signature="e#22477#22660#0" expanded="false" />
+            <element signature="e#12394#17287#0" expanded="false" />
+            <element signature="e#17639#22338#0" expanded="false" />
+            <element signature="e#22714#22897#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -971,9 +841,9 @@
           <folding>
             <element signature="e#5015#5615#0" expanded="false" />
             <element signature="e#5786#10413#0" expanded="false" />
-            <element signature="e#12157#17050#0" expanded="false" />
-            <element signature="e#17402#22101#0" expanded="false" />
-            <element signature="e#22477#22660#0" expanded="false" />
+            <element signature="e#12394#17287#0" expanded="false" />
+            <element signature="e#17639#22338#0" expanded="false" />
+            <element signature="e#22714#22897#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -985,9 +855,9 @@
           <folding>
             <element signature="e#5015#5615#0" expanded="false" />
             <element signature="e#5786#10413#0" expanded="false" />
-            <element signature="e#12157#17050#0" expanded="false" />
-            <element signature="e#17402#22101#0" expanded="false" />
-            <element signature="e#22477#22660#0" expanded="false" />
+            <element signature="e#12394#17287#0" expanded="false" />
+            <element signature="e#17639#22338#0" expanded="false" />
+            <element signature="e#22714#22897#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1023,9 +893,9 @@
           <folding>
             <element signature="e#5015#5615#0" expanded="false" />
             <element signature="e#5786#10413#0" expanded="false" />
-            <element signature="e#12157#17050#0" expanded="false" />
-            <element signature="e#17402#22101#0" expanded="false" />
-            <element signature="e#22477#22660#0" expanded="false" />
+            <element signature="e#12394#17287#0" expanded="false" />
+            <element signature="e#17639#22338#0" expanded="false" />
+            <element signature="e#22714#22897#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1037,9 +907,9 @@
           <folding>
             <element signature="e#5015#5615#0" expanded="false" />
             <element signature="e#5786#10413#0" expanded="false" />
-            <element signature="e#12157#17050#0" expanded="false" />
-            <element signature="e#17402#22101#0" expanded="false" />
-            <element signature="e#22477#22660#0" expanded="false" />
+            <element signature="e#12394#17287#0" expanded="false" />
+            <element signature="e#17639#22338#0" expanded="false" />
+            <element signature="e#22714#22897#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1075,9 +945,9 @@
           <folding>
             <element signature="e#5015#5615#0" expanded="false" />
             <element signature="e#5786#10413#0" expanded="false" />
-            <element signature="e#12157#17050#0" expanded="false" />
-            <element signature="e#17402#22101#0" expanded="false" />
-            <element signature="e#22477#22660#0" expanded="false" />
+            <element signature="e#12394#17287#0" expanded="false" />
+            <element signature="e#17639#22338#0" expanded="false" />
+            <element signature="e#22714#22897#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1089,9 +959,9 @@
           <folding>
             <element signature="e#5015#5615#0" expanded="false" />
             <element signature="e#5786#10413#0" expanded="false" />
-            <element signature="e#12157#17050#0" expanded="false" />
-            <element signature="e#17402#22101#0" expanded="false" />
-            <element signature="e#22477#22660#0" expanded="false" />
+            <element signature="e#12394#17287#0" expanded="false" />
+            <element signature="e#17639#22338#0" expanded="false" />
+            <element signature="e#22714#22897#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1127,9 +997,9 @@
           <folding>
             <element signature="e#5015#5615#0" expanded="false" />
             <element signature="e#5786#10413#0" expanded="false" />
-            <element signature="e#12157#17050#0" expanded="false" />
-            <element signature="e#17402#22101#0" expanded="false" />
-            <element signature="e#22477#22660#0" expanded="false" />
+            <element signature="e#12394#17287#0" expanded="false" />
+            <element signature="e#17639#22338#0" expanded="false" />
+            <element signature="e#22714#22897#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1141,9 +1011,9 @@
           <folding>
             <element signature="e#5015#5615#0" expanded="false" />
             <element signature="e#5786#10413#0" expanded="false" />
-            <element signature="e#12157#17050#0" expanded="false" />
-            <element signature="e#17402#22101#0" expanded="false" />
-            <element signature="e#22477#22660#0" expanded="false" />
+            <element signature="e#12394#17287#0" expanded="false" />
+            <element signature="e#17639#22338#0" expanded="false" />
+            <element signature="e#22714#22897#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1179,9 +1049,9 @@
           <folding>
             <element signature="e#5015#5615#0" expanded="false" />
             <element signature="e#5786#10413#0" expanded="false" />
-            <element signature="e#12157#17050#0" expanded="false" />
-            <element signature="e#17402#22101#0" expanded="false" />
-            <element signature="e#22477#22660#0" expanded="false" />
+            <element signature="e#12394#17287#0" expanded="false" />
+            <element signature="e#17639#22338#0" expanded="false" />
+            <element signature="e#22714#22897#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1193,9 +1063,9 @@
           <folding>
             <element signature="e#5015#5615#0" expanded="false" />
             <element signature="e#5786#10413#0" expanded="false" />
-            <element signature="e#12157#17050#0" expanded="false" />
-            <element signature="e#17402#22101#0" expanded="false" />
-            <element signature="e#22477#22660#0" expanded="false" />
+            <element signature="e#12394#17287#0" expanded="false" />
+            <element signature="e#17639#22338#0" expanded="false" />
+            <element signature="e#22714#22897#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1231,9 +1101,9 @@
           <folding>
             <element signature="e#5015#5615#0" expanded="false" />
             <element signature="e#5786#10413#0" expanded="false" />
-            <element signature="e#12157#17050#0" expanded="false" />
-            <element signature="e#17402#22101#0" expanded="false" />
-            <element signature="e#22477#22660#0" expanded="false" />
+            <element signature="e#12394#17287#0" expanded="false" />
+            <element signature="e#17639#22338#0" expanded="false" />
+            <element signature="e#22714#22897#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1245,9 +1115,9 @@
           <folding>
             <element signature="e#5015#5615#0" expanded="false" />
             <element signature="e#5786#10413#0" expanded="false" />
-            <element signature="e#12157#17050#0" expanded="false" />
-            <element signature="e#17402#22101#0" expanded="false" />
-            <element signature="e#22477#22660#0" expanded="false" />
+            <element signature="e#12394#17287#0" expanded="false" />
+            <element signature="e#17639#22338#0" expanded="false" />
+            <element signature="e#22714#22897#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1283,9 +1153,9 @@
           <folding>
             <element signature="e#5015#5615#0" expanded="false" />
             <element signature="e#5786#10413#0" expanded="false" />
-            <element signature="e#12157#17050#0" expanded="false" />
-            <element signature="e#17402#22101#0" expanded="false" />
-            <element signature="e#22477#22660#0" expanded="false" />
+            <element signature="e#12394#17287#0" expanded="false" />
+            <element signature="e#17639#22338#0" expanded="false" />
+            <element signature="e#22714#22897#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1297,9 +1167,9 @@
           <folding>
             <element signature="e#5015#5615#0" expanded="false" />
             <element signature="e#5786#10413#0" expanded="false" />
-            <element signature="e#12157#17050#0" expanded="false" />
-            <element signature="e#17402#22101#0" expanded="false" />
-            <element signature="e#22477#22660#0" expanded="false" />
+            <element signature="e#12394#17287#0" expanded="false" />
+            <element signature="e#17639#22338#0" expanded="false" />
+            <element signature="e#22714#22897#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1335,9 +1205,9 @@
           <folding>
             <element signature="e#5015#5615#0" expanded="false" />
             <element signature="e#5786#10413#0" expanded="false" />
-            <element signature="e#12157#17050#0" expanded="false" />
-            <element signature="e#17402#22101#0" expanded="false" />
-            <element signature="e#22477#22660#0" expanded="false" />
+            <element signature="e#12394#17287#0" expanded="false" />
+            <element signature="e#17639#22338#0" expanded="false" />
+            <element signature="e#22714#22897#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1349,9 +1219,9 @@
           <folding>
             <element signature="e#5015#5615#0" expanded="false" />
             <element signature="e#5786#10413#0" expanded="false" />
-            <element signature="e#12157#17050#0" expanded="false" />
-            <element signature="e#17402#22101#0" expanded="false" />
-            <element signature="e#22477#22660#0" expanded="false" />
+            <element signature="e#12394#17287#0" expanded="false" />
+            <element signature="e#17639#22338#0" expanded="false" />
+            <element signature="e#22714#22897#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1419,14 +1289,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/messages/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="282" column="9" lean-forward="true" selection-start-line="282" selection-start-column="9" selection-end-line="282" selection-end-column="9" />
+        <state relative-caret-position="333">
+          <caret line="284" column="125" lean-forward="false" selection-start-line="284" selection-start-column="125" selection-end-line="284" selection-end-column="125" />
           <folding>
             <element signature="e#5015#5615#0" expanded="false" />
             <element signature="e#5786#10413#0" expanded="false" />
-            <element signature="e#12157#17050#0" expanded="false" />
-            <element signature="e#17402#22101#0" expanded="false" />
-            <element signature="e#22477#22660#0" expanded="false" />
+            <element signature="e#12394#17287#0" expanded="false" />
+            <element signature="e#17639#22338#0" expanded="false" />
+            <element signature="e#22714#22897#0" expanded="false" />
           </folding>
         </state>
       </provider>

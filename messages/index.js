@@ -272,16 +272,23 @@ bot.dialog('incidentStatus', [
         function callback(error, response, body) {
             if (!error && response.statusCode == 200) {
                 var respJSON = JSON.parse(body);
+                session.dialogData.myIncidents = respJSON;
                 //session.send(body);
                 var incidentCount = respJSON.result.length;
                 session.send("You currently have " + incidentCount + " incidents.");
+                var choices = {};
                 for (var i = 0; i < respJSON.result.length; i++) {
+                    choices[i] = session.dialogData.myIncidents.result[i].number;
                     session.send("Incident ID number " + (i + 1) + " is: " + respJSON.result[i].number + ", short description is: " + respJSON.result[i].short_description);
                 }
-                session.send("If you want more information on one of those incidents, ask me about its ID.")
+
+                session.Prompts.choice("If you want more information on one of those incidents, ask me about its ID.",choices);
             }
         }
         request(options, callback);
+    },
+    function (session, results) {
+
     }
 ]).triggerAction({matches: 'ticketStatus'});
 
