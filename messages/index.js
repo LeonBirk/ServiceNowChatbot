@@ -258,7 +258,7 @@ bot.dialog('incidentStatus', [
     function(session){
 
         session.send("Getting your personal incidents...");
-        var urlString = 'https://dev27563.service-now.com/api/now/table/incident?sysparm_query=caller_id=javascript:gs.getUserID()^active=true&sysparm_limit=16';
+        var urlString = 'https://dev27563.service-now.com/api/now/table/incident?sysparm_query=caller_id=javascript:gs.getUserID()^active=true^ORDERBYnumber&sysparm_limit=16';
         var options = {
             url: urlString,
             headers: headers,
