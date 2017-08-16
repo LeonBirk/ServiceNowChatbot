@@ -305,7 +305,7 @@ bot.dialog('incidentStatus', [
                 urgency = respJSON.result[0].urgency;
                 switch (urgency){
                     case "1":
-                        urgency = "High";
+                        urgency = '<font color="red">High</font>';
                         break;
                     case "2":
                         urgency = "Medium";
