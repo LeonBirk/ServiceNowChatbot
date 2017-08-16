@@ -277,7 +277,7 @@ bot.dialog('incidentStatus', [
                 var choices = [];
                 for (var i = 0; i < respJSON.result.length; i++) {
                     choices[i] = respJSON.result[i].number.toString();
-                    session.send("Incident ID number " + (i + 1) + " is: " + respJSON.result[i].number + ", short description is: " + respJSON.result[i].short_description);
+                    session.send("Incident ID number " + (i + 1) + " is: '" + respJSON.result[i].number + "', the short description is: '" + respJSON.result[i].short_description+"'");
                 }
                 builder.Prompts.choice(session, "If you want more information on one of those incidents, ask me about its ID.", choices, buttonStyle);
             }
@@ -325,7 +325,7 @@ bot.dialog('incidentStatus', [
                     default:
                         state = "undefined";
                 }
-                session.send('Requested ID: ' + respJSON.result[0].number + '\n Status: ' + state + '\n Urgency: ' + respJSON.result[0].urgency + '\n Short Description: ' + respJSON.result[0].short_description);
+                session.send("Requested ID: '" + respJSON.result[0].number + "' <br/>Status: '" + state + "'<br/>Urgency: '" + respJSON.result[0].urgency + "' <br/>Short Description: '" + respJSON.result[0].short_description+"'");
             }
         } request(options, callback);
     }
