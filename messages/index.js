@@ -274,7 +274,7 @@ bot.dialog('incidentStatus', [
                 session.dialogData.myIncidents = respJSON;
                 var incidentCount = respJSON.result.length;
                 session.send("You currently have " + incidentCount + " incidents.");
-                var choices ={};
+                var choices="";
                 for (var i = 0; i < respJSON.result.length; i++) {
                     choices[i] = respJSON.result[i].number+"";
                     session.send("Incident ID number " + (i + 1) + " is: " + respJSON.result[i].number + ", short description is: " + respJSON.result[i].short_description);
