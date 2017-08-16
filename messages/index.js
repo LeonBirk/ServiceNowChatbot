@@ -276,10 +276,10 @@ bot.dialog('incidentStatus', [
                 session.send("You currently have " + incidentCount + " incidents.");
                 var choices ={};
                 for (var i = 0; i < respJSON.result.length; i++) {
-                    choices[i] = respJSON.result[i].number.toString();
+                    choices[i] = respJSON.result[i].number+"";
                     session.send("Incident ID number " + (i + 1) + " is: " + respJSON.result[i].number + ", short description is: " + respJSON.result[i].short_description);
                 }
-                builder.Prompts.choice(session, "If you want more information on one of those incidents, ask me about its ID.", choices);
+                builder.Prompts.choice(session, "If you want more information on one of those incidents, ask me about its ID.", choices, buttonStyle);
             }
         }
         request(options, callback);
