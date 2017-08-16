@@ -341,7 +341,7 @@ bot.dialog('incidentStatus', [
                     default:
                         state = "Unavailable";
                 }
-                session.send("Requested ID: '" + respJSON.result[0].number + "' <br/>Status: '" + state + "'<br/>Urgency: '" + urgency + "' <br/>Short Description: '" + respJSON.result[0].short_description+"'");
+                session.send("Requested ID: '" + respJSON.result[0].number + "' <br/>Short Description: '" + respJSON.result[0].short_description + "' <br/>Status: '" + state + "'<br/>Urgency: '" + urgency + "'");
             }
         } request(options, callback);
     }
