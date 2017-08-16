@@ -300,8 +300,24 @@ bot.dialog('incidentStatus', [
         function callback(error, response, body) {
             if (!error && response.statusCode == 200) {
                 var respJSON = JSON.parse(body);
-                //session.send(body)
-                var state = "empty";
+                // Displaying an understandable value - 1 High, 3 low
+                var urgency;
+                urgency = respJSON.result[0].urgency;
+                switch (urgency){
+                    case "1":
+                        urgency = "High";
+                        break;
+                    case "2":
+                        urgency = "Medium";
+                        break;
+                    case "3":
+                        urgency = "Low";
+                        break;
+                    default:
+                        urgency = "Unavailable";
+                }
+                // Displaying an understandable value
+                var state;
                 state = respJSON.result[0].state;
                 switch (state) {
                     case "1":
@@ -323,9 +339,9 @@ bot.dialog('incidentStatus', [
                         state = "Canceled";
                         break;
                     default:
-                        state = "undefined";
+                        state = "Unavailable";
                 }
-                session.send("Requested ID: '" + respJSON.result[0].number + "' <br/>Status: '" + state + "'<br/>Urgency: '" + respJSON.result[0].urgency + "' <br/>Short Description: '" + respJSON.result[0].short_description+"'");
+                session.send("Requested ID: '" + respJSON.result[0].number + "' <br/>Status: '" + state + "'<br/>Urgency: '" + urgency + "' <br/>Short Description: '" + respJSON.result[0].short_description+"'");
             }
         } request(options, callback);
     }
