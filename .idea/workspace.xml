@@ -31,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/messages/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="176">
-              <caret line="260" column="149" lean-forward="true" selection-start-line="260" selection-start-column="149" selection-end-line="260" selection-end-column="149" />
+              <caret line="260" column="147" lean-forward="false" selection-start-line="260" selection-start-column="147" selection-end-line="260" selection-end-column="147" />
               <folding>
                 <element signature="e#4951#5551#0" expanded="false" />
                 <element signature="e#5722#10349#0" expanded="false" />
@@ -274,14 +274,7 @@
       <workItem from="1500914059272" duration="10875000" />
       <workItem from="1500995464592" duration="3104000" />
       <workItem from="1501622360830" duration="36239000" />
-      <workItem from="1502460637745" duration="17680000" />
-    </task>
-    <task id="LOCAL-00084" summary="Sidequest: BUTTONS">
-      <created>1501764208225</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1501764208225</updated>
+      <workItem from="1502460637745" duration="18031000" />
     </task>
     <task id="LOCAL-00085" summary="GREETING: 0.1 trigger">
       <created>1501764976903</created>
@@ -619,11 +612,18 @@
       <option name="project" value="LOCAL" />
       <updated>1502904835647</updated>
     </task>
-    <option name="localTasksCounter" value="133" />
+    <task id="LOCAL-00133" summary="INCIDENT STATUS: 0.91 limit to 15 bc. Skype can not display more">
+      <created>1502905227447</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1502905227447</updated>
+    </task>
+    <option name="localTasksCounter" value="134" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99377000" />
+    <option name="totallyTimeSpent" value="99728000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -713,7 +713,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="INCIDENT STATUS: 0.1 trigger and function" />
     <MESSAGE value="INCIDENT STATUS: 0.2 choices" />
     <MESSAGE value="INCIDENT STATUS: 0.3 next step" />
     <MESSAGE value="INCIDENT STATUS: 0.31 fix" />
@@ -738,7 +737,8 @@
     <MESSAGE value="INCIDENT STATUS: 0.89 cut to 20 incidents: response to large" />
     <MESSAGE value="INCIDENT STATUS: 0.9 query parameter swap" />
     <MESSAGE value="INCIDENT STATUS: 0.9 query parameter fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="INCIDENT STATUS: 0.9 query parameter fix" />
+    <MESSAGE value="INCIDENT STATUS: 0.91 limit to 15 bc. Skype can not display more" />
+    <option name="LAST_COMMIT_MESSAGE" value="INCIDENT STATUS: 0.91 limit to 15 bc. Skype can not display more" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1227,7 +1227,7 @@
     <entry file="file://$PROJECT_DIR$/messages/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
-          <caret line="260" column="149" lean-forward="true" selection-start-line="260" selection-start-column="149" selection-end-line="260" selection-end-column="149" />
+          <caret line="260" column="147" lean-forward="false" selection-start-line="260" selection-start-column="147" selection-end-line="260" selection-end-column="147" />
           <folding>
             <element signature="e#4951#5551#0" expanded="false" />
             <element signature="e#5722#10349#0" expanded="false" />
