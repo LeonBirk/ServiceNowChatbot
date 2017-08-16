@@ -258,7 +258,7 @@ bot.dialog('incidentStatus', [
     function(session){
 
         session.send("Getting your personal incidents...");
-        var urlString = 'https://dev27563.service-now.com/api/now/table/incident?sysparm_query=caller_id=681ccaf9c0a8016400b98a06818d57c7';
+        var urlString = 'https://dev27563.service-now.com/api/now/table/incident?sysparm_query=caller_id=gs.getUserID';
         var options = {
             url: urlString,
             headers: headers,
@@ -305,7 +305,7 @@ bot.dialog('incidentStatus', [
                 urgency = respJSON.result[0].urgency;
                 switch (urgency){
                     case "1":
-                        urgency = '<text style="color:red;">High</text>';
+                        urgency = 'High';
                         break;
                     case "2":
                         urgency = "Medium";
