@@ -4,7 +4,7 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a191f03-0956-421e-ad62-a81abb0cfdf2" name="Default" comment="">
+    <list default="true" id="8a191f03-0956-421e-ad62-a81abb0cfdf2" name="Default" comment="INCIDENT STATUS: 0.91 limit to 17">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/messages/index.js" afterPath="$PROJECT_DIR$/messages/index.js" />
     </list>
@@ -274,14 +274,7 @@
       <workItem from="1500914059272" duration="10875000" />
       <workItem from="1500995464592" duration="3104000" />
       <workItem from="1501622360830" duration="36239000" />
-      <workItem from="1502460637745" duration="18153000" />
-    </task>
-    <task id="LOCAL-00086" summary="GREETING: 0.3 message formulated">
-      <created>1501768718548</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1501768718548</updated>
+      <workItem from="1502460637745" duration="18285000" />
     </task>
     <task id="LOCAL-00087" summary="GREETING: 0.4 message formatting">
       <created>1501768908319</created>
@@ -619,11 +612,18 @@
       <option name="project" value="LOCAL" />
       <updated>1502905564648</updated>
     </task>
-    <option name="localTasksCounter" value="135" />
+    <task id="LOCAL-00135" summary="INCIDENT STATUS: 0.91 limit to 17">
+      <created>1502905686477</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1502905686477</updated>
+    </task>
+    <option name="localTasksCounter" value="136" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99850000" />
+    <option name="totallyTimeSpent" value="99982000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -713,7 +713,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="INCIDENT STATUS: 0.3 next step" />
     <MESSAGE value="INCIDENT STATUS: 0.31 fix" />
     <MESSAGE value="INCIDENT STATUS: 0.4 functional fix" />
     <MESSAGE value="INCIDENT STATUS: 0.45 working choices (maybe)" />
@@ -738,7 +737,8 @@
     <MESSAGE value="INCIDENT STATUS: 0.9 query parameter fix" />
     <MESSAGE value="INCIDENT STATUS: 0.91 limit to 15 bc. Skype can not display more" />
     <MESSAGE value="INCIDENT STATUS: 0.91 limit to 18" />
-    <option name="LAST_COMMIT_MESSAGE" value="INCIDENT STATUS: 0.91 limit to 18" />
+    <MESSAGE value="INCIDENT STATUS: 0.91 limit to 17" />
+    <option name="LAST_COMMIT_MESSAGE" value="INCIDENT STATUS: 0.91 limit to 17" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
