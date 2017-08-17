@@ -7,7 +7,7 @@ var headers = {
     'Accept': 'application/json'
 };
 
-var useEmulator = (process.env.NODE_ENV == 'development');
+var useEmulator = (process.env.NODE_ENV === 'development');
 
 var connector = useEmulator ? new builder.ChatConnector() : new botbuilder_azure.BotServiceConnector({
     appId: process.env['MicrosoftAppId'],
@@ -164,8 +164,6 @@ bot.dialog('greeting', [
 bot.dialog('createIncident', [
     // Verifies entry into Conversation
     function (session) {
-
-        // TODO: change the isThatCorrect prompts to Confirmation Prompts
         builder.Prompts.choice(session, 'I have understood that you want to create a new Ticket, is that correct?', isThatCorrect, buttonStyle);
     },
     // if the response is negative, returns to default dialog; if positive: ask for a keyword (possible keywords listed in categories.json
@@ -209,10 +207,10 @@ bot.dialog('createIncident', [
     },
     function (session, results) {
         var confirmation = results.response.entity.toString();
-        if (confirmation == 'no') {
+        if (confirmation === 'no') {
             session.send('OK NOW I AM UPSET! Ask someone else. >:(')
         }
-        else if (confirmation == 'yes') {
+        else if (confirmation === 'yes') {
             session.send('Nice! I will get to work. Don\'t worry, I will get back to you when there are any news.');
             var data = {
                 "caller_id": "javascript:gs.getUser().getFullName()",
@@ -237,7 +235,7 @@ bot.dialog('createIncident', [
 
             //noinspection JSAnnotator
             function callback(error, response, body) {
-                if (!error && response.statusCode == 201) {
+                if (!error && response.statusCode === 201) {
 
                     session.send("Incident record created! The number is: " + body.result.number);
                 }
@@ -250,12 +248,12 @@ bot.dialog('createIncident', [
         session.endDialog();
 
     }]).triggerAction({matches: 'openTicket'})
-    .cancelAction('cancelAction', 'Okay, action canceled.', {matches: /^cancel$/i, confirmPrompt: "Are you sure?"} )
+    .cancelAction('cancelAction', 'Okay, action canceled.', {matches: /^cancel$/i, confirmPrompt: "Are you sure?"})
     .reloadAction('startOver', 'Ok, starting over.', {matches: /^start over$/i, confirmPrompt: "Are you sure?"});
 
 // Waterfall dialog that gets the users personal incidents
 bot.dialog('incidentStatus', [
-    function(session){
+    function (session) {
 
         session.send("Getting your personal incidents...");
         var urlString = 'https://dev27563.service-now.com/api/now/table/incident?sysparm_query=caller_id=javascript:gs.getUserID()^active=true^ORDERBYnumber&sysparm_limit=16';
@@ -269,7 +267,7 @@ bot.dialog('incidentStatus', [
         };
 
         function callback(error, response, body) {
-            if (!error && response.statusCode == 200) {
+            if (!error && response.statusCode === 200) {
                 var respJSON = JSON.parse(body);
                 session.dialogData.myIncidents = respJSON;
                 var incidentCount = respJSON.result.length;
@@ -277,11 +275,12 @@ bot.dialog('incidentStatus', [
                 var choices = [];
                 for (var i = 0; i < respJSON.result.length; i++) {
                     choices[i] = respJSON.result[i].number.toString();
-                    session.send("Incident ID number " + (i + 1) + " is: '" + respJSON.result[i].number + "', the short description is: '" + respJSON.result[i].short_description+"'");
+                    session.send("Incident ID number " + (i + 1) + " is: '" + respJSON.result[i].number + "', the short description is: '" + respJSON.result[i].short_description + "'");
                 }
                 builder.Prompts.choice(session, "If you want more information on one of those incidents, ask me about its ID.", choices, buttonStyle);
             }
         }
+
         request(options, callback);
     },
     function (session, results) {
@@ -298,12 +297,12 @@ bot.dialog('incidentStatus', [
         };
 
         function callback(error, response, body) {
-            if (!error && response.statusCode == 200) {
+            if (!error && response.statusCode === 200) {
                 var respJSON = JSON.parse(body);
                 // Displaying an understandable value - 1 High, 3 low
                 var urgency;
                 urgency = respJSON.result[0].urgency;
-                switch (urgency){
+                switch (urgency) {
                     case "1":
                         urgency = 'High';
                         break;
@@ -343,10 +342,12 @@ bot.dialog('incidentStatus', [
                 }
                 session.send("Requested ID: '" + respJSON.result[0].number + "' <br/>Short Description: '" + respJSON.result[0].short_description + "' <br/>Status: '" + state + "'<br/>Urgency: '" + urgency + "'");
             }
-        } request(options, callback);
+        }
+
+        request(options, callback);
     }
 ]).triggerAction({matches: 'ticketStatus'})
-    .cancelAction('cancelAction', 'Okay, action canceled.', {matches: /^cancel$/i, confirmPrompt: "Are you sure?"} );
+    .cancelAction('cancelAction', 'Okay, action canceled.', {matches: /^cancel$/i, confirmPrompt: "Are you sure?"});
 
 
 // Waterfall dialog that is triggered if a user wants to reopen an incident and guides him through the process
@@ -357,7 +358,7 @@ bot.dialog('reopenIncident', [
     function (session, results) {
         var confirmation = results.response.entity.toString();
         // User does not want to reopen an incident --> leave dialog and go back to default
-        if (confirmation == 'no') {
+        if (confirmation === 'no') {
             session.endDialog('Ok! So how else can I help you?');
         } else {
             // List the incidents available for reopening
@@ -376,15 +377,17 @@ bot.dialog('reopenIncident', [
 
             //noinspection JSAnnotator
             function callback(error, response, body) {
-                if (!error && response.statusCode == 200) {
+                if (!error && response.statusCode === 200) {
                     var respJSON = JSON.parse(body);
                     var incidentCount = respJSON.result.length;
+                    var incidents = [];
+                    var incidentChoices = [];
+                    var i = 0;
                     // Different messages for Incident counts if lower than 2
-                    if (respJSON.result.length > 1 || respJSON.result.length ==0 ) {
+                    if (respJSON.result.length > 1 || respJSON.result.length === 0) {
                         session.send("You currently have " + incidentCount + " closed incidents.");
-                        var incidents = [];
-                        var incidentChoices = [];
-                        for (var i = 0; i < respJSON.result.length; i++) {
+
+                        for (; i < respJSON.result.length; i++) {
                             incidentChoices[i] = respJSON.result[i].number;
                             incidents[i] = {name: respJSON.result[i].number, id: respJSON.result[i].sys_id};
                             session.send("Incident number " + (i + 1) + " has the ID: " + respJSON.result[i].number + ", its short description is: " + respJSON.result[i].short_description);
@@ -393,9 +396,8 @@ bot.dialog('reopenIncident', [
                         builder.Prompts.choice(session, 'So, which Incident is it going to be?', incidentChoices, buttonStyle);
                     } else {
                         session.send("You currently have " + incidentCount + " closed incident.");
-                        var incidents = [];
-                        var incidentChoices = [];
-                        for (var i = 0; i < respJSON.result.length; i++) {
+
+                        for (; i < respJSON.result.length; i++) {
                             incidentChoices[i] = respJSON.result[i].number;
                             incidents[i] = {name: respJSON.result[i].number, id: respJSON.result[i].sys_id};
                             session.send("The Incident number is: \'" + respJSON.result[i].number + "\', its short description is: \'" + respJSON.result[i].short_description + "\'");
@@ -442,8 +444,8 @@ bot.dialog('reopenIncident', [
             }
         };
 
-        function callback(error, response, body) {
-            if (!error && response.statusCode == 200) {
+        function callback(error, response) {
+            if (!error && response.statusCode === 200) {
                 session.endDialog("Incident reopened successfully!")
             }
         }
@@ -463,7 +465,7 @@ bot.dialog('orderHardware', [
     },
 
     function (session, result) {
-        if (result.response.entity.toString() == 'no') {
+        if (result.response.entity.toString() === 'no') {
             session.endDialog('Ok, how else might I be of service to you?')
         } else {
             hardware = require('./hardware.json');
@@ -504,7 +506,7 @@ bot.dialog('orderHardware', [
 
         function callback(error, response, body) {
             //session.send("Callback function is called.");
-            if (!error && response.statusCode == 200) {
+            if (!error && response.statusCode === 200) {
                 session.send(session.dialogData.hardwareSubcategory.toString() + ": " +
                     "'" + session.dialogData.hardwareDevice.toString() + "' has been put into your personal cart.");
                 var answer = body;
@@ -513,7 +515,7 @@ bot.dialog('orderHardware', [
                     session.send(answer.result.items[i].item_name + " for " + answer.result.items[i].localized_price)
                 }
                 session.dialogData.shoppingcart = answer.result.items;
-                builder.Prompts.choice(session, "The subtotal (including additional cost) is " + answer.result.subtotal + ". Are you ready to submit your order?", isThatCorrect,buttonStyle);
+                builder.Prompts.choice(session, "The subtotal (including additional cost) is " + answer.result.subtotal + ". Are you ready to submit your order?", isThatCorrect, buttonStyle);
 
             }
         }
@@ -522,8 +524,7 @@ bot.dialog('orderHardware', [
 
     },
     function (session, result) {
-        // TODO: Implement cart checkout, notify about waiting time
-        if (result.response.entity.toString() == 'no') {
+        if (result.response.entity.toString() === 'no') {
             session.replaceDialog('orderHardware');
         } else {
             // submit the order, all items in session.dialogData.shoppingcart will be ordered
@@ -541,7 +542,7 @@ bot.dialog('orderHardware', [
 
             //noinspection JSAnnotator
             function callback(error, response, body) {
-                if (!error && response.statusCode == 200) {
+                if (!error && response.statusCode === 200) {
                     session.dialogData.order_request_number = body.result.request_number;
                     session.dialogData.order_request_id = body.result.request_id;
                     session.send("Your order was submitted, the corresponding REQ-Number is: " + session.dialogData.order_request_number + ". ");

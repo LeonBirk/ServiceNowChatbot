@@ -5,7 +5,8 @@
   "main": "index.js",
   "dependencies": {
     "botbuilder": "^3.9.0",
-    "botbuilder-azure": "3.0.2"
+    "botbuilder-azure": "3.0.2",
+    "request": "latest"
   },
   "devDependencies": {
     "restify": "^4.1.1"
