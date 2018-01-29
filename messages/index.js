@@ -86,7 +86,7 @@ var buttonStyle = {listStyle: builder.ListStyle.button};
  headers: headers,
  auth: {
  'user': 'admin',
- 'pass': 'EF3tGqL5T!'
+ 'pass': ''
  }
  };
 
@@ -117,7 +117,7 @@ var buttonStyle = {listStyle: builder.ListStyle.button};
  headers: headers,
  auth: {
  'user': 'admin',
- 'pass': 'EF3tGqL5T!'
+ 'pass': ''
  }
  };
 
@@ -229,7 +229,7 @@ bot.dialog('createIncident', [
                 headers: headers,
                 auth: {
                     'user': 'admin',
-                    'pass': 'EF3tGqL5T!'
+                    'pass': ''
                 }
             };
 
@@ -262,7 +262,7 @@ bot.dialog('incidentStatus', [
             headers: headers,
             auth: {
                 'user': 'admin',
-                'pass': 'EF3tGqL5T!'
+                'pass': ' '
             }
         };
 
@@ -292,7 +292,7 @@ bot.dialog('incidentStatus', [
             headers: headers,
             auth: {
                 'user': 'admin',
-                'pass': 'EF3tGqL5T!'
+                'pass': ' '
             }
         };
 
@@ -371,7 +371,7 @@ bot.dialog('reopenIncident', [
                 headers: headers,
                 auth: {
                     'user': 'admin',
-                    'pass': 'EF3tGqL5T!'
+                    'pass': ' '
                 }
             };
 
@@ -440,7 +440,7 @@ bot.dialog('reopenIncident', [
             headers: headers,
             auth: {
                 'user': 'admin',
-                'pass': 'EF3tGqL5T!'
+                'pass': ' '
             }
         };
 
@@ -500,7 +500,7 @@ bot.dialog('orderHardware', [
             headers: headers,
             auth: {
                 'user': 'admin',
-                'pass': 'EF3tGqL5T!'
+                'pass': ' '
             }
         };
 
@@ -536,7 +536,7 @@ bot.dialog('orderHardware', [
                 headers: headers,
                 auth: {
                     'user': 'admin',
-                    'pass': 'EF3tGqL5T!'
+                    'pass': ' '
                 }
             };
 
